@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<title>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</title>
+<link rel="stylesheet" href="./css/architech-light.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+             .nav-footer{text-align: center; margin-top: auto;}
+             .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="_computers_and_coding" class="article toc2 toc-left">
+<head>
+  <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+  <!-- TODO: Keep link to font awesome? -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div>
+<div id="header">
+<h1>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a></span></p><ul class="sectlevel1">
+<li><a href="_soundcheck.html">Soundcheck</a>
+</li>
+<li><a href="_computers_and_coding.html"><span class="toc-current">1. Computers and Coding</span></a>
+<ul class="sectlevel2">
+<li><a href="_computers_and_coding.html#_whats_the_point">What&#8217;s the Point?</a>
+</li>
+<li><a href="_computers_and_coding.html#_programming_languages">1.1. Programming Languages</a>
+</li>
+<li><a href="_computers_and_coding.html#_programming_paradigms">1.2. Programming Paradigms</a>
+</li>
+<li><a href="_computers_and_coding.html#_software_development_process">1.3. Software Development Process</a>
+</li>
+<li><a href="_computers_and_coding.html#_first_java_program">1.4. First Java Program</a>
+</li>
+<li><a href="_computers_and_coding.html#_basic_output">1.5. Basic Output</a>
+</li>
+<li><a href="_computers_and_coding.html#_code_comments">1.6. Code Comments</a>
+</li>
+<li><a href="_computers_and_coding.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_2">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_computers_and_coding">1. Computers and Coding</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p><span title='This is "Chapter One" in binary (base 2)'>Chapter 0001 <sub>2</sub></span></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Help Make These Materials Better!</div>
+<div class="paragraph">
+<p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://forms.gle/4173pZ1yPuNX7pku6" target="_blank" rel="noopener">CIS150AB Course Materials Feedback (Google Form)</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whats_the_point">What&#8217;s the Point?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Understand the role of programming languages</p>
+</li>
+<li>
+<p>Get to know a little about Object-Oriented Programming (OOP)</p>
+</li>
+<li>
+<p>Use <code>print()</code> and <code>println()</code> to produce text output</p>
+</li>
+<li>
+<p>Use code comments to document your code</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/OOP%20with%20Java%20(CIS150AB)/01%20Computers%20and%20Coding" target="_blank" rel="noopener">GitHub</a>.</em></p>
+</div>
+<div class="paragraph">
+<p><em>Note: This material is similar to the corresponding material in <a href="https://timmcmichael.github.io/lofi-csharp/" target="_blank" rel="noopener">Lo-Fi C#</a>, the eBook for CIS162AD. However, it also introduces programming paradigms you&#8217;ll need to know, so go through this before you move on to the next chapter.</em></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>A computer is basically a device that executes a set of commands&#8212;&#8203;and does so very quickly.
+Because the guts of a computer (a CPU) are kinda like a bunch of light switches&#8212;&#8203;and I mean a <strong>BUNCH</strong> of light switches&#8212;&#8203;it can only deal with zeros and ones: a switch that is off is "zero," and a switch that&#8217;s on is "one."</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Never before has the concept of a modern computer been so recklessly simplified. I feel shame.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>All of the information a computer handles ultimately has to be represented by some combination of 1s and 0s, which we call a <strong>binary</strong> (or "base-two") number system.</p>
+</div>
+<div class="paragraph">
+<p>Imagine that your BFF is in your programming class, but that cruel professor won&#8217;t let you sit together.
+When the professor turns his back, you can use your fingers to send a quick message to your BFF.
+Holding up your index finger might mean, "meet me in the library after class;" two fingers could mean, "send me a copy of your homework."
+As long as you agree on what each number means, you could pass along commands or information&#8212;&#8203;it would be like your own little language.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re a sports fan, I have a better analogy.
+A quarterback and a coach could have a language based completely on numbers.
+The coach tells the quarterback "22" and the quarterback knows which play to run, because they&#8217;ve agreed on what instruction (play) the number 22 means&#8212;&#8203;and there are football teams that do exactly this.</p>
+</div>
+<div class="paragraph">
+<p>Sending that number to the quarterback as a binary number would be a lot less efficient because the coach would have to say "10110" (which is the binary representation of twenty two) and the quarterback would have to know binary numbers,or have them written on his wrist-band thing as a cheatsheet.</p>
+</div>
+<div class="paragraph">
+<p>Want to take the analogy one step further?
+A player standing on the sideline with their helmet on could represent a 1, and a player with their helmet off could represent a 0.
+Now the coach could just line up five players and tell the 2nd and 5th ones to take their helmets off.
+The quarterback could look over, see the pattern of helmets (10110) and run play 22.</p>
+</div>
+<div class="paragraph">
+<p>Okay, that would be the nerdiest football team in history.</p>
+</div>
+<div class="exampleblock callout bs">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="bs-icon" width="20" height="17" viewBox="0 0 288.95 245.62" fill="currentColor"><path d="M227.25,128.95h28.66v-17.51C255.91,49.99,205.92,0,144.47,0S33.03,49.99,33.03,111.44v17.51h28.65v-17.51c0-45.64,37.14-82.78,82.78-82.78s82.78,37.14,82.78,82.78v17.51h.01Z"/><path d="M0,164.42v49.35c0,17.59,8.96,31.84,31.78,31.84h11.2v-113.03h-11.2C8.95,132.58,0,146.84,0,164.42Z"/><path d="M56.78,132.58h-9.55v113.03h9.55c3.52,0,6.37-2.85,6.37-6.37v-100.29c0-3.52-2.85-6.37-6.37-6.37h0Z"/><path d="M257.16,132.58h-11.2v113.03h11.2c22.83,0,31.79-14.25,31.79-31.84v-49.35c0-17.58-8.96-31.84-31.79-31.84h0Z"/><path d="M225.79,138.95v100.3c0,3.52,2.85,6.37,6.37,6.37h9.55v-113.03h-9.55c-3.52,0-6.37,2.85-6.37,6.37h0Z"/></svg><strong class="callout-title">B-Side</strong></p>
+</div>
+<div class="paragraph">
+<p>The chapters of this eBook are subtitled using binary to show basic examples of the numbering system: 0001 is, well, 1 in decimal.
+And 0100 is 4 in decimal. We won&#8217;t get into binary numbers, but it&#8217;s not very complicated and is kind of interesting if you&#8217;re a nerd.</p>
+</div>
+<div class="paragraph">
+<p>The amazing <a href="https://code.org" target="_blank" rel="noopener">code.org</a> project has a playlist of great, short videos on how computers work&#8212;&#8203;including binary numbers&#8212;&#8203;if you want to know a little more without going too crazy:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank" rel="noopener">How Computers Work</a></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>And how is any of that relevant?
+Let&#8217;s see&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Remember that a computer can execute commands super fast.
+Each command, or <strong>instruction</strong> (like a football play), is represented by a number&#8212;&#8203;a binary number, since that&#8217;s the number system the computer uses.
+The collection of instructions the computer understands is called <strong>machine language</strong>.
+Incidentally, there are lots of different machine languages out there.
+Just like people in different cultures use different languages, different CPU types (<em>architectures</em>) use different languages.</p>
+</div>
+<div class="paragraph">
+<p>You could give the computer a set of instructions (a.k.a., a program) if you looked up the binary number for each instruction you wanted to use.
+Of course, even a simple program requires a lot of instructions, so you&#8217;re going to be looking up a <strong>lot</strong> of stuff.</p>
+</div>
+<div class="paragraph">
+<p>Few people actually <em>want</em> to do that, so the rest of us use programming languages instead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programming_languages">1.1. Programming Languages</h3>
+<div class="paragraph">
+<p>A programming language is something that&#8217;s easier for humans to use than machine language, but is capable of being accurately translated to machine language.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There are many, many programming languages. <a href="https://en.wikipedia.org/wiki/List_of_programming_languages" target="_blank" rel="noopener">Seriously, there are a lot</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The instructions you write using a programming language are called <strong>source code</strong>.
+Translating source code file to a machine language file that can be executed is called <strong>compiling</strong>, and is done by an application called a compiler.
+When the computer runs the program, it&#8217;s using the machine language translation created by the compiler.
+Clicking on the icon to open Microsoft Word runs a file that&#8217;s been compiled from source code.</p>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Coding and Compiling</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/yR939VDXPaM?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Some programming languages don&#8217;t get translated ahead of time&#8212;&#8203;they get translated "on the fly," as the program is running.
+That&#8217;s called <strong>interpreting</strong> instead of compiling, but it&#8217;s conceptually the same thing.</p>
+</div>
+<div class="paragraph">
+<p>Java is an interesting case, because it&#8217;s both compiled <strong>and</strong> interpreted.
+The JDK compiles our source code into an intermediate language called <strong>bytecode</strong>.
+To execute the program, you use the Java Runtime Environment to interpret that bytecode file as it executes.</p>
+</div>
+<div class="paragraph">
+<p>Bytecode is very close to machine language.
+In fact, it&#8217;s basically a "virtual machine language"--a machine language for a CPU that doesn&#8217;t actually exist.
+This approach allows Java to be cross-platform (runnable on many different machines).
+A compiled machine language file only works on a computer that "speaks" the same machine language, but if we compile our program to a bytecode file, it&#8217;ll run on any computer that has the Java Runtime Environment installed&#8212;&#8203;and that will interpret the bytecode as it executes.
+This "write once, run anywhere" ability contributes greatly to Java&#8217;s popularity.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programming_paradigms">1.2. Programming Paradigms</h3>
+<div class="paragraph">
+<p>A paradigm is a model or example, or maybe better described as a way of seeing things&#8212;&#8203;which is helpful to think about, since we can all have different ways of seeing how a problem could be solved.</p>
+</div>
+<div class="paragraph">
+<p>Imagine that your crazy uncle wants to pay you to go through the junk in his garage and organize his giant collection of vinyl records.
+Or imagine it&#8217;s a collection of books, if that&#8217;s what you prefer.
+How would you organize the collection?
+You could group them by artist and then arrange them alphabetically, from <a href="https://youtu.be/xFrGuyw1V8s?si=2N4W5250-YP5Pdth" target="_blank" rel="noopener">ABBA</a> to <a href="https://youtu.be/F2HH7J-Sx80?si=ByL5Vr4VVYmDA8Rv" target="_blank" rel="noopener">Warren Zevon</a>.
+Or you could group them by genres (keeping disco separate from rock \'n' roll), or just put them in the order they were released.</p>
+</div>
+<div class="paragraph">
+<p>There are tons of different ways to do it.
+None of them are really right or wrong, it just depends on what you prefer&#8212;&#8203;or maybe on how you plan to find things later.
+Coding is similar, in that we all have different ways we imagine organizing a program or solving a problem.
+That&#8217;s kinda the idea of a programming paradigm: how do you think about the program you&#8217;re creating?
+How do you picture it being organized?</p>
+</div>
+<div class="paragraph">
+<p>Just like programming languages, paradigms are numerous.
+In fact, some languages were created specifically to work well with a certain paradigm, and that&#8217;s one reason there are so many languages.
+But when someone is going to learn to code, there are often two paradigms we consider:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Procedural Programming</p>
+</li>
+<li>
+<p>Object-Oriented Programming (OOP)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>They have a lot in common, and in fact, OOP is actually a type of procedural programming.
+Programmers love to argue why one approach is better than the other, in the same way some of my friends might argue about Ford trucks vs. Chevy trucks.
+And just like Ford vs. Chevy, there&#8217;s nothing inherently better about one paradigm or the other&#8212;&#8203;sorry friends, but Ford and Chevy trucks are basically the same.
+Growing up, my own first coding experiences were exclusively with procedural programming, and I stayed in that world until I began teaching Java&#8212;&#8203;now I very much prefer OOP, both for my own programming and for teaching beginning coders.
+But that really is a personal preference, and I wouldn&#8217;t argue that OOP is <em>better</em> than procedural programming.</p>
+</div>
+<div class="paragraph">
+<p>Well, I wouldn&#8217;t argue <em>much</em>.</p>
+</div>
+<div class="sect3">
+<h4 id="_comparing_procedural_programming_and_oop">1.2.1. Comparing Procedural Programming and OOP</h4>
+<div class="paragraph">
+<p>In procedural programming, we break up a program into the tasks we need to complete.
+Each individual task is handled by a set of statements that we call a <strong>procedure</strong>.
+If we need to calculate a student&#8217;s overall course grade, for example, we write a procedure to do it.</p>
+</div>
+<div class="paragraph">
+<p>The data for our program&#8212;&#8203;the stuff we&#8217;re keeping track of&#8212;&#8203;is stored somewhere else.
+If a procedure needs something to complete its task, that data is sent to the procedure, which then sends back a result.
+In short, information is kept separate from the code that uses it and is passed back and forth as necessary.</p>
+</div>
+<div class="paragraph">
+<p>In Figure 1.1, the <em>main procedure</em> passes the values <code>5</code> and <code>4</code> to the <em>adding procedure</em>, which uses that information to calculate the sum <code>9</code> and return it to the <em>main procedure</em>. The <em>subtracting procedure</em> also requires two numbers. <code>10</code> and <code>3</code> are passed to</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter1/ProceduralProgramming.png" alt="Diagram of data passing in procedural programming" width="400">
+</div>
+<div class="title">Figure 1.1 - Passing data in procedural programming</div>
+</div>
+<div class="paragraph">
+<p>Many programming languages (such as Python) refer to procedures as <strong>functions</strong>, and the term <strong>subroutines</strong> is also used in some cases; if you&#8217;ve done some programming in any language, you&#8217;ve almost certainly used procedures in some form.</p>
+</div>
+<div class="paragraph">
+<p>In OOP, the focus shifts from procedures to <strong>objects</strong>, which are programming elements that bundle data with the procedures that use it, instead of keeping them separate.
+We&#8217;ll explore the nature of objects in great detail going forward, so we won&#8217;t worry about describing it too much for now.</p>
+</div>
+<div class="paragraph">
+<p>I have my own biases about the topic.
+I believe OOP lends itself especially well to things like graphical user interfaces (GUIs) and games, as well as large projects developed by teams of programmers.</p>
+</div>
+<div class="paragraph">
+<p>The bottom line is that, when faced with a programming task or project, my brain immediately starts thinking in terms of the <em>objects</em> the program will need.
+But that&#8217;s probably just a matter of habit; as I mentioned, I spent much of my life (including all of the time I spent as a professional programmer) seeing programs as a bunch of procedures.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important that you&#8217;re aware of procedural programming, and the code we&#8217;ll write in the next couple of chapters is really written from a procedural perspective, but our overall focus in this book and course is really on OOP.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_software_development_process">1.3. Software Development Process</h3>
+<div class="paragraph">
+<p>Learning to write code means creating a lot of programs&#8212;&#8203;mostly small, straightforward programs at first.
+Remember those awful word problems where a train leaves Chicago traveling 40 mph, and another train leaves Denver at 35 mph?
+That kind of stuff; but in my course, we don&#8217;t get too caught up in the math part of it.
+But we care <strong>a lot</strong> about understanding the requirements of a program and implementing it successfully.</p>
+</div>
+<div class="paragraph">
+<p>As our programs become bigger and more complex, we&#8217;ll need to work within a deliberate design and implementation process in order to keep ourselves organized and focused.
+Even the smaller programs we&#8217;ll develop while learning the basics will benefit from a thoughtful approach beyond just opening a new file and starting to type.
+It ensures that we use our time efficiently.
+And when we are faced with solving a programming problem that really intimidates us, the process will help make the task more approachable.</p>
+</div>
+<div class="paragraph">
+<p>For big or small projects, a good general approach to software development is:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Analysis</dt>
+<dd>
+<p>Identify the goals and scope of the program. As a rule, keep it small and focused&#8212;&#8203;we can always add features later. <strong>Ask yourself, <em>What does this program need to do?</em></strong></p>
+</dd>
+<dt class="hdlist1">Testing Plan</dt>
+<dd>
+<p>Determine how the final program will be tested. The testing plan will be useful, but most importantly, taking the time to establish a specific testing plan ensures that you thoroughly understand the program before you begin writing code. If you don&#8217;t know how the program will work, you&#8217;re not yet ready to begin coding. <strong>Ask yourself, <em>How will I make sure the program works correctly?</em></strong></p>
+</dd>
+<dt class="hdlist1">Implementation</dt>
+<dd>
+<p>Write and test the code. We say that this is an <em>iterative</em> (or "repeating") process, meaning you&#8217;ll write and test one small piece, staying with it until you know it&#8217;s good. Then you&#8217;ll move on to the next piece and repeat. <strong>Ask yourself, <em>What code do I need in order to get the next part of the program working?</em></strong></p>
+</dd>
+<dt class="hdlist1">Revise or maintain</dt>
+<dd>
+<p>If our needs or program requirements change, we&#8217;ll need to go back to the first step and begin planning the next version. If not, we&#8217;ll need to monitor that the program continues to perform as expected over time. <strong>Ask yourself, <em>What&#8217;s next for this program?</em></strong></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll flesh out this process as we go&#8212;&#8203;and as our programs become more advanced.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_first_java_program">1.4. First Java Program</h3>
+<div class="paragraph">
+<p>Enough of that, let&#8217;s write some code!</p>
+</div>
+<div class="paragraph">
+<p>One of the (valid) criticisms of Java as a choice for beginners is that it&#8217;s a little complicated to create our first program.
+In Python, we just open a file and write our first command; in recent versions, C# has added that ability as well.
+But Java puts OOP front and center, and we can&#8217;t start writing statements until we first define a class.</p>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Java File Structure and First Program</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/zYDdJzs24rs?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP&index=4" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>File from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Completed code: <a href="https://raw.githubusercontent.com/timmcmichael/EMCCTimFiles/refs/heads/main/OOP%20with%20Java%20(CIS150AB)/01%20Computers%20and%20Coding/HelloWorld.java" target="_blank" rel="noopener"><code>HelloWorld.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Take a look at the code for a basic "Hello World" program; we&#8217;ll learn what all of these pieces are as we go, but we should at least identify them now.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1.1 - <code>HelloWorld.java</code> - Hello World program in Java</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">HelloWorld</span><span style="color: #f8f8f2"> { </span><i class="conum" data-value="1"></i><b>(1)</b>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) { </span><i class="conum" data-value="2"></i><b>(2)</b>
+
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Hello World!&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="3"></i><b>(3)</b>
+
+<span style="color: #f8f8f2">    } </span><i class="conum" data-value="4"></i><b>(4)</b>
+
+<span style="color: #f8f8f2">} </span><i class="conum" data-value="5"></i><b>(5)</b>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here are the parts of the program:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Class declaration and start of a code block. This is a publicly accessible class called <code>HelloWorld</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>main()</code> method declaration and start of a code block. <code>main()</code> is where a Java program starts running.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><code>println()</code> statement to output the message.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>End of the <code>main()</code> method code block, as indicated by the indenting and closing curly brace.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>End of the class code block.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll learn about all of these components as we go.
+But for now, we&#8217;re off and running!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_basic_output">1.5. Basic Output</h3>
+<div class="paragraph">
+<p>The first programs we create in Java are <em>console</em> programs&#8212;&#8203;they are text-based programs that can&#8217;t really display any graphics.
+To start with, we&#8217;ll use two basic ways to output text to the console: <code>System.out.print()</code> and <code>System.out.println()</code> statements.
+<code>print()</code> outputs whatever text is in the parentheses, and we&#8217;ll need to put that text in quotation marks:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Mick Jagger&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This line of code outputs <code><strong>Mick Jagger</strong></code> to the console window.
+After <code>print()</code> outputs the text in parentheses, the cursor remains at the end of the output.
+This is just like if we type something in a word processor but don&#8217;t hit enter; the next time we start typing, the characters resume on the same line.
+In the same way, the next output statement will continue on the same line in the console.</p>
+</div>
+<div class="paragraph">
+<p>A <code>println()</code> statement works exactly the same way, but it advances the cursor to the next line when it&#8217;s finished.
+Basically, it hits <em>enter</em>, and the next output statement will begin on a new line.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>println()</code> works by outputting the text inside the parentheses and then outputting a special character called a <em>newline</em>. The newline isn&#8217;t visible, but it moves the cursor to the next line.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To understand the difference between <code>print()</code> and <code>println()</code>, consider this program.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1.2 - <code>OutputExample.java</code> - Simple console output in Java</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">OutputExample</span><span style="color: #f8f8f2"> {</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;As the Rolling Stones might say,&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;you can&#39;t always&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;get what you want.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The program produces the following output:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>As the Rolling Stones might say,you can't always
+get what you want</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After the <code>print()</code> statement executes, the cursor is still sitting right after the comma following <code><strong>say</strong></code>, so when the next line of code outputs <code><strong>you can&#8217;t always</strong></code>, that output just gets jammed onto the end.
+Notice that it doesn&#8217;t even add a space; if we want a space there, we have to include it within our quotation marks.</p>
+</div>
+<div class="paragraph">
+<p>Because <code><strong>you can&#8217;t always</strong></code> is in a <code>println()</code> statement, the cursor advances and <code><strong>get what you want</strong></code> is on a new line.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll use <code>print()</code> and <code>println()</code> in every Java program we write for quite a while, so it&#8217;s important to take time to experiment with them on our own to make sure we understand how they work.</p>
+</div>
+<div class="sect3">
+<h4 id="_escape_sequences">1.5.1. Escape Sequences</h4>
+<div class="paragraph">
+<p>Sometimes, we want to include special characters in our output, like a tab or a newline.</p>
+</div>
+<div class="paragraph">
+<p>To do this, we use something called an <em>escape sequence</em> (a.k.a. <em>escape character</em>).
+An escape sequence begins with a backslash (<code>\</code>) and is followed by a letter or symbol that indicates what we want to do.</p>
+</div>
+<div class="paragraph">
+<p>The newline character lets us go to the next line in our output&#8212;&#8203;so we don&#8217;t have to write a new <code>println()</code> statement just to move to the next line.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;We were born before the wind\nVan Morrison&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It might be tough to see in the middle of the line, but look after the word <code><strong>wind</strong></code>.
+When the compiler gets to the <code>\n</code> escape sequence, it knows to move the cursor to the next line before continuing with the rest of the output.</p>
+</div>
+<div class="paragraph">
+<p>The output of this code is:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The wild night is calling
+Van Morrison</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above code is equivalent to this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;We were born before the wind&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Van Morrison&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we want to add the title of the song in quotes, we run into a problem.
+When I put a quote in the middle of a string, the compiler gets confused.</p>
+</div>
+<div class="paragraph">
+<p><code>System.out.println("Van Morrison, "Into the Mystic"");</code></p>
+</div>
+<div class="paragraph">
+<p>This code won&#8217;t compile because the sees the quotation mark before the word <strong>Into</strong> and thinks it&#8217;s the end of the string, and then it has no idea what to do with <code>nto the Mystic</code>.</p>
+</div>
+<div class="paragraph">
+<p>We can include a quotation mark in our output by using an escape sequence: <code>\"</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Figure 1.2 - Using a double-quote escape sequence.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;We were born before the wind&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Van Morrison, \&quot;Into the Mystic\&quot;&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output of this code is:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>We were born before the wind
+Van Morrison, "Into the Mystic"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The most common escape sequences are:</p>
+</div>
+<table class="tableblock frame-all grid-all stripes-even" style="width: 50%;">
+<caption class="title">Table 1. Common escape sequences</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Escape Sequence</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\\</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">backslash</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\'</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">single quote</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">double quote</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\n</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">newline</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\t</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tab</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code_comments">1.6. Code Comments</h3>
+<div class="paragraph">
+<p>The Java compiler goes through our source code file line by line, translating all of the code into something that we can execute (unless it finds something it doesn&#8217;t understand, which causes it to stop and output an error message).
+If there&#8217;s something in our source code we don&#8217;t want the compiler to process, we can identify it as a <em>code comment</em> and the compiler will ignore it.
+Code comments are generally used to provide information for any humans who might be looking at the code.
+And since they are ignored by the compiler, they can be written however we want; so our code comments should be written in plain human language.
+To indicate a comment, use two slashes:</p>
+</div>
+<div class="paragraph">
+<p><code>// This is a comment!</code></p>
+</div>
+<div class="paragraph">
+<p>Once the compiler sees two slashes, it just ignores the rest of the line and moves on to the next line.
+We can add a comment onto the end of a line of code:</p>
+</div>
+<div class="listingblock">
+<div class="title">Inline comment placed at the end of a line of code</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Hello World&quot;</span><span style="color: #f8f8f2">); </span><span style="color: #959077">// this outputs text to the console</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>println()</code> statement still gets processed and will execute when we run our program, but everything after the slashes gets ignored.</p>
+</div>
+<div class="paragraph">
+<p>To make a comment that takes up multiple lines, start the comment block with <code>/*</code> (that&#8217;s a slash and an asterisk) and end it with <code>*/</code> (asterisk and a slash).
+When the compiler sees <code>/*</code> it will ignore everything until it finds <code>*/</code>, and then it will resume processing as usual.</p>
+</div>
+<div class="listingblock">
+<div class="title">Multi-line comment block</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #959077">/*</span>
+<span style="color: #959077">This program shows the difference between print() and println().</span>
+<span style="color: #959077">It is referring to an old Rolling Stones song.</span>
+
+<span style="color: #959077">Everything in this comment block will be ignored.</span>
+<span style="color: #959077">*/</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">OutputExample</span><span style="color: #f8f8f2"> {</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;As the Rolling Stones might say,&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;you can&#39;t always&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;get what you want.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A common convention is to start each line within the comment block with an asterisk, but that&#8217;s not required.</p>
+</div>
+<div class="listingblock">
+<div class="title">Multi-line comment block with asterisks</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #959077">/*</span>
+<span style="color: #959077"> * This program shows the difference between print() and println().</span>
+<span style="color: #959077"> * It is referring to an old Rolling Stones song.</span>
+<span style="color: #959077"> *</span>
+<span style="color: #959077"> * Everything in this comment block will be ignored.</span>
+<span style="color: #959077"> *</span>
+<span style="color: #959077"> * The asterisks at the beginning of each line are optional.</span>
+<span style="color: #959077"> */</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In general, code comments are used to explain or provide context for our code.
+Programming often involves going back to old code to make updates or corrections.
+Maybe it&#8217;s been a long time and we might not remember what the code is supposed to do, or maybe it&#8217;s someone different looking at the code and trying to figure it out.
+So code comments should be descriptive, especially when code might be confusing.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Code comments don&#8217;t cost anything, so use lots of them!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We often add a multiline comment block at the top of a file to provide information about the overall program or class.</p>
+</div>
+<div class="sect3">
+<h4 id="_commenting_out_code">1.6.1. "Commenting Out" Code</h4>
+<div class="paragraph">
+<p>Coding is all about trial and error, and programmers spend a lot of time writing code in different ways until they get it working the way they want.
+In that kind of process, it&#8217;s not unusual to delete something only to regret it and wish we could have that old code back.</p>
+</div>
+<div class="paragraph">
+<p>Code commenting gives us a life hack to help prevent that regret.
+Instead of deleting code that&#8217;s not working the way we want, we can just mark it as a comment.
+As far as the compiler is concerned, we&#8217;ve deleted the code.
+But if we want to see or use the code again down the road, it&#8217;s still there.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Almost all IDEs have a keyboard shortcut (and menu item) for commenting out code&#8212;&#8203;and in many, it&#8217;s the same shortcut. Highlight a section of code and press <span class="keyseq"><kbd>Alt</kbd>+<kbd>/</kbd></span> on Windows or <span class="keyseq"><kbd>⌘</kbd>+<kbd>/</kbd></span> on macOS, and many IDEs will add <code>//</code> at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn&#8217;t work, check the IDE&#8217;s documentation to see if there&#8217;s a different shortcut.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_2">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="paragraph subtitle">
+<p>Chapter Review Questions</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What is the primary role of a programming language in the context of computer programming?</p>
+</li>
+<li>
+<p>What happens when you run a c# program? Describe that process in simple terms.</p>
+</li>
+<li>
+<p>What&#8217;s the difference between <code>Console.Write()</code> and <code>Console.WriteLine()</code>? When would you use each?</p>
+</li>
+<li>
+<p>How would you explain what a "program" is to an 8-year-old?</p>
+</li>
+<li>
+<p>Explain the difference between compiled and interpreted programming languages. Describe how C# is both compiled <strong>and</strong> interpreted.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in the <a href="#computers-and-coding">Liner Notes</a></em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_soundcheck.html">Soundcheck</a> | ↑ Up: <a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a> | Next: <a href="_acknowledgements.html">Acknowledgements</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-04-26<br />
+        09:04:33 -0700<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

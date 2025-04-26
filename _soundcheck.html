@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<title>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</title>
+<link rel="stylesheet" href="./css/architech-light.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+             .nav-footer{text-align: center; margin-top: auto;}
+             .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="_soundcheck" class="article toc2 toc-left">
+<head>
+  <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+  <!-- TODO: Keep link to font awesome? -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div>
+<div id="header">
+<h1>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a></span></p><ul class="sectlevel1">
+<li><a href="_soundcheck.html"><span class="toc-current">Soundcheck</span></a>
+<ul class="sectlevel2">
+<li><a href="_soundcheck.html#_but_why_are_we_stuck_reading_this_ebook">But why are we stuck reading <strong>THIS</strong> eBook?</a>
+</li>
+<li><a href="_soundcheck.html#_and_why_are_we_using_java_instead_of_my_favorite_language">And why are we using Java instead of <strong><em>MY</em></strong> favorite language?</a>
+</li>
+<li><a href="_soundcheck.html#_how_to_use_this_book">How to Use This Book</a>
+</li>
+<li><a href="_soundcheck.html#_related_resources">Related Resources</a>
+</li>
+<li><a href="_soundcheck.html#_setting_up_your_programming_environment">Setting Up Your Programming Environment</a>
+</li>
+<li><a href="_soundcheck.html#_install_the_java_development_kit">Install the Java Development Kit</a>
+</li>
+<li><a href="_soundcheck.html#_install_an_ide">Install an IDE</a>
+</li>
+<li><a href="_soundcheck.html#_check_yourself_before_you_wreck_yourself_on_the_assignments">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_soundcheck">Soundcheck</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p>A few things before we drop the needle</p>
+</div>
+<div class="paragraph">
+<p>This eBook isn&#8217;t trying to to cover everything a regular textbook would cover.
+It&#8217;s a little stripped-down and simplified--​what musicians might call <em>low fidelity</em>.</p>
+</div>
+<div class="paragraph">
+<p>This content is intended to be a companion to CIS150AB, which is an introduction to object-oriented programming. Since you&#8217;ll be attending (or viewing recordings of) lectures, and you&#8217;ll have access to additional content in Canvas (our LMS), this text doesn&#8217;t try to cover everything; it tries to give you the basic information you&#8217;ll need in order to get the most out of that other content.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also lo-fi because the purpose of this particular course, at least from my perspective, is not to give students a comprehensive look at a programming language.
+It&#8217;s an introductory course that&#8217;s taken by a variety of students. If you&#8217;re a coding student&#8212;&#8203;majoring in <em>Programming and Systems Analysis</em> or <em>Web Design and Development</em>, for example&#8212;&#8203;you&#8217;ll take language-specific courses that will get much more detailed, so our goal here is to give you a foundation for that.
+If you&#8217;re majoring in something else, you might never write another line of code after the semester ends&#8212;&#8203;I want you to learn about programming and software development so you can communicate with the coders in your workplace and have a general understanding of how an idea becomes a program or app.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also possible that I just don&#8217;t know very much.
+You know, a lo-fi brain.</p>
+</div>
+<div class="sect2">
+<h3 id="_but_why_are_we_stuck_reading_this_ebook">But why are we stuck reading <strong>THIS</strong> eBook?</h3>
+<div class="paragraph">
+<p>The primary reason I wrote this is because real (high fidelity?!?) textbooks are expensive.
+As I started to record more and more videos to supplement the real textbook I was using, students had less and less reason to actually read it.
+But I can&#8217;t cover everything we need in my videos, so I started writing content to fill in details I couldn&#8217;t get to.</p>
+</div>
+<div class="paragraph">
+<p>To be clear, this <strong>isn&#8217;t</strong> lo-fi just because students don&#8217;t bother to read textbooks that are dense and detailed.
+That sometimes seems true, but you&#8217;re different; I can tell just by looking at you!
+But I acknowledge that many students prefer video content and in-person instruction rather than reading, so this is my attempt to meet those students halfway.</p>
+</div>
+<div class="paragraph">
+<p>This eBook might not be very good or very detailed, but it <strong>is</strong> very free.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_and_why_are_we_using_java_instead_of_my_favorite_language">And why are we using Java instead of <strong><em>MY</em></strong> favorite language?</h3>
+<div class="paragraph">
+<p><em>Looking at you, Python nerds&#8230;&#8203;</em></p>
+</div>
+<div class="paragraph">
+<p>Okay, there are a few reasons I use Java to teach OOP:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It&#8217;s cross-platform, so my students can use Windows, macOS, or Linux machines and I can grade the work without hassle on whatever machine I&#8217;m currently using.</p>
+</li>
+<li>
+<p>I like the way Java implements OOP, which I think is "stronger" than in Python, for example (though not as strong as C#, in my opinion).</p>
+</li>
+<li>
+<p>Java is <em>strongly, statically typed</em>, meaning we have to declare data types when we make our variables and that type can&#8217;t change. I believe this "stricter" approach to data types is better for beginners.</p>
+</li>
+<li>
+<p>Since it uses C syntax, Java skills transfer well to many other languages.</p>
+</li>
+<li>
+<p>At <a href="https://www.estrellamountain.edu">Estrella Mountain Community College</a>, we have other CIS classes that teach C# (my favorite OOP language) and Python. I want students using something different for this course so that they get exposed to multiple languages before they graduate.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If I&#8217;m doing this right, what you&#8217;re mostly learning here is a good foundation of OOP (and general programming) skills and concepts.
+We happen to be using Java to do that, but these skills transfer to pretty much any other language you want to learn.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_use_this_book">How to Use This Book</h3>
+<div class="paragraph">
+<p>Before starting a chapter, review the relevant information on the "overview" page in Canvas.
+Then, start reading the chapter in this eBook.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>This book is lo-fi because much of the content you need is delivered in videos, making this a little stripped down. When you see <strong>Time to Watch</strong>, just watch the embedded (or hyperlinked) YouTube video. Quizzes in Canvas may include questions about the video content, and assignments will require the skills and concepts covered in videos.</p>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph">
+<p>Be sure to watch the embedded video. Where applicable, there will be links to files used/created in the video.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>After the video, continue reading the chapter. The text content in the eBook is intended to be brief, with an overview of the topic, code examples, and details not covered in the videos.</p>
+</li>
+<li>
+<p>Each chapter begins with <strong>What&#8217;s the Point?</strong>, which gives you an idea of what you should be able to do after reading the chapter.</p>
+</li>
+<li>
+<p>Reading and watching videos isn&#8217;t enough to learn programming. You need to stop occasionally and try out what you&#8217;re learning.</p>
+<div class="exampleblock callout spin">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="spin-icon" width="88.88" height="62.42" viewBox="0 0 88.88 62.42" fill="currentColor"><path d="M60.84,29.26c-1.16.32-1.79,1.37-1.47,2.42.32,1.05,1.37,1.68,2.42,1.47,1.05-.32,1.68-1.37,1.47-2.42-.32-1.16-1.37-1.79-2.42-1.47Z"/><path d="M40.63,15.26c-.32-.21-.74-.32-1.16-.21l-17.26,4.32c-.53.11-.95.63-.95,1.26v18.63c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-13.79l14.74-3.79v9.26c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-22.63c-.21-.42-.31-.84-.63-1.05h0ZM18.42,45.26c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.27,2-2.74,2ZM35.68,40.95c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.16,2-2.74,2ZM38.53,22.95l-14.74,3.79v-5.16l14.74-3.68v5.05Z"/><path d="M88,24.21c-3.16-12-13.79-20.1-25.58-20.53V1.47c0-.84-.63-1.47-1.47-1.47H1.47C.63,0,0,.64,0,1.48v59.47c0,.84.63,1.47,1.47,1.47h59.47c.84,0,1.47-.63,1.47-1.47v-2.21c2-.11,4-.32,5.89-.84,14.64-3.89,23.48-18.94,19.69-33.68h0ZM61.27,39.05c-4.32,0-7.79-3.47-7.79-7.79s3.47-7.79,7.79-7.79,7.79,3.47,7.79,7.79-3.48,7.79-7.79,7.79ZM2.95,2.84h56.53v3.26H2.95s0-3.26,0-3.26ZM59.47,59.48H2.95v-2.74h56.53v2.74ZM59.47,53.69H2.95V9.05h56.53v11.05c-5.47.74-9.58,5.37-9.58,10.95s4.21,10.32,9.58,10.95v11.68ZM76.74,28c-.63.21-1.26-.21-1.47-.84-1.05-3.47-3.26-6.42-6.32-8.32-.32-.21-.42-.42-.53-.74-.11-.32,0-.63.11-.95.32-.53,1.05-.74,1.68-.42,3.58,2.21,6.21,5.68,7.37,9.68.21.74-.21,1.38-.84,1.59h0ZM81.37,26.74c-.63.21-1.26-.21-1.47-.84-1.37-4.74-4.32-8.74-8.53-11.26-.32-.21-.42-.42-.53-.74s0-.63.11-.95c.32-.53,1.05-.74,1.68-.42,4.74,2.84,8.11,7.37,9.58,12.63.21.74-.21,1.48-.84,1.58h0Z"/></svg><strong class="callout-title">Take It for a Spin</strong></p>
+</div>
+<div class="paragraph">
+<p>When you see <strong>Take It for a Spin</strong>, it&#8217;s a good time to open your IDE and write some code. In some cases, these markers also indicate the spot where you have learned enough to complete a practice assignment for class.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>At the end of each chapter, <strong>Check Yourself Before You Wreck Yourself (on the assignments)</strong> provides a few questions to help you review the material.</p>
+</li>
+<li>
+<p>You can find sample answers to these questions at the very end of the eBook, in the <a href="#_liner_notes">[_liner_notes]</a> section.</p>
+</li>
+<li>
+<p>There are some topics that I think are important or useful but fall outside the scope of the course. These optional or expanded topics are marked with a <strong>Deep Cut</strong>, with links to additional information, either on an external website or in the <a href="#deep-cuts">[deep-cuts]</a> section at the end of the book.</p>
+<div class="exampleblock callout dc">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="dc-icon" viewBox="0 0 274.1 276.86" width="1em" height="1em" fill="currentColor"><path d="M148.45,139.81c0-6.21-5.18-11.39-11.39-11.39s-11.39,5.18-11.39,11.39,5.18,11.39,11.39,11.39,11.39-5.18,11.39-11.39Z"/><path d="M220.6,121.86l-21.75,21.75,5.52,5.52-7.94,8.29c-2.08,2.08-2.08,5.18,0,7.25,1.04,1.04,2.42,1.38,3.45,1.38,1.38,0,2.77-.69,3.79-1.73l7.94-8.29,4.14,4.14,21.75-21.75-4.47-3.79,16.91-17.26c1.04-1.04,1.38-2.42,1.38-3.45V5.18c.01-2.77-2.41-5.18-5.16-5.18s-5.18,2.42-5.18,5.18v106.68l-15.19,15.54-5.19-5.53h0Z"/><path d="M258.23,75.26v38.66c0,3.11-1.38,6.21-3.45,8.29l-12.09,12.43,4.48,4.48-31.41,31.41-4.14-4.14-3.11,3.11c-2.42,2.42-5.52,3.79-8.63,3.79s-6.21-1.38-8.29-3.45c-4.83-4.48-4.83-12.43-.35-16.91l3.45-3.45-5.52-5.52,31.41-31.41,5.18,5.18,8.29-8.63V42.81C209.21,17.96,175.03,2.76,137.06,2.76c-75.6,0-137.06,61.45-137.06,137.05s61.45,137.05,137.05,137.05,137.05-61.45,137.05-137.05c0-23.12-5.87-45.22-15.87-64.56h0ZM196.09,192.98c2.42,2.42,2.08,6.21-.35,8.63-15.19,14.5-35.56,22.79-56.61,23.47-3.11,0-5.87-2.77-6.21-5.87,0-3.45,2.42-6.21,5.87-6.21,18.29-.35,35.56-7.6,48.68-20.02,2.41-2.42,6.2-2.42,8.62,0h0ZM65.25,71.11c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21,0-8.63,20.02-19.33,46.26-30.03,73.88-30.72,3.45-.35,6.21,2.77,6.21,5.87,0,3.45-2.77,6.21-5.87,6.21-24.51.35-47.99,10.01-65.59,27.27-1.05,1.4-2.77,1.73-4.15,1.73h0ZM82.51,88.38c-1.73,0-3.11-.69-4.48-1.73-2.42-2.42-2.08-6.21.35-8.63,15.19-14.5,35.56-22.79,56.61-23.47,3.11-.35,6.21,2.42,6.21,5.87s-2.42,6.21-5.87,6.21c-18.29.35-35.56,7.6-48.68,20.02-1.02,1.04-2.75,1.73-4.14,1.73h0ZM94.93,139.81c0-23.12,18.99-42.12,42.12-42.12s42.12,18.99,42.12,42.12-18.99,42.12-42.12,42.12-42.12-19-42.12-42.12ZM213,218.87c-20.02,19.33-46.26,30.03-73.88,30.72-3.45,0-5.87-2.77-6.21-5.87,0-3.45,2.77-6.21,5.87-6.21,24.51-.35,47.99-10.01,65.59-27.27,2.42-2.42,6.21-2.08,8.63,0,2.42,2.42,2.42,6.21,0,8.63h0Z"/></svg><strong class="callout-title">Deep Cut</strong></p>
+</div>
+<div class="paragraph">
+<p>These generally add a little extra to skills/concepts in the eBook and videos. Since I&#8217;ve intentionally kept the content pretty minimal, I&#8217;ve left out all kinds of interesting and useful stuff. Assignments and quizzes will not include these topics, but these are things I expand on at the end of the book.</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All coursework (assignments and quizzes) will be in Canvas. I make an effort to align assignments to the content in the eBook, so the examples in the eBook and videos should help.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_related_resources">Related Resources</h3>
+<div class="paragraph">
+<p>In general, this book includes resources within each chapter. The following links collect those resources so you can find them when necessary.</p>
+</div>
+<div class="paragraph">
+<p>GitHub landing page: <a href="https://timmcmichael.github.io" target="_blank" rel="noopener">https://timmcmichael.github.io</a></p>
+</div>
+<div class="paragraph">
+<p>YouTube channel: <a href="https://www.youtube.com/@ProfTimEMCC" target="_blank" rel="noopener">@ProfTimEMCC</a></p>
+</div>
+<div class="paragraph">
+<p>Course YouTube playlist: <a href="https://www.youtube.com/playlist?list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" target="_blank" rel="noopener">Object-Oriented Programming Fundamentals (CIS150AB)</a></p>
+</div>
+<div class="sect3">
+<h4 id="_source_code_files">Source code files:</h4>
+<div class="paragraph">
+<p>The source code files shown in the eBook and videos are available on GitHub; a link at the beginning of each chapter will take you to the appropriate folder in the repository.
+If you have trouble finding something (or using the GitHub site), please contact me at <a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a> or in Canvas.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GitHub Repository: <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/OOP%20with%20Java%20(CIS150AB)" target="_blank" rel="noopener">https://github.com/timmcmichael/EMCCTimFiles/tree/main/OOP%20with%20Java%20(CIS150AB)</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setting_up_your_programming_environment">Setting Up Your Programming Environment</h3>
+<div class="paragraph">
+<p>Our goal is to learn the fundamentals of <strong>object-oriented programming</strong> using the <strong>Java</strong> programming language.
+You might not even know what those things mean yet, but to get started you&#8217;ll need a couple of things installed on your computer.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Java Development Kit (JDK)</dt>
+<dd>
+<p>A collection of software, used to develop Java programs. Most importantly, it includes a <strong>compiler</strong>.</p>
+</dd>
+<dt class="hdlist1">Integrated Development Environment (IDE)</dt>
+<dd>
+<p>An application used to write and test source code.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>These two tools can be used on pretty much any laptop or desktop computer, even if it&#8217;s not very powerful.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Java development on a Chromebook or iPad is tricky and not recommended for beginners. Use a different computer if at all possible.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The Canvas course includes some options for students who don&#8217;t have a computer capable of running the necessary software.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_install_the_java_development_kit">Install the Java Development Kit</h3>
+<div class="paragraph">
+<p>I recommend installing the JDK available at <a href="https://adoptium.net" class="bare">https://adoptium.net</a>, and the Oracle JDK is another great option.
+The linked documents below provide detailed installation instructions&#8212;&#8203;but if they are outdated at the moment, there are about a gazillion web pages and Youtube videos that will show you the process.
+I recommend installing the JDK before installing your IDE.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://drive.google.com/open?id=1yBFhti2juLLc-GNuxSwj1HBFjxxQL8LMwUBYOLPcUbA&amp;usp=drive_copy" target="_blank" rel="noopener">Install JDK on Windows</a></p>
+</li>
+<li>
+<p><a href="https://drive.google.com/open?id=1lTWz0KQkn3CbfjF4CICLNWpKhO9GedGhkO-SAHPkwAU&amp;usp=drive_copy" target="_blank" rel="noopener">Install JDK on macOS</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_install_an_ide">Install an IDE</h3>
+<div class="paragraph">
+<p>A computer program is created by writing <strong>source code</strong>, which is just text and can be created using any text editor.
+However, developing programs with something like Notepad or TextEdit&#8212;&#8203;which come with Windows and macOS, respectively&#8212;&#8203;means going through some potentially confusing (or at least intimidating) steps each time you want to run your program.
+Though IDEs do much more, the most important thing they do for beginners is give you a "run" button you can press whenever you want to test your code.</p>
+</div>
+<div class="paragraph">
+<p>You can definitely write Java programs without using an IDE, but it&#8217;s kinda like getting engaged to someone you&#8217;ve only ever met online: just because it turns out okay for some people doesn&#8217;t mean it&#8217;s a good idea for you.
+The only people who should write code without an IDE already know too much about programming to be wasting their time reading this book.</p>
+</div>
+<div class="paragraph">
+<p>There are many great IDEs out there, including many free options, and ultimately it doesn&#8217;t matter which one you use: they all produce the same files, and a person looking at the files can&#8217;t tell what IDE you used.
+It&#8217;s like choosing between Word and Google Docs; each has strengths and weaknesses, but you can write romantic poems about your online fiancé (or fiancée) in either one.</p>
+</div>
+<div class="paragraph">
+<p>I primarily use Visual Studio Code ("VS Code"), so that&#8217;s what you&#8217;ll see in most of my videos.
+It&#8217;s completely free and is available for Windows, macOS, and Linux.
+You can download it at <a href="https://code.visualstudio.com" class="bare">https://code.visualstudio.com</a>, and the videos below walk through installing VS Code and the tools it needs for Java development.
+I recommend installing a JDK (see previous section) prior to installing an IDE.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Visual Studio <strong>Code</strong> is not the same as Visual Studio! There&#8217;s a free version of Visual Studio (called Visual Studio Community) but it&#8217;s not intended to be used with Java.
+You&#8217;re going to want Visual Studio Code (aka "VS Code") for your Java coding.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once you&#8217;ve installed the JDK above, install the IDE you are going to use to learn Java.
+There&#8217;s nothing wrong with trying out multiple IDEs to find out which one you prefer.
+Other popular options include <a href="https://eclipseide.org/">eclipse</a>, <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>, and <a href="https://netbeans.apache.org">Apache NetBeans</a>, and they all have free versions that are great for learning Java.</p>
+</div>
+<div class="paragraph">
+<p>But my recommendation is to install VS Code.</p>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Installing VS Code on Windows for Java</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/Pkj6n3UVXEI?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Note: If you are on a school-issued laptop, or are having trouble with the Windows installer, you can also install from the Windows app store:
+<a href="https://youtu.be/Z8AY1sjUH4M?si=jDOYQJq0JbtRCMNM">Installing VS Code on Windows from Microsoft Store</a></em></p>
+</div>
+<div class="paragraph video-title">
+<p>Installing VS Code on macOS for Java</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/DrV5vcvIyR0?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you&#8217;ve installed the JDK and VS Code (along with the Java extensions), you&#8217;re ready to create your first program.</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="paragraph subtitle">
+<p>Review Questions</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What does "JDK" stand for?</p>
+</li>
+<li>
+<p>What is an example of an Integrated Development Environment?</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in the <a href="#soundcheck-chapter">Liner Notes</a></em>.
+:sectnums:</p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>↑ Up: <a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a> | Next: <a href="_computers_and_coding.html">Computers and Coding</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-04-26<br />
+        09:04:33 -0700<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
