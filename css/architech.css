@@ -54,7 +54,8 @@ h6 {
 
 h2,
 h3,
-h4 h5,
+h4,
+h5,
 h6 {
   color: var(--secondarycolor) !important;
 }
@@ -130,7 +131,7 @@ mark {
 }
 
 /* Table styles */
-th {
+/* th {
   background-color: var(--maincolor);
   color: var(--black) !important;
 }
@@ -138,7 +139,18 @@ th {
 td:not(.listingblock .content pre td) {
   background-color: var(--maincolor);
   color: var(--black) !important;
+} */
+
+/* Header row in tables */
+table thead th {
+  color: var(--secondarycolor) !important;
+  font-family: var(--heading-font);
+  font-size: 1.5em !important;
+  font-weight: bold !important;
+  padding-top: 0.1em !important;
+  padding-bottom: 0.1em !important;
 }
+
 
 #toc.toc2 {
   background-color: var(--sidebarbackground);
@@ -305,27 +317,21 @@ video {
   /* font-weight: bold; */
 }
 
-/* Below no longer needed? */
-/* .callout.table {
-  width: 100%;
-}
-
-.callout.dc td:first-child,
-.callout.bs td:first-child {
-  text-align: center;
-  vertical-align: middle;
-  padding-right: 1em;
-  line-height: 1.2;
-}
-
-.callout.dc td,
-.callout.bs td {
-  vertical-align: middle;
-  background-color: #fffef7 !important;
-} */
 
 /* code listing callout numbers */
 .conum {
   background-color: blue !important;
   color: #000 !important;
+}
+
+/* fixing line number mismatch */
+/* Sync the line numbers and code */
+.linenotable pre {
+  line-height: 1.4;
+  /* or whatever looks best */
+}
+
+.code pre {
+  line-height: 1.4 !important;
+  /* or whatever looks best */
 }

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<title>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</title>
+<link rel="stylesheet" href="./css/architech-light.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+             .nav-footer{text-align: center; margin-top: auto;}
+             .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="_liner_notes" class="article toc2 toc-left">
+<head>
+  <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+  <!-- TODO: Keep link to font awesome? -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div>
+<div id="header">
+<h1>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a></span></p><ul class="sectlevel1">
+<li><a href="_soundcheck.html">Soundcheck</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_classes_and_objects.html">4. Classes and Objects</a>
+</li>
+<li><a href="_decisions.html">5. Decisions</a>
+</li>
+<li><a href="_loops.html">6. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">7. Debugging and Generative AI</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_liner_notes.html"><span class="toc-current">Liner Notes</span></a>
+<ul class="sectlevel2">
+<li><a href="_liner_notes.html#soundcheck-chapter">Soundcheck</a>
+</li>
+<li><a href="_liner_notes.html#computers-and-coding">1. Computers and Coding</a>
+</li>
+<li><a href="_liner_notes.html#variables-and-data-types">2. Variables and Data Types</a>
+</li>
+<li><a href="_liner_notes.html#methods">3. Methods</a>
+</li>
+<li><a href="_liner_notes.html#classes-and-objects">4. Classes and Objects</a>
+</li>
+<li><a href="_liner_notes.html#decisions-chapter">5. Decisions</a>
+</li>
+<li><a href="_liner_notes.html#loops-chapter">6. Loops</a>
+</li>
+<li><a href="_liner_notes.html#debugging-and-generative-ai">7. Debugging and Generative AI</a>
+</li>
+<li><a href="_liner_notes.html#_8_arrays">8. Arrays</a>
+</li>
+</ul>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_liner_notes">Liner Notes</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p>Sample answers to "Check Yourself&#8230;&#8203;" questions</p>
+</div>
+<div class="paragraph">
+<p>When you buy an album on vinyl, the liner notes (or "jacket notes") are the information that&#8217;s printed on the back of the sleev or, for music on CD or cassette, in a booklet inside the plastic case.
+Basic liner notes are just the song titles, and the names of the artists and producers.
+But sometimes you get lucky, and the liner notes have blurbs written by the artists, or maybe even the complete lyrics to the songs.
+In other words, a cheat sheet that really helps you understand the music.</p>
+</div>
+<div class="paragraph">
+<p>These liner notes have answers and basic explanations to the <em>Check Yourself&#8230;&#8203;</em> questions from the chapters.
+These aren&#8217;t meant to be comprehensive answers, just a little information so you can confirm you&#8217;re&#8230;&#8203;well, I hate to say it, but&#8230;&#8203;on the right <em>track</em>.</p>
+</div>
+<div class="paragraph">
+<p>The review questions are intended to be a little open-ended, so your answers will vary from these.</p>
+</div>
+<div class="sect2">
+<h3 id="soundcheck-chapter">Soundcheck</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What does JDK stand for?</strong></em></p>
+<p>Java Development Kit</p>
+</li>
+<li>
+<p><em><strong>What is an example of an Integrated Development Environment?</strong></em></p>
+<p>Visual Studio Code, eclipse, IntelliJ, and many others.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="computers-and-coding">1. Computers and Coding</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is the primary role of a programming language in the context of computer programming?</strong></em></p>
+<p>The primary role of a programming language is to act as a bridge between human language and machine language. It allows humans to write instructions in a way that is easier for them to understand and use, which can then be accurately translated into machine language that a computer can execute.</p>
+</li>
+<li>
+<p><em><strong>What happens when you run a C# program? Describe that process in simple terms.</strong></em></p>
+<p>When you run a C# program, your code gets compiled (translated) into something the computer can understand, then the computer follows your instructions step by step and shows the results (like printing text or doing math).</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s the difference between Console.Write() and System.out.println()? When would you use each?</strong></em></p>
+<p>Console.Write() prints text and keeps the cursor on the same line. System.out.println() prints text and moves the cursor to a new line. Use Write() when you want output to continue on the same line, and WriteLine() when you want it to start a new line afterward.</p>
+</li>
+<li>
+<p><em><strong>How would you explain what a “program” is to an 8-year-old?</strong></em></p>
+<p>A program is like a list of instructions you give to a computer—kind of like a recipe. The computer follows the steps exactly to do something, like showing a message or solving a puzzle.</p>
+</li>
+<li>
+<p><em><strong>Explain the difference between compiled and interpreted programming languages. Describe how C# is both compiled *and</strong> interpreted.*</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Compiled languages</strong> are those where the source code is translated into machine language by a compiler before the program is run. This machine language file can then be executed directly by the computer. An example of a compiled language is C.</p>
+</li>
+<li>
+<p><strong>Interpreted languages</strong> are those where the source code is translated into machine language on the fly, as the program is running, by an interpreter. An example of an interpreted language is Python.</p>
+</li>
+<li>
+<p><strong>C#</strong> is a somewhat unique case, as it is both compiled and interpreted. The source code is first compiled into an intermediate language called CIL, which is then interpreted by the .NET runtime (CLR) when the program is executed. This allows C# to have some of the performance benefits of compiled languages while still being able to run on different platforms.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="variables-and-data-types">2. Variables and Data Types</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is a variable, and why do we use them in programming?</strong></em></p>
+<p>A variable is a named storage location in a program that holds a value which can change as the program runs. We use variables to store, update, and reuse data.</p>
+</li>
+<li>
+<p><em><strong>Which C# data type would you use for each of the following?</strong></em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The number of people in The Rolling Stones</strong> → <code>int</code></p>
+</li>
+<li>
+<p><strong>The full name of the Rolling Stones' drummer</strong> → <code>string</code></p>
+</li>
+<li>
+<p><strong>Whether the Stones are a great band (yes or no)</strong> → <code>bool</code></p>
+</li>
+<li>
+<p><strong>The price of <em>Sticky Fingers</em> on vinyl</strong> → <code>double</code></p>
+</li>
+<li>
+<p><strong>Mick Jagger&#8217;s middle initial (it&#8217;s P, incidentally)</strong> → <code>char</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em><strong>Write a line of code that declares a variable named importantYear and sets it to 1964.</strong></em></p>
+<div class="paragraph">
+<p>[source,java]int importantYear = 1964;</p>
+</div>
+</li>
+<li>
+<p><em><strong>What will the following code print? Why?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">string leadGuitarist </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Brian Jones&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">leadGuitarist </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Mick Taylor&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">leadGuitarist </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Ronnie Wood&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(leadGuitarist);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code will print "Ronnie Wood" because the variable <code>leadGuitarist</code> is first set to <a href="https://en.wikipedia.org/wiki/Brian_Jones" target="_blank" rel="noopener">"Brian Jones"</a> and then changed to <a href="https://en.wikipedia.org/wiki/Mick_Taylor" target="_blank" rel="noopener">"Mick Taylor"</a>. Then it is changed to "Ronnie Wood". The most recent value assigned to the variable is what gets printed.</p>
+</div>
+</li>
+<li>
+<p><em><strong>What happens if you try to store a word (like "hello") in a variable declared as int?</strong></em></p>
+<p>The program will not compile. You can&#8217;t assign a value of one data type to a variable of another (incompatible) data type. You also can&#8217;t change the data type of a variable after you&#8217;ve declared it.</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s wrong with this variable name: <code>19thNervousBreakdown</code>?</strong></em></p>
+<p>A Java variable name can&#8217;t start with a number. You could call it <code>nineteenthNervousBreakdown</code> instead.</p>
+</li>
+<li>
+<p><em><strong><em>True</em> or <em>False</em>: You must always assign a value to a variable at the same time you declare it</strong></em></p>
+<p><strong>False.</strong> You can declare a variable and assign a value to it later:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums;</span>
+<span style="color: #f8f8f2">albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">;</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>What are compound assignment operators in Java? Provide examples of how they are used in arithmetic operations.</strong></em></p>
+<p>Compound assignment operators combine an arithmetic operation with assignment. Examples:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numStones </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">numStones </span><span style="color: #ff4689">-=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Rest in peace, Charlie Watts!</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>Write a short program that asks for the user&#8217;s name and the number of Rolling Stones albums they own, and then prints a personalized message like: “Hello Bianca, you have 5 Stones albums.”</strong></em></p>
+<div class="listingblock">
+<div class="title"><code>StonesGreeting.java</code></div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> java.util.Scanner;</span>
+
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">StonesGreeting</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        Scanner input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Scanner(System.</span><span style="color: #a6e22e">in</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;What is your name? &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        String name </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextLine</span><span style="color: #f8f8f2">();</span>
+
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;How many Rolling Stones albums do you own? &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextInt</span><span style="color: #f8f8f2">();</span>
+
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Hello &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;, you have &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> albums </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; Stones albums.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>Explain the purpose of the <code>Scanner</code> class in Java and provide an example of how it is used to get user input.</strong></em></p>
+<p>The <code>Scanner</code> class is used to read input from various sources, including the keyboard. It allows you to get user input and store it in variables.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="methods">3. Methods</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is a method, and why would you use one in your code?</strong></em></p>
+<p>A method is a named block of code that does something — like a mini-program inside your program. You use methods to organize your code, avoid repetition, and make your program easier to understand and manage. (Like reusable LEGO chunks.)</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s the difference between calling a method and defining a method?</strong></em></p>
+<p>Defining a method is writing what the method does. Calling a method is telling it to actually run. You define once, but can call it as many times as you want.</p>
+</li>
+<li>
+<p><em><strong>What does the keyword <code>void</code> mean in a method definition?</strong></em></p>
+<p><code>void</code> means the method doesn&#8217;t return anything. It just does something, like printing text, but doesn&#8217;t give a value back.</p>
+</li>
+<li>
+<p><em><strong>Consider the code below. a. What does it do? b. How would you call it to greet someone named "Darryl Jones"?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">greet</span><span style="color: #f8f8f2">(string name)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">($</span><span style="color: #e6db74">&quot;Hello, {name}!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #f8f8f2">greet(</span><span style="color: #e6db74">&quot;Darryl Jones&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>Why is it a good idea to define reusable code inside a method instead of copying and pasting it everywhere?</strong></em></p>
+<p>Defining reusable code inside a method is better than copying and pasting because it makes your code cleaner, easier to read, and less error-prone. If you need to change the code later, you only have to do it in one place instead of everywhere you pasted it. It also ensures that each copy of the code does the same thing, reducing the chance of mistakes.</p>
+</li>
+<li>
+<p><em><strong>Consider the code below. a. Overload the method by accepting the name of a band to introduce. b. Demonstrate how to call each version of the method.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">announceBand</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Ladies and gentlemen, The Beatles!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>Overloaded method:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">announceBand</span><span style="color: #f8f8f2">(string bandName)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">	System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Ladies and gentlemen, &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> bandName </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Calling each version:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">announceBand(); </span><span style="color: #959077">// Calls the original method</span>
+<span style="color: #f8f8f2">announceBand(</span><span style="color: #e6db74">&quot;The Rolling Stones&quot;</span><span style="color: #f8f8f2">); </span><span style="color: #959077">// Calls the overloaded method</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><em><strong>What happens if you define a method with a parameter but forget to provide an argument when you call it?</strong></em></p>
+<p>If you define a method with a parameter but forget to provide an argument when you call it, the program will not compile. The compiler will give an error because it expects an argument for the parameter.</p>
+</li>
+<li>
+<p><em><strong>What do we call the variable inside a method&#8217;s parentheses? How is it different from an argument?</strong></em></p>
+<p>The variable inside a method&#8217;s parentheses is called a <strong>parameter</strong>. It&#8217;s a placeholder for the value that will be passed to the method when it&#8217;s called. An <strong>argument</strong> is the actual value you provide when you call the method. For example, in <code>greet("Darryl Jones")</code>, "Darryl Jones" is the argument, and <code>name</code> in <code>greet(string name)</code> is the parameter.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="classes-and-objects">4. Classes and Objects</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>What is the primary difference between procedural programming and object-oriented programming (OOP)?</strong></dt>
+<dd>
+<p>Procedural programming organizes programs as a collection of tasks or methods that need to be performed in a specific order. In contrast, OOP organizes programs as a collection of interacting objects, each representing a real-world entity with attributes (data) and behaviors (methods).</p>
+</dd>
+<dt class="hdlist1"><strong>Explain the concept of a class and how it relates to objects in OOP.</strong></dt>
+<dd>
+<p>A class is a blueprint or template for creating objects. It defines the attributes and behaviors that the objects created from the class will have. An object is an instance of a class, meaning it is created with the fields and methods implemented in the class.</p>
+</dd>
+<dt class="hdlist1"><strong>What is encapsulation, and why is it important in OOP? Provide an example.</strong></dt>
+<dd>
+<p>Encapsulation is the concept of hiding the internal state of an object and requiring all interaction to be performed through the object&#8217;s methods. This is important because it protects the object&#8217;s data from unintended or harmful modifications. For example, in a bank account class, the balance field is private and can only be accessed or modified through a public getter method, and modified through public deposit and withdraw methods.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="decisions-chapter">5. Decisions</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>Explain what Boolean expressions are and how they are used to make decisions in Java.</strong></em></p>
+<p>Boolean expressions are statements that evaluate to either true or false. In Java, they are used to make decisions by determining which blocks of code to execute based on the evaluation of these expressions.</p>
+</li>
+<li>
+<p><em><strong>Explain the difference between a relational operator and a logical operator.</strong></em></p>
+<p>Relational operators compare two values and determine their relationship, such as equality (==), inequality (!=), less than (&lt;), and greater than (&gt;). Logical operators, on the other hand, combine multiple Boolean expressions to form a single, more complex expression, such as AND (&amp;&amp;), OR (||), and NOT (!).</p>
+</li>
+<li>
+<p><em><strong>What is the difference between an <code>if</code> statement and an <code>if-else</code> statement?</strong></em></p>
+<p>An if statement allows you to execute a block of code only if a certain condition is true. An if-else statement extends this by providing an alternative block of code to execute if the condition is false, allowing you to choose between two possible actions.</p>
+</li>
+<li>
+<p><em><strong>How can you write code that runs one code block from multiple options?</strong></em></p>
+<p>You can use a switch statement to run one code block from multiple options based on the value of an expression. Alternatively, you can use an if-else if structure to chain multiple if-else statements together, allowing you to handle more than two options.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="loops-chapter">6. Loops</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>Describe the difference between a while loop and a do-while loop.</strong></em></p>
+<p>A while loop checks the condition before executing the block of code, meaning the code might not execute at all if the condition is false initially. A do-while loop, on the other hand, checks the condition after executing the block of code, ensuring that the code is executed at least once.</p>
+</li>
+<li>
+<p><em><strong>What is a control variable, and how is it used in loops?</strong></em></p>
+<p>A control variable is a variable used to control the execution of a loop. It is typically initialized before the loop starts, checked in the loop&#8217;s condition to determine whether the loop should continue, and updated within the loop to eventually meet the condition that stops the loop.</p>
+</li>
+<li>
+<p><em><strong>Give an example of an indefinite loop.</strong></em></p>
+<p>An example of an indefinite loop is a program that asks the user to guess a number and keeps prompting the user until they guess correctly. The loop repeats until the user&#8217;s input matches the target number.
+Another example is a loop that reads user input until a specific sentinel value is entered, indicating the end of input.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="debugging-and-generative-ai">7. Debugging and Generative AI</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is the difference between a compile-time error and a runtime error?</strong></em></p>
+<p><strong>Compile-time errors</strong> occur when the compiler cannot translate the source code into machine code due to syntax or semantic issues. These errors must be fixed before the program can run. <strong>Runtime errors</strong>, on the other hand, occur during the execution of the program and are often due to logic errors, causing the program to behave unexpectedly or crash.</p>
+</li>
+<li>
+<p><em><strong>How can using output statements help in debugging a program?</strong></em></p>
+<p>Output statements, such as <code>print()</code> statements, allow you to monitor the values of variables and the flow of execution in your program. This visibility helps you pinpoint where things are going wrong, making it easier to identify and correct errors.</p>
+</li>
+<li>
+<p><em><strong>What are some strategies you can use when you&#8217;re frustrated by a bug in your code?</strong></em></p>
+<p>When you&#8217;re frustrated by a bug in your code, take a break to clear your mind and return with fresh eyes. Use output statements to track variables and execution flow, clean up your code for better readability, and break down the problem into smaller parts. If needed, seek help from others and stay patient, knowing that debugging is a valuable part of the learning process.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_8_arrays">8. Arrays</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is an array and how does it differ from a single variable?</strong></em></p>
+<p>An array is a data structure that allows you to store multiple pieces of data in a single collection. Unlike a single variable, which can only store one piece of data at a time, an array can hold multiple values, each of which is referred to as an element. Each element in an array is accessed using its unique index, which starts at 0 for the first element and increments by 1 for each subsequent element.</p>
+</li>
+<li>
+<p><em><strong>What is an ArrayIndexOutOfBoundsException and when does it occur?</strong></em></p>
+<p>An <code>ArrayIndexOutOfBoundsException</code> is a runtime error that occurs when you try to access an element at an index that is outside the bounds of the array. This means you are trying to access an index that is either less than 0 or greater than or equal to the length of the array. For example, if an array has 10 elements, valid indices are 0 through 9. Attempting to access the element at index 10 or higher will result in this exception.</p>
+</li>
+<li>
+<p><em><strong>How can loops be used to traverse an array? Provide an example of a for loop that sums the elements of an integer array.</strong></em></p>
+<p>Loops can be used to traverse an array by iterating through each element, performing operations such as reading, modifying, or accumulating values. Here is an example of a for loop that sums the elements of an integer array:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> scores </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> scores.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[</span><span style="color: #f8f8f2">i</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The sum of the scores is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> sum);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, the for loop iterates through each element of the scores array, adding each element&#8217;s value to the sum variable. After the loop completes, the total sum of the array elements is printed.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_arrays.html">Arrays</a> | ↑ Up: <a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a> | Next: <a href="_acknowledgements.html">Acknowledgements</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-04-27<br />
+        20:01:55 -0700<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
