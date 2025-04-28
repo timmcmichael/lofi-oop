@@ -50,6 +50,10 @@
 </li>
 <li><a href="_arrays.html">8. Arrays</a>
 </li>
+<li><a href="_inheritance.html">9. Inheritance</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">10. Graphical User Interfaces</a>
+</li>
 <li><a href="_liner_notes.html"><span class="toc-current">Liner Notes</span></a>
 <ul class="sectlevel2">
 <li><a href="_liner_notes.html#soundcheck-chapter">Soundcheck</a>
@@ -68,7 +72,11 @@
 </li>
 <li><a href="_liner_notes.html#debugging-and-generative-ai">7. Debugging and Generative AI</a>
 </li>
-<li><a href="_liner_notes.html#_8_arrays">8. Arrays</a>
+<li><a href="_liner_notes.html#arays-chapter">8. Arrays</a>
+</li>
+<li><a href="_liner_notes.html#inheritance-chapter">9. Inheritance</a>
+</li>
+<li><a href="_liner_notes.html#gui-chapter">10. Graphical User Interfaces</a>
 </li>
 </ul>
 </li>
@@ -454,7 +462,7 @@ Another example is a loop that reads user input until a specific sentinel value 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_8_arrays">8. Arrays</h3>
+<h3 id="arays-chapter">8. Arrays</h3>
 <div class="qlist qanda">
 <ol>
 <li>
@@ -491,16 +499,62 @@ Another example is a loop that reads user input until a specific sentinel value 
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="inheritance-chapter">9. Inheritance</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is inheritance in object-oriented programming, and what are its benefits</strong></em></p>
+<p>Inheritance is a feature in object-oriented programming that allows a class (subclass) to inherit attributes and methods from another class (superclass), promoting code reuse and organization by enabling the creation of hierarchical relationships between classes.</p>
+</li>
+<li>
+<p><em><strong>How do you override a method in a subclass, and why might you want to do this?</strong></em></p>
+<p>To override a method in a subclass, you define a method in the subclass with the same name, return type, and parameters as the method in the superclass. This allows the subclass to provide a specific implementation of the method, which can be used to customize or extend the behavior of the inherited method.</p>
+</li>
+<li>
+<p><em><strong>Explain how to use the <code>super</code> keyword in a constructor.</strong></em></p>
+<p>The super keyword is used in a subclass constructor to call the constructor of its superclass. This must be the first statement in the subclass constructor and is used to ensure that the superclass is properly initialized before the subclass adds its own initialization code. For example: super(parameter1, parameter2);.</p>
+</li>
+<li>
+<p><em><strong>Explain how different subclasses can be managed in a single array.</strong></em></p>
+<p>Different subclasses can be managed in a single array by declaring the array to be of the type of their common superclass. This allows the array to hold instances of any subclass, enabling polymorphism. For example, an array of type <code>BankAccount</code> can hold instances of both <code>CheckingAccount</code> and <code>SavingsAccount</code>, and common methods can be called on these instances through the superclass reference.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="gui-chapter">10. Graphical User Interfaces</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is a Graphical User Interface (GUI) and why is it important for end users?</strong></em></p>
+<p>A Graphical User Interface (GUI) is a type of user interface that allows users to interact with electronic devices using graphical elements such as windows, icons, and buttons, rather than text-based commands. It is important for end users because it makes software more accessible and easier to use, especially for those who are not familiar with command-line interfaces.</p>
+</li>
+<li>
+<p><em><strong>Explain the role of the Swing library in Java and why it is preferred for beginners over JavaFX.</strong></em></p>
+<p>The Swing library in Java provides a set of pre-built GUI components that developers can use to create graphical user interfaces. It is preferred for beginners over JavaFX because it is simpler to use, does not require additional installations, and the concepts learned in Swing can be easily transferred to JavaFX.</p>
+</li>
+<li>
+<p><em><strong>Describe the process of creating a simple GUI using Swing, including the main components involved.</strong></em></p>
+<p>To create a simple GUI using Swing, you start by importing the necessary Swing classes, then instantiate a JFrame object to serve as the main window. You can set attributes like the title and size of the window, and add other components such as JLabel, JButton, and JTextField to the frame. Finally, you make the frame visible by calling the setVisible(true) method.</p>
+</li>
+<li>
+<p><em><strong>What is event-driven programming in the context of GUIs, and how does it differ from console-based programming?</strong></em></p>
+<p>Event-driven programming in the context of GUIs involves writing code that responds to user actions, such as clicking a button or entering text. This is different from console-based programming, where the program runs sequentially from top to bottom and waits for user input at specific points. In event-driven programming, the program continuously listens for events and executes the corresponding event handlers when an event occurs.</p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="_arrays.html">Arrays</a> | ↑ Up: <a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a> | Next: <a href="_acknowledgements.html">Acknowledgements</a> →</p>
+<p>← Previous: <a href="_graphical_user_interfaces.html">Graphical User Interfaces</a> | ↑ Up: <a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a> | Next: <a href="_acknowledgements.html">Acknowledgements</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Nanker Phelge Edition,&nbsp;revised&nbsp;2025-04-27<br />
-        20:01:55 -0700<br />
+        20:40:16 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

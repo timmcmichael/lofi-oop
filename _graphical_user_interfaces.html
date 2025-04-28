@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<title>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</title>
+<link rel="stylesheet" href="./css/architech-light.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+             .nav-footer{text-align: center; margin-top: auto;}
+             .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="_graphical_user_interfaces" class="article toc2 toc-left">
+<head>
+  <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+  <!-- TODO: Keep link to font awesome? -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<div id="header">
+  <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div>
+<div id="header">
+<h1>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Track Listing</div>
+<p><span class="toc-root"><a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a></span></p><ul class="sectlevel1">
+<li><a href="_soundcheck.html">Soundcheck</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_classes_and_objects.html">4. Classes and Objects</a>
+</li>
+<li><a href="_decisions.html">5. Decisions</a>
+</li>
+<li><a href="_loops.html">6. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">7. Debugging and Generative AI</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_inheritance.html">9. Inheritance</a>
+</li>
+<li><a href="_graphical_user_interfaces.html"><span class="toc-current">10. Graphical User Interfaces</span></a>
+<ul class="sectlevel2">
+<li><a href="_graphical_user_interfaces.html#_whats_the_point_10">What&#8217;s the Point?</a>
+</li>
+<li><a href="_graphical_user_interfaces.html#_graphical_user_interfaces_2">10.1. Graphical User Interfaces</a>
+</li>
+<li><a href="_graphical_user_interfaces.html#_the_swing_library">10.2. The Swing Library</a>
+</li>
+<li><a href="_graphical_user_interfaces.html#_event_driven_programming_with_swing">10.3. Event-Driven Programming with Swing</a>
+</li>
+<li><a href="_graphical_user_interfaces.html#_processing_user_input_with_swing">10.4. Processing User Input with Swing</a>
+</li>
+<li><a href="_graphical_user_interfaces.html#_widgets">10.5. Widgets</a>
+</li>
+<li><a href="_graphical_user_interfaces.html#_gui_layouts">10.6. GUI Layouts</a>
+</li>
+<li><a href="_graphical_user_interfaces.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_11">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_graphical_user_interfaces">10. Graphical User Interfaces</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p><span title='This is "Chapter Ten" in binary (base 2)'>Chapter 1010 <sub>2</sub></span></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Help Make These Materials Better!</div>
+<div class="paragraph">
+<p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://forms.gle/4173pZ1yPuNX7pku6" target="_blank" rel="noopener">CIS150AB Course Materials Feedback (Google Form)</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whats_the_point_10">What&#8217;s the Point?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify the characteristics of a GUI</p>
+</li>
+<li>
+<p>Understand the role of the Swing library</p>
+</li>
+<li>
+<p>Create a GUI using Swing widgets</p>
+</li>
+<li>
+<p>Create event handlers that interact with widgets</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs" target="_blank" rel="noopener">GitHub</a>.</em></p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_graphical_user_interfaces_2">10.1. Graphical User Interfaces</h3>
+<div class="paragraph">
+<p>Until now, we&#8217;ve been creating <em>console applications</em>, in which the entire user interface is text-based.
+Though many utility applications are text-based, those are generally used by "power users," software developers, and system administrators.
+End users are used to applications that rely graphical elements to interact with the user.
+This is called a <em>graphical user interface</em>, which is abbreviated as <em>GUI</em> and pronounced "gooey."</p>
+</div>
+<div class="paragraph">
+<p>GUIs on desktop and laptop computers have elements like windows, buttons, text fields, and checkboxes, and the user interacts using a mouse or touchpad.
+These GUI elements are called <em>widgets</em> or <em>controls</em>. Mobile applications have similar widgets, but they are designed for touchscreens and are generally more simplified than desktop applications.</p>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Intro to GUIs</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/ghe5TA1qA28?rel=0&amp;list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_swing_library">10.2. The Swing Library</h3>
+<div class="paragraph">
+<p>The code required to create and display a functioning GUI is complex and far beyond our current skills, but we can use pre-built GUI widgets written by other developers.
+These are typically bundled into <em>libraries</em>, or <em>frameworks</em>, that we can use in our own programs.
+The two most common GUI frameworks for Java are called <em>Swing</em> and <em>JavaFX</em>; we&#8217;ll use Swing in this course because it&#8217;s a little simpler for beginners and does not require any additional installations.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+JavaFX is newer and more powerful than Swing, but it&#8217;s also more complex and has a steeper learning curve. The concepts learned in Swing will transfer to JavaFX, so learning Swing is a great place to start. Plus, we don&#8217;t need to install anything extra to use it.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To use Swing classes, we simply need to add an <code>import</code> statement at the top of our Java file:</p>
+</div>
+<div class="paragraph">
+<p>[source,java]import javax.swing.*;</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll begin by instantiating a <code>JFrame</code> object, which is the main window of our application.
+We can use setters on the <code>JFrame</code> object to set attributes like the title and size of the window; we&#8217;ll also want to set the attribute that determines what happens when the user closes the window.
+We can then add other widgets to the frame, like buttons, text fields, and labels.
+Finally, we&#8217;ll set the frame to be visible, which will cause the window to appear on the screen.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 10.1 - A simple "Hello World!" GUI using Swing</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> javax.swing.*;</span>
+
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">BasicGUI</span><span style="color: #f8f8f2"> {</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        JFrame frame </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> JFrame(</span><span style="color: #e6db74">&quot;Hello, World!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        frame.</span><span style="color: #a6e22e">setSize</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">300</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">200</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        frame.</span><span style="color: #a6e22e">setDefaultCloseOperation</span><span style="color: #f8f8f2">(JFrame.</span><span style="color: #a6e22e">EXIT_ON_CLOSE</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        JLabel lblHello </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> JLabel(</span><span style="color: #e6db74">&quot;It&#39;s so gooey!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        frame.</span><span style="color: #a6e22e">add</span><span style="color: #f8f8f2">(lblHello);</span>
+<span style="color: #f8f8f2">        frame.</span><span style="color: #a6e22e">setVisible</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This code creates a window with the title "Hello, World!" and a label that says "It&#8217;s so gooey!".</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>JFrame.EXIT_ON_CLOSE</code> attribute tells the program to exit when the user closes the window. If this attribute is not set, the program will continue running in the background after the window is closed. There are a few other options for this attribute, but <code>EXIT_ON_CLOSE</code> is the most common.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/chapter10/basic-gui.png" alt="Basic GUI" width="450">
+</div>
+<div class="title">Figure 10.1 - Screenshot of <code>BasicGUI.java</code> in action on macOS.</div>
+</div>
+<div class="paragraph">
+<p>As you can see, the code to create a simple GUI is a little more complex than the single <code>println()</code> statement of an equivalent console application, which is why we&#8217;ve waited until now to learn it.</p>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Intro to Swing in Java</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/djh5Cd0cPmA?rel=0&amp;list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/SimpleGUI.java" target="_blank" rel="noopener"><code>SimpleGUI.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/SimpleGUIFinished.java" target="_blank" rel="noopener"><code>SimpleGUIFinished.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_event_driven_programming_with_swing">10.3. Event-Driven Programming with Swing</h3>
+<div class="paragraph">
+<p>A GUI application offers a lot more flexibility than a console application, since the user can interact with the program in many ways.
+In a console application, the program runs from top to bottom, and the user can only interact by typing text.
+In a GUI application, the user can click buttons, type in text fields, and select items from drop-down lists.
+This means that the program must be able to respond to these events; we call this <em>event-driven programming</em>, and it is a key concept in GUI programming.</p>
+</div>
+<div class="paragraph">
+<p>In Swing, we can add <em>event listeners</em> to widgets, which are objects that respond to events.
+For example, we can add an event listener to a button that will run a method when the button is clicked.
+The method that runs in response to an event is called an <em>event handler</em>.
+Once we&#8217;ve added an event listener to a widget, the event handler is like any other method in our program, and we can write it to do whatever we want.</p>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Swing Event Handling</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/rsZ6f-twWfI?rel=0&amp;list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/GreetingFrame.java" target="_blank" rel="noopener"><code>GreetingFrame.java</code></a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Note: there is no starter code for this video.</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_processing_user_input_with_swing">10.4. Processing User Input with Swing</h3>
+<div class="paragraph">
+<p>Once we&#8217;ve learned how to work with widgets and add event listeners, we can put everything together to create a GUI application that gets input from the user, performs actions or calculations with that data, and displays the results.</p>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Calculations in Swing</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/dJfuwUfRczI?rel=0&amp;list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/GUICalculations.java" target="_blank" rel="noopener"><code>GUICalculations.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/GUICalculationsFinished.java" target="_blank" rel="noopener"><code>GUICalculationsFinished.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_widgets">10.5. Widgets</h3>
+<div class="paragraph">
+<p>Using <code>JLabel</code> and <code>JTextField</code>, we&#8217;ve been about to create GUI programs that function much like console applications, but that doesn&#8217;t really take advantage of the power of GUIs.
+A well-designed GUI application utilizes specialized widgets that are designed for specific types of user input and output.</p>
+</div>
+<div class="paragraph">
+<p>Here are some common widgets and their purposes:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">JLabel</dt>
+<dd>
+<p>Displays text or an image.</p>
+</dd>
+<dt class="hdlist1">JTextField</dt>
+<dd>
+<p>Allows the user to type in a single line of text.</p>
+</dd>
+<dt class="hdlist1">JTextArea</dt>
+<dd>
+<p>Allows the user to type in multiple lines of text.</p>
+</dd>
+<dt class="hdlist1">JButton</dt>
+<dd>
+<p>A clickable button that can run a method when clicked.</p>
+</dd>
+<dt class="hdlist1">JCheckBox</dt>
+<dd>
+<p>A checkbox that can be checked or unchecked.</p>
+</dd>
+<dt class="hdlist1">JRadioButton</dt>
+<dd>
+<p>A radio button that can be selected or deselected, and can be grouped with other radio buttons to limit the user to selecting only one.</p>
+</dd>
+<dt class="hdlist1">JComboBox</dt>
+<dd>
+<p>A drop-down list that allows the user to select one item from a list.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>There are many more widgets in the Swing framework, but these will cover most of what you&#8217;ll need for basic GUI applications.
+There is a great deal of documentation available online for the Swing framework, so you can always look up how to use a specific widget.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Use widgets as they are intended, even if they are able to be used in other ways, such as displaying output in a text field. Users are accustomed to certain behaviors from widgets, and using them in unexpected ways can make the application harder to use.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_widget_naming_conventions">10.5.1. Widget Naming Conventions</h4>
+<div class="paragraph">
+<p>When naming widgets, it&#8217;s a good idea to use a consistent naming convention that makes it clear what type of widget it is.
+There are a variety of conventions for naming widgets, but two are most common:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prefix the name to identify the widget type, like <code>lbl</code> for a label, <code>txt</code> for a text field, or <code>btn</code> for a button.</p>
+</li>
+<li>
+<p>Append the type of widget to the end of the name, like <code>helloLabel</code>, <code>nameTextField</code>, or <code>submitButton</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I use the prefix method in my code, mostly because I&#8217;m used to that from C# programming (where that&#8217;s the preferred style), but you can use either approach on your assignments.
+The most important thing is to be consistent in your naming so that anyone reading your code can easily understand what each widget is for.</p>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>More Swing Widgets</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/2HlIsvtYTec?rel=0&amp;list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/JCheckBoxDemo.java" target="_blank" rel="noopener"><code>JCheckBoxDemo.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/JRadioButtonDemo.java" target="_blank" rel="noopener"><code>JRadioButtonDemo.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/JComboBoxDemo.java" target="_blank" rel="noopener"><code>JComboBoxDemo.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/JComboBoxDemo2.java" target="_blank" rel="noopener"><code>JComboBoxDemo2.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gui_layouts">10.6. GUI Layouts</h3>
+<div class="paragraph">
+<p>As we add more widgets to our GUI, we&#8217;ll need to consider how they are arranged on the screen.
+While we can set the position of each widget manually, this is tedious and doesn&#8217;t work well when the window is resized.
+Instead, we should use <em>layout managers</em>, which are objects that arrange widgets in a specific way and respond to window and screen sizes in predictable ways.
+Think of a layout manager as a set of rules that determine how widgets are arranged in a window.</p>
+</div>
+<div class="paragraph">
+<p>The Swing framework is itself built on top of <strong>another</strong> framework called the <em>Abstract Window Toolkit</em>, or <em>AWT</em>.
+Swing hides most of that from us by implementing classes that extend the AWT classes.
+For example, the <code>JLabel</code> class is a Swing widget that extends the <code>Label</code> class from AWT.
+So we don&#8217;t directly use AWT very often, but layout managers are an exception.
+Layout managers are part of AWT, so we&#8217;ll have to import them from the <code>java.awt</code> package:</p>
+</div>
+<div class="paragraph">
+<p>[source,java]import java.awt.*;</p>
+</div>
+<div class="paragraph">
+<p>There are several layout managers available in AWT, each with its own strengths and weaknesses.
+The most common layout managers are:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">FlowLayout</dt>
+<dd>
+<p>Widgets are arranged in a single row or column, and wrap to the next row or column when the window is resized.</p>
+</dd>
+<dt class="hdlist1">GridLayout</dt>
+<dd>
+<p>Widgets are arranged in a grid, with a specified number of rows and columns.</p>
+</dd>
+<dt class="hdlist1">BorderLayout</dt>
+<dd>
+<p>Widgets are arranged in five regions: north, south, east, west, and center.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>To create more complex layouts, we can nest layout managers, which means that we can put a layout manager inside another layout manager.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+There are tools that allow us to create GUIs visually, by dragging and dropping widgets onto a window, and then generating the code that will produce the GUI. But our goal is to learn how layout managers work, so we&#8217;ll be creating our GUIs by writing the code ourselves. For GUI designs that don&#8217;t have to be turned into an obnoxious professor for a grade, you&#8217;re welcome to take advantage of these tools.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock timetowatch">
+<div class="content">
+<div class="paragraph">
+<p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
+</div>
+<div class="paragraph video-title">
+<p>Swing Layouts</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/kM3p7V_3UOk?rel=0&amp;list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from video:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/FlowLayoutDemo.java" target="_blank" rel="noopener"><code>FlowLayoutDemo.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/JPanelDemo.java" target="_blank" rel="noopener"><code>JPanelDemo.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/GridLayoutDemo.java" target="_blank" rel="noopener"><code>GridLayoutDemo.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/BorderLayoutDemo.java" target="_blank" rel="noopener"><code>BorderLayoutDemo.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/NestedLayoutDemo.java" target="_blank" rel="noopener"><code>NestedLayoutDemo.java</code></a></p>
+</li>
+<li>
+<p>Sample code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/10%20Swing%20GUIs/NestedLayoutDemoColors.java" target="_blank" rel="noopener"><code>NestedLayoutDemoColors.java</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_11">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="paragraph subtitle">
+<p>Chapter Review Questions</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What is a Graphical User Interface (GUI) and why is it important for end users?</p>
+</li>
+<li>
+<p>Explain the role of the Swing library in Java and why it is preferred for beginners over JavaFX.</p>
+</li>
+<li>
+<p>Describe the process of creating a simple GUI using Swing, including the main components involved.</p>
+</li>
+<li>
+<p>What is event-driven programming in the context of GUIs, and how does it differ from console-based programming?</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in the <a href="_liner_notes.html#gui-chapter">Liner Notes</a></em>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_inheritance.html">Inheritance</a> | ↑ Up: <a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a> | Next: <a href="_liner_notes.html">Liner Notes</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-04-27<br />
+        20:40:16 -0700<br />
+        <span>This work is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                <span>CC BY-NC-SA 4.0</span>
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+            </a>
+        </span>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
