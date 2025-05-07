@@ -50,7 +50,7 @@
 </li>
 <li><a href="_variables_and_data_types.html#_strings">2.5. Strings</a>
 </li>
-<li><a href="_variables_and_data_types.html#_declaring_constants">2.6. Declaring Constants</a>
+<li><a href="_variables_and_data_types.html#_declaring_named_constants">2.6. Declaring Named Constants</a>
 </li>
 <li><a href="_variables_and_data_types.html#_outputting_variable_and_constant_values">2.7. Outputting Variable (and Constant) Values</a>
 </li>
@@ -524,9 +524,9 @@ Always remember that, in Java, single quotes <kbd>'</kbd> enclose a <code>char</
 </div>
 </div>
 <div class="sect2">
-<h3 id="_declaring_constants">2.6. Declaring Constants</h3>
+<h3 id="_declaring_named_constants">2.6. Declaring Named Constants</h3>
 <div class="paragraph">
-<p>A constant is similar to a variable, with two rules:</p>
+<p>A named constant is similar to a variable, with two rules:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -539,7 +539,7 @@ Always remember that, in Java, single quotes <kbd>'</kbd> enclose a <code>char</
 </ol>
 </div>
 <div class="paragraph">
-<p>To create a constant, add the keyword <code>final</code> at the start of your statement, followed by the rest of a declaration and assignment statement you&#8217;d use for a variable.
+<p>To create a named constant (often just called a constant), add the keyword <code>final</code> at the start of your statement, followed by the rest of a declaration and assignment statement you&#8217;d use for a variable.
 So that people looking at your code can easily tell it&#8217;s a constant rather than a variable, it should be named with all capital letters, using the underscore character to separate words.</p>
 </div>
 <div class="listingblock">
@@ -554,7 +554,7 @@ So that people looking at your code can easily tell it&#8217;s a constant rather
 </div>
 </div>
 <div class="paragraph">
-<p>There are a few different reasons to use constants in your code. For now:</p>
+<p>There are a few different reasons to use named constants in your code. For now:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -576,7 +576,7 @@ So that people looking at your code can easily tell it&#8217;s a constant rather
 <div class="content">
 <div class="title">Interesting!</div>
 <div class="paragraph">
-<p>The naming convention used for Java constants is called <strong>snake case</strong>. More specifically, since it&#8217;s all caps, people refer to it as <strong>screaming snake case</strong>. Snake case with lowercase letters is the standard convention for variables in Python, among other languages.</p>
+<p>The naming convention used for named constants in Java is called <strong>snake case</strong>. More specifically, since it&#8217;s all caps, people refer to it as <strong>screaming snake case</strong>. Snake case with lowercase letters is the standard convention for variables in Python, among other languages.</p>
 </div>
 </div>
 </div>
@@ -657,7 +657,7 @@ Arithmetic operations work in a similar way.
 In Java, there are five basic arithmetic operators:</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even" style="width: 50%;">
-<caption class="title">Table 2. Java arithmetic operators</caption>
+<caption class="title">Table 1. Java arithmetic operators</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 83.3334%;">
@@ -818,7 +818,7 @@ For example, if we want to add 10 to a <code>weight</code> variable that already
 <p>You can use compound assignment operators for all of the arithmetic operations.</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even" style="width: 50%;">
-<caption class="title">Table 3. Java compound assignment operators</caption>
+<caption class="title">Table 2. Java compound assignment operators</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 83.3334%;">
@@ -926,7 +926,7 @@ We can access that input device using something called the <code>Scanner</code> 
 <p>The <code>Scanner</code> class includes a variety methods for working with input "streams" (including input sources other than a keyboard), but the ones you&#8217;ll need for our work are shown below.</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even stretch">
-<caption class="title">Table 4. Common <code>Scanner</code> methods</caption>
+<caption class="title">Table 3. Common <code>Scanner</code> methods</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 83.3334%;">
@@ -1052,8 +1052,8 @@ As a reminder from the video, there&#8217;s a weird quirk that happens when you 
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-01<br />
-        19:45:41 -0700<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-07<br />
+        09:18:35 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

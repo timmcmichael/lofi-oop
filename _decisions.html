@@ -52,7 +52,7 @@
 </li>
 <li><a href="_decisions.html#_adding_an_else_block">5.3. Adding an <code>else</code> Block</a>
 </li>
-<li><a href="_decisions.html#_the_if_else_if_structure">5.4. The <code>if-else if</code> Structure</a>
+<li><a href="_decisions.html#_the_if_else_if_structure">5.4. The if-else-if Structure</a>
 </li>
 <li><a href="_decisions.html#_nested_if_else_statements">5.5. Nested <code>if-else</code> Statements</a>
 </li>
@@ -186,7 +186,7 @@ In other words, we need two values to compare.</p>
 In Java, where we have to stick with stuff on our keyboard, we use the following symbols:</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even" style="width: 50%;">
-<caption class="title">Table 5. Java relational operators</caption>
+<caption class="title">Table 1. Java relational operators</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 83.3334%;">
@@ -297,8 +297,8 @@ The <code>equals()</code> method is case-sensitive, so <code>"Paul McCartney"</c
 <div class="sect2">
 <h3 id="_if_statements">5.2. <code>if</code> Statements</h3>
 <div class="paragraph">
-<p>The <code>if</code> statement is the most basic decision-making structure in Java.
-It allows us to execute a block of code only if a certain condition is true.</p>
+<p>The <code>if</code> statement is the basic decision-making structure in Java.
+It allows us to execute a block of code only if a specified condition is true.</p>
 </div>
 <div class="paragraph">
 <p>The syntax of an <code>if</code> statement is the keyword <code>if</code>, followed by a Boolean expression in parentheses, followed by a block of code in curly braces.
@@ -323,7 +323,7 @@ In either case the program will continue executing the next line of code after t
 </div>
 <div class="paragraph">
 <p>In this example, the <code>if</code> statement checks if the variable <code>age</code> is less than <code>21</code>.
-Since <code>20</code> is less than <code>21</code>, the Boolean expression evaluates to <code>true</code>, and the block of code inside the <code>if</code> statement is executed&#8212;&#8203;and it prints "You can&#8217;t buy alcohol."
+Since <code>20</code> is less than <code>21</code>, the Boolean expression evaluates to <code>true</code>, and the block of code inside the <code>if</code> statement (lines 2 through 4) is executed&#8212;&#8203;and it prints "You can&#8217;t buy alcohol."
 The program then continues to the next line of code, which prints "Keep that in mind when you go to the store!"</p>
 </div>
 <div class="paragraph">
@@ -404,13 +404,13 @@ Basically, it&#8217;s an either-or situation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_if_else_if_structure">5.4. The <code>if-else if</code> Structure</h3>
+<h3 id="_the_if_else_if_structure">5.4. The if-else-if Structure</h3>
 <div class="paragraph">
 <p>The <code>if-else</code> structure is great for choosing between two blocks of code, but what if we have more than two options?
 To handle this, we can chain multiple <code>if-else</code> statements together.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.5 - An <code>if-else if</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/05%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete <code>WeatherRecord.java</code> file.</div>
+<div class="title">Example 5.5 - An if-else-if structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/05%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete <code>WeatherRecord.java</code> file.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -479,7 +479,7 @@ If the program gets through the entire structure without finding a <code>true</c
 <div class="paragraph">
 <p>If we&#8217;re looking at that code critically, we might notice that the <code>else</code> block is not strictly necessary.
 We could just put the <code>return "Cold";</code> statement at the end of the method, and it would work the same way.
-However, that depends on the logic of the <code>if-else if</code> structure and whether or not we&#8217;re using <code>return</code> statements in the blocks of code.</p>
+However, that depends on the logic of the if-else-if structure and whether or not we&#8217;re using <code>return</code> statements in the blocks of code.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -490,7 +490,7 @@ However, that depends on the logic of the <code>if-else if</code> structure and 
 </div>
 </div>
 <div class="paragraph">
-<p>In summary, an <code>if-else if</code> structure can execute, at most, one block of code.
+<p>In summary, an if-else-if structure can execute, at most, one block of code.
 If an <code>else</code> block is included at the end, it guarantees that exactly one block of code will execute.</p>
 </div>
 <div class="sidebarblock timetowatch">
@@ -544,7 +544,7 @@ If an <code>else</code> block is included at the end, it guarantees that exactly
 <div class="sect2">
 <h3 id="_nested_if_else_statements">5.5. Nested <code>if-else</code> Statements</h3>
 <div class="paragraph">
-<p>If we want a block of code to execute only if two different conditions are met, we can place <code>if</code> statements inside of each other&#8212;&#8203;which is called <em>nesting</em>.
+<p>If we want a block of code to execute only if two different conditions are met, we can place <code>if</code> statements inside of each other, which is called <em>nesting</em>.
 Nested if statements check multiple conditions in a hierarchical way: if one condition is met, it will proceed and check the next condition; if the first condition is not met, it will skip the inner <code>if</code> block.</p>
 </div>
 <div class="listingblock">
@@ -682,7 +682,7 @@ The if-else structures within those blocks check the average wind speed and retu
 A logical operator is a binary operation, so it takes two operands&#8212;&#8203;but the operands are Boolean expressions instead of numbers.</p>
 </div>
 <table class="tableblock frame-all grid-all stripes-even" style="width: 75%;">
-<caption class="title">Table 6. Java logical operators</caption>
+<caption class="title">Table 2. Java logical operators</caption>
 <colgroup>
 <col style="width: 14.2857%;">
 <col style="width: 14.2857%;">
@@ -778,6 +778,8 @@ The following code is a very common beginner mistake and will <strong>not</stron
 <p>This reads like "if the percentage is greater than or equal to 80 and less than 90," but the second part of the expression is not a complete Boolean expression.
 We need to include the variable name and the comparison operator on <strong>both</strong> sides of the <code>&amp;&amp;</code> operator.</p>
 </div>
+<div class="sect3">
+<h4 id="_the_not_operator">5.6.1. The NOT Operator</h4>
 <div class="paragraph">
 <p>The NOT operation is a little different, as it only takes one operand (making it a <em>unary</em> operator_, if you&#8217;re nerdy about words, like I am).
 It simply inverts the value of the operand.
@@ -799,11 +801,12 @@ If the operand is <code>false</code>, the NOT operation will evaluate to <code>t
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="_range_checking">5.6.1. Range Checking</h4>
+<h4 id="_range_checking">5.6.2. Range Checking</h4>
 <div class="paragraph">
 <p>There are a lot of situations where we might need to combine multiple conditions to make a decision, but one of the most common is <em>range checking</em>.
-Range checking means we want to see if a value is within a certain range.</p>
+Range checking means we want to see if a value is within a specified range.</p>
 </div>
 <div class="paragraph">
 <p>A common example of range checking is to convert a percentage grade to a letter grade.</p>
@@ -844,7 +847,7 @@ Range checking means we want to see if a value is within a certain range.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The AND operator <code>&amp;&amp;</code> used in this example means that in order to return <code>"B"</code>, for example, the percentage must be greater than or equal to <code>80</code> <em>and</em> less than <code>90</code>.
+<p>The AND operator <code>&amp;&amp;</code> used in this example means that in order to return <code>"B"</code>, for example, the percentage must be greater than or equal to <code>80</code> <em>and</em> the percentage must be less than <code>90</code>.
 If either of those conditions is not met, the program will move on to the next <code>else if</code> statement.</p>
 </div>
 </div>
@@ -853,7 +856,7 @@ If either of those conditions is not met, the program will move on to the next <
 <h3 id="_switch_statements">5.7. <code>switch</code> Statements</h3>
 <div class="paragraph">
 <p>Java includes a structure called a <code>switch</code> statement that can be used to choose between multiple options.
-It is essentially another way to write an <code>if-else if</code> structure, but it can be more readable and easier to write in some situations.
+It is essentially another way to write an if-else-if structure, but it can be more readable and easier to write in some situations.
 I generally consider <code>switch</code> structures to be optional&#8212;&#8203;you can complete all of the assignments in this course without using them&#8212;&#8203;but they are a useful tool to have in your programming toolbox.
 And since you see them often in code written by others, it&#8217;s good to know how they work.</p>
 </div>
@@ -998,8 +1001,8 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-01<br />
-        19:45:41 -0700<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-07<br />
+        09:18:35 -0700<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
