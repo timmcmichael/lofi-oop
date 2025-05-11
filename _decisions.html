@@ -8,19 +8,14 @@
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
 <title>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</title>
-<link rel="stylesheet" href="./css/architech-light.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
-                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
-             .nav-footer{text-align: center; margin-top: auto;}
-             .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
 <body id="_decisions" class="article toc2 toc-left">
-<head>
-  <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
-  <!-- TODO: Keep link to font awesome? -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <div id="header">
   <button id="theme-toggle">Toggle Dark/Light Mode</button>
 </div>
@@ -53,7 +48,7 @@
 </li>
 <li><a href="_decisions.html#_adding_an_else_block">5.3. Adding an <code>else</code> Block</a>
 </li>
-<li><a href="_decisions.html#_the_if_else_if_structure">5.4. The if-else-if Structure</a>
+<li><a href="_decisions.html#_the_if_else_if_structure">5.4. The <code>if-else if</code> Structure</a>
 </li>
 <li><a href="_decisions.html#_nested_if_else_statements">5.5. Nested <code>if-else</code> Statements</a>
 </li>
@@ -405,13 +400,25 @@ Basically, it&#8217;s an either-or situation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_if_else_if_structure">5.4. The if-else-if Structure</h3>
+<h3 id="_the_if_else_if_structure">5.4. The <code>if-else if</code> Structure</h3>
 <div class="paragraph">
 <p>The <code>if-else</code> structure is great for choosing between two blocks of code, but what if we have more than two options?
 To handle this, we can chain multiple <code>if-else</code> statements together.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This <code>if-else if</code> structure isn&#8217;t really a <em>thing</em> in Java. This is really just a way to write a series of <code>if</code> statements that are all part of the same decision-making process. But it&#8217;s a useful made-up name to help beginners understand the concept, so we&#8217;ll use it here.
+</td>
+</tr>
+</table>
+</div>
 <div class="listingblock">
-<div class="title">Example 5.5 - An if-else-if structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/05%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete <code>WeatherRecord.java</code> file.</div>
+<div class="title">Example 5.5 - An if-else if structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/05%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete <code>WeatherRecord.java</code> file.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -491,7 +498,7 @@ However, that depends on the logic of the if-else-if structure and whether or no
 </div>
 </div>
 <div class="paragraph">
-<p>In summary, an if-else-if structure can execute, at most, one block of code.
+<p>In summary, an <code>if-else if</code> structure can execute, at most, one block of code.
 If an <code>else</code> block is included at the end, it guarantees that exactly one block of code will execute.</p>
 </div>
 <div class="sidebarblock timetowatch">
@@ -547,6 +554,18 @@ If an <code>else</code> block is included at the end, it guarantees that exactly
 <div class="paragraph">
 <p>If we want a block of code to execute only if two different conditions are met, we can place <code>if</code> statements inside of each other, which is called <em>nesting</em>.
 Nested if statements check multiple conditions in a hierarchical way: if one condition is met, it will proceed and check the next condition; if the first condition is not met, it will skip the inner <code>if</code> block.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Just like the <code>if-else if</code> structure, this is not a special structure in C#--again, it&#8217;s just a useful way to help beginners understand how and when this way of organizing <code>if-else</code> statements is useful. Indeed, what I call an <code>if-else if</code> structure is really just nested <code>if</code> statements, too.
+</td>
+</tr>
+</table>
 </div>
 <div class="listingblock">
 <div class="title">Example 5.6 - Basic structure of a nested <code>if-else</code> statement.</div>
@@ -857,7 +876,7 @@ If either of those conditions is not met, the program will move on to the next <
 <h3 id="_switch_statements">5.7. <code>switch</code> Statements</h3>
 <div class="paragraph">
 <p>Java includes a structure called a <code>switch</code> statement that can be used to choose between multiple options.
-It is essentially another way to write an if-else-if structure, but it can be more readable and easier to write in some situations.
+It is essentially another way to write an <code>if-else if</code> structure, but it can be more readable and easier to write in some situations.
 I generally consider <code>switch</code> structures to be optional&#8212;&#8203;you can complete all of the assignments in this course without using them&#8212;&#8203;but they are a useful tool to have in your programming toolbox.
 And since you see them often in code written by others, it&#8217;s good to know how they work.</p>
 </div>
@@ -1002,8 +1021,8 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-07<br />
-        10:07:53 -0700<br />
+        Nanker Phelges Edition,&nbsp;revised&nbsp;2025-05-11<br />
+        22:22:50 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

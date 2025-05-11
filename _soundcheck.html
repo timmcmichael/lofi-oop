@@ -8,19 +8,14 @@
 <meta name="author" content="Tim McMichael">
 <link rel="icon" type="image/svg" href="./images/favicon.svg">
 <title>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</title>
-<link rel="stylesheet" href="./css/architech-light.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
-                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
-             .nav-footer{text-align: center; margin-top: auto;}
-             .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
 <body id="_soundcheck" class="article toc2 toc-left">
-<head>
-  <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
-  <!-- TODO: Keep link to font awesome? -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+<link id="theme-link" rel="stylesheet" href="css/architech-light.css">
+<!-- TODO: Keep link to font awesome? -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <div id="header">
   <button id="theme-toggle">Toggle Dark/Light Mode</button>
 </div>
@@ -91,7 +86,7 @@
 </div>
 <div class="paragraph">
 <p>This eBook isn&#8217;t trying to to cover everything a regular textbook would cover.
-It&#8217;s a little stripped-down and simplified--​what musicians might call <em>low fidelity</em>.</p>
+It&#8217;s a little stripped-down and simplified--​what musicians might call <em>low fidelity</em>, or lo-fi.</p>
 </div>
 <div class="paragraph">
 <p>This content is intended to be a companion to CIS150AB, which is an introduction to object-oriented programming. Since you&#8217;ll be attending (or viewing recordings of) lectures, and you&#8217;ll have access to additional content in Canvas (our LMS), this text doesn&#8217;t try to cover everything; it tries to give you the basic information you&#8217;ll need in order to get the most out of that other content.</p>
@@ -155,14 +150,13 @@ We happen to be using Java to do that, but these skills transfer to pretty much 
 </div>
 <div class="sect2">
 <h3 id="_how_to_use_this_book">How to Use This Book</h3>
-<div class="paragraph">
-<p>Before starting a chapter, review the relevant information on the "overview" page in Canvas.
-Then, start reading the chapter in this eBook.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>This book is lo-fi because much of the content you need is delivered in videos, making this a little stripped down. When you see <strong>Time to Watch</strong>, just watch the embedded (or hyperlinked) YouTube video. Quizzes in Canvas may include questions about the video content, and assignments will require the skills and concepts covered in videos.</p>
+<p>Each chapter begins with <strong>What&#8217;s the Point?</strong>, which gives you an idea of what you should be able to do after finishing the chapter content.</p>
+</li>
+<li>
+<p>This book is lo-fi because much of the content you need is delivered via video content, making this a little stripped down. When you see <strong>Time to Watch</strong>, just watch the embedded (or hyperlinked) YouTube video. Quizzes in Canvas may include questions about the video content, and assignments will require the skills and concepts covered in videos.</p>
 <div class="sidebarblock timetowatch">
 <div class="content">
 <div class="paragraph">
@@ -178,29 +172,20 @@ Then, start reading the chapter in this eBook.</p>
 <p>After the video, continue reading the chapter. The text content in the eBook is intended to be brief, with an overview of the topic, code examples, and details not covered in the videos.</p>
 </li>
 <li>
-<p>Each chapter begins with <strong>What&#8217;s the Point?</strong>, which gives you an idea of what you should be able to do after reading the chapter.</p>
-</li>
-<li>
-<p>Reading and watching videos isn&#8217;t enough to learn programming. You need to stop occasionally and try out what you&#8217;re learning.</p>
+<p>Reading and watching videos isn&#8217;t enough to learn programming. You need to stop regularly and try out what you&#8217;re learning.</p>
 <div class="exampleblock callout spin">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="spin-icon" width="88.88" height="62.42" viewBox="0 0 88.88 62.42" fill="currentColor"><path d="M60.84,29.26c-1.16.32-1.79,1.37-1.47,2.42.32,1.05,1.37,1.68,2.42,1.47,1.05-.32,1.68-1.37,1.47-2.42-.32-1.16-1.37-1.79-2.42-1.47Z"/><path d="M40.63,15.26c-.32-.21-.74-.32-1.16-.21l-17.26,4.32c-.53.11-.95.63-.95,1.26v18.63c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-13.79l14.74-3.79v9.26c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-22.63c-.21-.42-.31-.84-.63-1.05h0ZM18.42,45.26c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.27,2-2.74,2ZM35.68,40.95c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.16,2-2.74,2ZM38.53,22.95l-14.74,3.79v-5.16l14.74-3.68v5.05Z"/><path d="M88,24.21c-3.16-12-13.79-20.1-25.58-20.53V1.47c0-.84-.63-1.47-1.47-1.47H1.47C.63,0,0,.64,0,1.48v59.47c0,.84.63,1.47,1.47,1.47h59.47c.84,0,1.47-.63,1.47-1.47v-2.21c2-.11,4-.32,5.89-.84,14.64-3.89,23.48-18.94,19.69-33.68h0ZM61.27,39.05c-4.32,0-7.79-3.47-7.79-7.79s3.47-7.79,7.79-7.79,7.79,3.47,7.79,7.79-3.48,7.79-7.79,7.79ZM2.95,2.84h56.53v3.26H2.95s0-3.26,0-3.26ZM59.47,59.48H2.95v-2.74h56.53v2.74ZM59.47,53.69H2.95V9.05h56.53v11.05c-5.47.74-9.58,5.37-9.58,10.95s4.21,10.32,9.58,10.95v11.68ZM76.74,28c-.63.21-1.26-.21-1.47-.84-1.05-3.47-3.26-6.42-6.32-8.32-.32-.21-.42-.42-.53-.74-.11-.32,0-.63.11-.95.32-.53,1.05-.74,1.68-.42,3.58,2.21,6.21,5.68,7.37,9.68.21.74-.21,1.38-.84,1.59h0ZM81.37,26.74c-.63.21-1.26-.21-1.47-.84-1.37-4.74-4.32-8.74-8.53-11.26-.32-.21-.42-.42-.53-.74s0-.63.11-.95c.32-.53,1.05-.74,1.68-.42,4.74,2.84,8.11,7.37,9.58,12.63.21.74-.21,1.48-.84,1.58h0Z"/></svg><strong class="callout-title">Take It for a Spin</strong></p>
 </div>
 <div class="paragraph">
-<p>When you see <strong>Take It for a Spin</strong>, it&#8217;s a good time to open your IDE and write some code. In some cases, these markers also indicate the spot where you have learned enough to complete a practice assignment for class.</p>
+<p>When you see <strong>Take It for a Spin</strong>, it&#8217;s a good time to open your IDE and write some code. In many cases, these markers also indicate the spot where you have learned enough to complete a practice assignment for class.</p>
 </div>
 </div>
 </div>
 </li>
 <li>
-<p>At the end of each chapter, <strong>Check Yourself Before You Wreck Yourself (on the assignments)</strong> provides a few questions to help you review the material.</p>
-</li>
-<li>
-<p>You can find sample answers to these questions at the very end of the eBook, in the <a href="_liner_notes.html">Liner Notes</a> section.</p>
-</li>
-<li>
-<p>There are some topics that I think are important or useful but fall outside the scope of the course. These optional or expanded topics are marked with a <strong>Deep Cut</strong>, with links to additional information, either on an external website or in the <a href="#deep-cuts">[deep-cuts]</a> section at the end of the book.</p>
+<p>There are some topics that I think are important or useful (or just cool) but fall outside the scope of the course. These optional or expanded topics are marked as <strong>Deep Cuts</strong>, with links to additional information, either on an external website or in the <a href="#deep-cuts">[deep-cuts]</a> section at the end of the book.</p>
 <div class="exampleblock callout dc">
 <div class="content">
 <div class="paragraph">
@@ -212,12 +197,9 @@ Then, start reading the chapter in this eBook.</p>
 </div>
 </div>
 </li>
-</ul>
-</div>
-<div class="ulist">
-<ul>
 <li>
-<p>All coursework (assignments and quizzes) will be in Canvas. I make an effort to align assignments to the content in the eBook, so the examples in the eBook and videos should help.</p>
+<p>At the end of each chapter, <strong>Check Yourself Before You Wreck Yourself (on the assignments)</strong> provides a few questions to help you review the material.
+You can find sample answers to these questions at the very end of the eBook, in the <a href="_liner_notes.html">Liner Notes</a> section.</p>
 </li>
 </ul>
 </div>
@@ -412,8 +394,8 @@ Other popular options include <a href="https://eclipseide.org/">eclipse</a>, <a 
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-07<br />
-        10:07:53 -0700<br />
+        Nanker Phelges Edition,&nbsp;revised&nbsp;2025-05-11<br />
+        22:22:50 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
