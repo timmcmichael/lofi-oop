@@ -459,7 +459,7 @@ It essentially acts as a very advanced code completion tool&#8212;&#8203;or like
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-11<br />
-        22:25:53 UTC<br />
+        22:30:42 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
@@ -491,7 +491,7 @@ It essentially acts as a very advanced code completion tool&#8212;&#8203;or like
             }
 
             // Set the button text based on the current theme
-            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode (experimental)";
 
             // Toggle the theme
             themeToggle.addEventListener("click", () => {
@@ -503,7 +503,7 @@ It essentially acts as a very advanced code completion tool&#8212;&#8203;or like
                 localStorage.setItem("theme", themeName);
 
                 // Update the button text based on the new theme
-                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode (experimental)";
 
             });
         });

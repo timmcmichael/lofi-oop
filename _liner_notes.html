@@ -552,7 +552,7 @@ Another example is a loop that reads user input until a specific sentinel value 
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
         Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-11<br />
-        22:25:53 UTC<br />
+        22:30:42 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
@@ -584,7 +584,7 @@ Another example is a loop that reads user input until a specific sentinel value 
             }
 
             // Set the button text based on the current theme
-            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode (experimental)";
 
             // Toggle the theme
             themeToggle.addEventListener("click", () => {
@@ -596,7 +596,7 @@ Another example is a loop that reads user input until a specific sentinel value 
                 localStorage.setItem("theme", themeName);
 
                 // Update the button text based on the new theme
-                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode (experimental)";
 
             });
         });
