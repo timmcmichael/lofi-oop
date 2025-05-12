@@ -11,14 +11,25 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <link rel="stylesheet" href="./asciidoctor.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const toc = document.getElementById("toc");
+        if (toc) {
+            const btn = document.createElement("button");
+            btn.id = "theme-toggle";
+            btn.textContent = "Toggle Dark/Light Mode";
+            toc.appendChild(btn);
+        }
+    });
+</script>
 </head>
 <body id="_debugging_and_generative_ai" class="article toc2 toc-left">
 <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
 <!-- TODO: Keep link to font awesome? -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<div id="header">
+<!-- <div id="header">
   <button id="theme-toggle">Toggle Dark/Light Mode</button>
-</div>
+</div> -->
 <div id="header">
 <h1>Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</h1>
 <div class="details">
@@ -458,8 +469,8 @@ It essentially acts as a very advanced code completion tool&#8212;&#8203;or like
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-11<br />
-        22:30:42 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-12<br />
+        03:21:30 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
@@ -491,7 +502,7 @@ It essentially acts as a very advanced code completion tool&#8212;&#8203;or like
             }
 
             // Set the button text based on the current theme
-            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode (experimental)";
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
 
             // Toggle the theme
             themeToggle.addEventListener("click", () => {
@@ -503,7 +514,7 @@ It essentially acts as a very advanced code completion tool&#8212;&#8203;or like
                 localStorage.setItem("theme", themeName);
 
                 // Update the button text based on the new theme
-                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode (experimental)";
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
 
             });
         });
