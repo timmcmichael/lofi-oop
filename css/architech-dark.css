@@ -1,6 +1,7 @@
 /* Color styling for dark theme */
 
-@import url('../../css/architech.css');
+/* @import url('../../css/architech.css'); */
+@import url('./architech.css');
 
 :root {
   --maincolor: #0a0b0c;
