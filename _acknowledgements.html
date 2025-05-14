@@ -18,7 +18,8 @@
             const btn = document.createElement("button");
             btn.id = "theme-toggle";
             btn.textContent = "Toggle Dark/Light Mode";
-            toc.appendChild(btn);
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
         }
     });
 </script>
@@ -182,8 +183,8 @@ But I am nerdy about music history, and especially the cultural impact of music.
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-12<br />
-        04:06:01 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-14<br />
+        02:37:04 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
@@ -215,7 +216,7 @@ But I am nerdy about music history, and especially the cultural impact of music.
             }
 
             // Set the button text based on the current theme
-            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 
             // Toggle the theme
             themeToggle.addEventListener("click", () => {
@@ -227,7 +228,7 @@ But I am nerdy about music history, and especially the cultural impact of music.
                 localStorage.setItem("theme", themeName);
 
                 // Update the button text based on the new theme
-                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 
             });
         });

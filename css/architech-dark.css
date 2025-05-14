@@ -15,10 +15,19 @@
   --highlightcolor: #614214;
   --sidebarbackground: #21252b;
   --linkcolor: #34bdf8;
-  --linkcoloralternate: #ff9800;
   --stickynote: #f9a825;
-  --black: #000000;
+  --inlinebackground: #0b3141;
+  --inlinecode: #ebb105;
+
+  /* Callout colors */
+
+  /* --deepcutcolor: inherit;
+  --bsidecolor: inherit;
+  --spincolor: inherit; */
+
+
   --white: #FFFFFF;
+  --black: #000000;
 }
 
 body {
@@ -78,35 +87,24 @@ blockquote {
 }
 
 
-code {
-  color: var(--linkcoloralternate);
+/* code {
+  color: var(--tertiarycolor);
   background-color: var(--sidebarbackground) !important;
   padding: 0 0.2em;
   border-radius: 4px;
-}
-
-/* 
-.listingblock code {
-  /* Don't unset all styles, just avoid overriding necessary ones 
-  color: inherit;
-  background-color: inherit;
 } */
 
 
 /* Exclude code inside a listingblock */
-.listingblock code {
+/* Fixes uneven background in pygments listings */
+/* .listingblock code {
   all: unset;
-}
+} */
 
-/* Table styles */
-th:not(.listingblock .content pre th) {
-  background-color: var(--maincolor);
-  color: var(--white) !important;
-}
-
+/* Callout legend text below code listings */
 td:not(.listingblock .content pre td) {
   background-color: var(--maincolor);
-  color: var(--linkcoloralternate) !important
+  color: var(--white);
 }
 
 #toc.toc2 {
@@ -126,10 +124,19 @@ mark {
   color: var(--primarycolor);
 }
 
-/* Fix b-sides, deep cuts, and "take it for a spin" callout colors */
+/* Basic callout colors */
 .callout.dc .content,
-.callout.bs .content,
+.callout.ttw .content,
 .callout.spin .content {
   color: var(--white) !important;
   background-color: var(--sidebarbackground) !important;
+}
+
+.literalblock pre {
+  background-color: #191b1d;
+}
+
+/* Toggle button hover effect */
+#theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

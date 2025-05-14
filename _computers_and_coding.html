@@ -18,7 +18,8 @@
             const btn = document.createElement("button");
             btn.id = "theme-toggle";
             btn.textContent = "Toggle Dark/Light Mode";
-            toc.appendChild(btn);
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
         }
     });
 </script>
@@ -95,16 +96,8 @@
 <div class="paragraph subtitle">
 <p><span title='This is "Chapter One" in binary (base 2)'>Chapter 0001 <sub>2</sub></span></p>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Help Make These Materials Better!</div>
 <div class="paragraph">
-<p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
-</div>
-<div class="paragraph">
-<p><a href="https://forms.gle/4173pZ1yPuNX7pku6" target="_blank" rel="noopener">CIS150AB Course Materials Feedback (Google Form)</a></p>
-</div>
-</div>
+<p>feedback.adoc[]</p>
 </div>
 <div class="sect2">
 <h3 id="_whats_the_point">What&#8217;s the Point?</h3>
@@ -232,7 +225,7 @@ Translating source code file to a machine language file that can be executed is 
 When the computer runs the program, it&#8217;s using the machine language translation created by the compiler.
 Clicking on the icon to open Microsoft Word runs a file that&#8217;s been compiled from source code.</p>
 </div>
-<div class="sidebarblock timetowatch">
+<div class="exampleblock callout ttw">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
@@ -400,7 +393,7 @@ And when we are faced with solving a programming problem that really intimidates
 In Python, we just open a file and write our first command; in recent versions, C# has added that ability as well.
 But Java puts OOP front and center, and we can&#8217;t start writing statements until we first define a class.</p>
 </div>
-<div class="sidebarblock timetowatch">
+<div class="exampleblock callout ttw">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
@@ -496,7 +489,7 @@ To start with, we&#8217;ll use two basic ways to output text to the console: <co
 </div>
 </div>
 <div class="paragraph">
-<p>This line of code outputs <code><strong>Mick Jagger</strong></code> to the console window.
+<p>This line of code outputs <code>Mick Jagger</code> to the console window.
 After <code>print()</code> outputs the text in parentheses, the cursor remains at the end of the output.
 This is just like if we type something in a word processor but don&#8217;t hit enter; the next time we start typing, the characters resume on the same line.
 In the same way, the next output statement will continue on the same line in the console.</p>
@@ -553,11 +546,11 @@ get what you want</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>After the <code>print()</code> statement executes, the cursor is still sitting right after the comma following <code><strong>say</strong></code>, so when the next line of code outputs <code><strong>you can&#8217;t always</strong></code>, that output just gets jammed onto the end.
+<p>After the <code>print()</code> statement executes, the cursor is still sitting right after the comma following <code>say</code>, so when the next line of code outputs <code>you can&#8217;t always</code>, that output just gets jammed onto the end.
 Notice that it doesn&#8217;t even add a space; if we want a space there, we have to include it within our quotation marks.</p>
 </div>
 <div class="paragraph">
-<p>Because <code><strong>you can&#8217;t always</strong></code> is in a <code>println()</code> statement, the cursor advances and <code><strong>get what you want</strong></code> is on a new line.</p>
+<p>Because <code>you can&#8217;t always</code> is in a <code>println()</code> statement, the cursor advances and <code>get what you want</code> is on a new line.</p>
 </div>
 <div class="paragraph">
 <p>We&#8217;ll use <code>print()</code> and <code>println()</code> in every Java program we write for quite a while, so it&#8217;s important to take time to experiment with them on our own to make sure we understand how they work.</p>
@@ -580,7 +573,7 @@ An escape sequence begins with a backslash (<code>\</code>) and is followed by a
 </div>
 </div>
 <div class="paragraph">
-<p>It might be tough to see in the middle of the line, but look after the word <code><strong>wind</strong></code>.
+<p>It might be tough to see in the middle of the line, but look after the word <code>wind</code>.
 When the compiler gets to the <code>\n</code> escape sequence, it knows to move the cursor to the next line before continuing with the rest of the output.</p>
 </div>
 <div class="paragraph">
@@ -848,8 +841,8 @@ Almost all IDEs have a keyboard shortcut (and menu item) for commenting out code
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-12<br />
-        04:06:01 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-14<br />
+        02:37:04 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
@@ -881,7 +874,7 @@ Almost all IDEs have a keyboard shortcut (and menu item) for commenting out code
             }
 
             // Set the button text based on the current theme
-            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 
             // Toggle the theme
             themeToggle.addEventListener("click", () => {
@@ -893,7 +886,7 @@ Almost all IDEs have a keyboard shortcut (and menu item) for commenting out code
                 localStorage.setItem("theme", themeName);
 
                 // Update the button text based on the new theme
-                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 
             });
         });

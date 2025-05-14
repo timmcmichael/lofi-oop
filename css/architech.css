@@ -6,23 +6,35 @@
 
 
 :root {
+
   --maincolor: #FFFFFF;
+  --primarycolor: #000000;
+  --secondarycolor: #1a237e;
+  --tertiarycolor: #9ddcff;
+  --highlightcolor: #ffd600;
+  --sidebarbackground: #CACACA;
+  --linkcolor: #0D47A1;
+  --stickynote: #f9a825;
+  --inlinecode: var(--black);
+  --inlinebackground: #9ddcff;
+
+  /* --maincolor: #FFFFFF;
   --primarycolor: #2c3e50;
   --secondarycolor: #ba3925;
   --tertiarycolor: #186d7a;
   --highlightcolor: #ffd600;
   --sidebarbackground: #CCC;
   --linkcolor: #b71c1c;
-  --linkcoloralternate: #f44336;
-  --stickynote: #f9a825;
+  --: #f44336;
+  --stickynote: #f9a825; */
   --white: #FFFFFF;
   --black: #000000;
 
   /* Callout colors */
 
   --deepcutcolor: var(--linkcolor);
-  --bsidecolor: var(--tertiarycolor);
-  --spincolor: var(--linkcoloralternate);
+  --ttwcolor: var(--stickynote);
+  --spincolor: #f44336;
 
   --main-font: "Work Sans", sans-serif;
   --heading-font: "Architects Daughter", cursive;
@@ -130,17 +142,6 @@ mark {
   background-color: var(--highlightcolor)
 }
 
-/* Table styles */
-/* th {
-  background-color: var(--maincolor);
-  color: var(--black) !important;
-}
-
-td:not(.listingblock .content pre td) {
-  background-color: var(--maincolor);
-  color: var(--black) !important;
-} */
-
 /* Header row in tables */
 table thead th {
   color: var(--secondarycolor) !important;
@@ -159,7 +160,8 @@ table thead th {
 
 #toctitle {
   color: var(--white);
-  font-family: var(--heading-font)
+  font-family: var(--heading-font);
+  padding-top: .25em;
 }
 
 #toc {
@@ -175,7 +177,7 @@ table thead th {
 #toc ul {
   flex: 1 1 auto;
   /* TOC list takes up available vertical space */
-  padding-bottom: 2em;
+  /* padding-bottom: 2em; */
   /* space between TOC and button */
 }
 
@@ -200,7 +202,6 @@ video {
 }
 
 #footer-text a {
-  color: var(--linkcoloralternate);
   text-decoration: none;
   /* turn off underline globally */
 }
@@ -211,18 +212,21 @@ video {
 }
 
 #theme-toggle {
+
   align-self: flex-start;
-  /* left-aligned */
+
   background-color: transparent;
   border: none;
-  padding: 0;
-  font: inherit;
-  font-size: larger;
-  color: var(--tertiarycolor) !important;
+
+  font-size: small;
+  color: rgb(255, 230, 0) !important;
   font-family: var(--heading-font);
   cursor: pointer;
-  text-decoration: underline;
-  text-align: left;
+
+}
+
+#theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.1); /* light mode */
 }
 
 /* Callout styles */
@@ -232,7 +236,6 @@ video {
 
 .callout {
   border-left: 4px solid var(--highlightcolor);
-  background-color: rgba(255, 255, 255, 0.03);
   padding: 1em;
   margin: 1.5em 0;
   border-radius: 0.5em;
@@ -250,12 +253,12 @@ video {
 
 }
 
-.callout.bs {
-  border-color: var(--bsidecolor);
+.callout.ttw {
+  border-color: var(--ttwcolor);
 
 
-  .bs-icon {
-    fill: var(--bsidecolor);
+  .ttw-icon {
+    fill: var(--ttwcolor);
     width: 3em;
     height: 3em;
     vertical-align: text-center;
@@ -263,7 +266,7 @@ video {
   }
 
   .callout-title {
-    color: var(--bsidecolor) !important;
+    color: var(--ttwcolor) !important;
   }
 
 }
@@ -301,21 +304,6 @@ video {
 
 }
 
-.timetowatch {
-  /* border-color: var(--linkcolor); */
-
-  .ttw-icon {
-    fill: var(--stickynote);
-    width: 3em;
-    height: 3em;
-    vertical-align: text-middle;
-    margin-right: .3em;
-  }
-
-
-
-}
-
 .callout-title {
   color: var(--stickynote) !important;
   font-family: var(--heading-font);
@@ -327,7 +315,6 @@ video {
 
 .video-title {
   font-size: 1.5em !important;
-  /* font-weight: bold; */
 }
 
 
@@ -337,14 +324,24 @@ video {
   color: #000 !important;
 }
 
-/* fixing line number mismatch */
 /* Sync the line numbers and code */
 .linenotable pre {
   line-height: 1.4;
-  /* or whatever looks best */
 }
 
 .code pre {
   line-height: 1.4 !important;
-  /* or whatever looks best */
+}
+
+/* Inline code formatting */
+:not(pre):not([class^=L]) > code {
+
+    background: var(--inlinebackground) !important;
+    color: var(--inlinecode) !important;
+    font-family: var(--monospace-font);
+    padding: .1em .3em !important;
+}
+
+pre {
+  color: green;
 }

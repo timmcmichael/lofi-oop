@@ -2,29 +2,6 @@
 
 @import url('./architech.css');
 
-:root {
-  --maincolor: #FFFFFF;
-  --primarycolor: #000000;
-  --secondarycolor: #1a237e;
-  --tertiarycolor: #9ddcff;
-  --highlightcolor: #ffd600;
-  --sidebarbackground: #CACACA;
-  --linkcolor: #0D47A1;
-  --linkcoloralternate: #B71C1C;
-  --stickynote: #f9a825;
-
-  /* Callout colors */
-  /* 
-  --deepcutcolor: inherit;
-  --bsidecolor: inherit;
-  --spincolor: inherit; */
-
-  --white: #FFFFFF;
-  --black: #000000;
-}
-
-
-
 #toc.toc2 {
   background-image: url('../images/blue-grid.png');
   /* Adjust path as necessary */
@@ -51,9 +28,4 @@
     font-family: var(--main-font) !important;
   }
 
-  code {
-    color: var(--primarycolor);
-    background-color: var(--tertiarycolor);
-    /* font-weight: bold; */
-  }
 }

@@ -18,7 +18,8 @@
             const btn = document.createElement("button");
             btn.id = "theme-toggle";
             btn.textContent = "Toggle Dark/Light Mode";
-            toc.appendChild(btn);
+            // toc.appendChild(btn);
+            toc.insertBefore(btn, toc.firstChild);
         }
     });
 </script>
@@ -95,16 +96,8 @@
 <div class="paragraph subtitle">
 <p><span title='This is "Chapter Ten" in binary (base 2)'>Chapter 1010 <sub>2</sub></span></p>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Help Make These Materials Better!</div>
 <div class="paragraph">
-<p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
-</div>
-<div class="paragraph">
-<p><a href="https://forms.gle/4173pZ1yPuNX7pku6" target="_blank" rel="noopener">CIS150AB Course Materials Feedback (Google Form)</a></p>
-</div>
-</div>
+<p>feedback.adoc[]</p>
 </div>
 <div class="sect2">
 <h3 id="_whats_the_point_10">What&#8217;s the Point?</h3>
@@ -141,7 +134,7 @@ This is called a <em>graphical user interface</em>, which is abbreviated as <em>
 <p>GUIs on desktop and laptop computers have elements like windows, buttons, text fields, and checkboxes, and the user interacts using a mouse or touchpad.
 These GUI elements are called <em>widgets</em> or <em>controls</em>. Mobile applications have similar widgets, but they are designed for touchscreens and are generally more simplified than desktop applications.</p>
 </div>
-<div class="sidebarblock timetowatch">
+<div class="exampleblock callout ttw">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
@@ -245,7 +238,7 @@ The <code>JFrame.EXIT_ON_CLOSE</code> attribute tells the program to exit when t
 <div class="paragraph">
 <p>As you can see, the code to create a simple GUI is a little more complex than the single <code>println()</code> statement of an equivalent console application, which is why we&#8217;ve waited until now to learn it.</p>
 </div>
-<div class="sidebarblock timetowatch">
+<div class="exampleblock callout ttw">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
@@ -288,7 +281,7 @@ For example, we can add an event listener to a button that will run a method whe
 The method that runs in response to an event is called an <em>event handler</em>.
 Once we&#8217;ve added an event listener to a widget, the event handler is like any other method in our program, and we can write it to do whatever we want.</p>
 </div>
-<div class="sidebarblock timetowatch">
+<div class="exampleblock callout ttw">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
@@ -322,7 +315,7 @@ Once we&#8217;ve added an event listener to a widget, the event handler is like 
 <div class="paragraph">
 <p>Once we&#8217;ve learned how to work with widgets and add event listeners, we can put everything together to create a GUI application that gets input from the user, performs actions or calculations with that data, and displays the results.</p>
 </div>
-<div class="sidebarblock timetowatch">
+<div class="exampleblock callout ttw">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
@@ -428,7 +421,7 @@ There are a variety of conventions for naming widgets, but two are most common:<
 <p>I use the prefix method in my code, mostly because I&#8217;m used to that from C# programming (where that&#8217;s the preferred style), but you can use either approach on your assignments.
 The most important thing is to be consistent in your naming so that anyone reading your code can easily understand what each widget is for.</p>
 </div>
-<div class="sidebarblock timetowatch">
+<div class="exampleblock callout ttw">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
@@ -517,7 +510,7 @@ There are tools that allow us to create GUIs visually, by dragging and dropping 
 </tr>
 </table>
 </div>
-<div class="sidebarblock timetowatch">
+<div class="exampleblock callout ttw">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="ttw-icon" width="22.34" height="20.24" viewBox="0 0 22.34 20.24" fill="currentColor"><path d="M22.59,2.7v15.34c0,1.35-1.1,2.45-2.45,2.45H2.7c-1.35,0-2.45-1.1-2.45-2.45V2.7C.25,1.35,1.35.25,2.7.25h17.44c1.35,0,2.45,1.1,2.45,2.45ZM22.04,18.04V2.7c0-1.05-.85-1.9-1.9-1.9H2.7c-1.05,0-1.91.85-1.91,1.9v15.34c0,1.05.86,1.91,1.91,1.91h17.44c1.05,0,1.9-.86,1.9-1.91Z"/><path d="M22.04,2.7v15.34c0,1.05-.85,1.91-1.9,1.91H2.7c-1.05,0-1.91-.86-1.91-1.91V2.7c0-1.05.86-1.9,1.91-1.9h17.44c1.05,0,1.9.85,1.9,1.9ZM20.65,18.04V4.51H2.19v13.53c0,.28.23.52.51.52h17.44c.28,0,.51-.24.51-.52ZM20.65,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM17.62,2.69c0-.76-.62-1.39-1.39-1.39s-1.39.63-1.39,1.39.62,1.4,1.39,1.4,1.39-.63,1.39-1.4ZM14.6,2.69c0-.76-.63-1.39-1.4-1.39s-1.39.63-1.39,1.39.63,1.4,1.39,1.4,1.4-.63,1.4-1.4Z"/><path d="M20.65,4.51v13.53c0,.28-.23.52-.51.52H2.7c-.28,0-.51-.24-.51-.52V4.51h18.46ZM20.1,18.01V5.06H2.73v12.95h17.37Z"/><path d="M19.26,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM20.1,2.69c0-.46-.37-.84-.84-.84s-.85.38-.85.84.38.85.85.85.84-.38.84-.85Z"/><path d="M16.23,1.3c.77,0,1.39.63,1.39,1.39s-.62,1.4-1.39,1.4-1.39-.63-1.39-1.4.62-1.39,1.39-1.39ZM17.08,2.69c0-.46-.38-.84-.85-.84s-.85.38-.85.84.38.85.85.85.85-.38.85-.85Z"/><path d="M13.2,1.3c.77,0,1.4.63,1.4,1.39s-.63,1.4-1.4,1.4-1.39-.63-1.39-1.4.63-1.39,1.39-1.39ZM14.05,2.69c0-.46-.38-.84-.85-.84s-.84.38-.84.84.38.85.84.85.85-.38.85-.85Z"/><path d="M13.28,10.77c.46.22.53.52.53.68,0,.15-.07.45-.53.67l-2.64,1.26c-.16.07-.32.11-.47.11-.48,0-.82-.38-.82-.93v-2.23c0-.55.34-.93.82-.93.15,0,.31.04.47.12l2.64,1.25ZM13.27,11.44s-.06-.1-.22-.18l-2.64-1.25c-.09-.04-.17-.06-.24-.06-.25,0-.28.27-.28.38v2.23c0,.11.03.38.28.38.07,0,.15-.02.24-.06l2.64-1.25c.16-.08.22-.16.22-.19Z"/></svg><strong class="callout-title">Time To Watch!</strong></p>
@@ -596,8 +589,8 @@ There are tools that allow us to create GUIs visually, by dragging and dropping 
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-12<br />
-        04:06:01 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-14<br />
+        02:37:04 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
@@ -629,7 +622,7 @@ There are tools that allow us to create GUIs visually, by dragging and dropping 
             }
 
             // Set the button text based on the current theme
-            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+            themeToggle.textContent = currentTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 
             // Toggle the theme
             themeToggle.addEventListener("click", () => {
@@ -641,7 +634,7 @@ There are tools that allow us to create GUIs visually, by dragging and dropping 
                 localStorage.setItem("theme", themeName);
 
                 // Update the button text based on the new theme
-                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+                themeToggle.textContent = themeName === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 
             });
         });
