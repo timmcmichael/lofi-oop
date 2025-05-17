@@ -301,10 +301,9 @@ video {
   margin-left: 0.5em;
 }
 
-.video-title {
+.video-title p {
   font-size: 1.5em !important;
 }
-
 
 /* code listing callout numbers */
 .conum {

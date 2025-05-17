@@ -66,7 +66,7 @@
 </li>
 <li><a href="_loops.html#_for_loops">6.5. <code>for</code> Loops</a>
 </li>
-<li><a href="_loops.html#_optional_break_and_continue_statements">6.6. OPTIONAL: <code>break</code> and <code>continue</code> Statements</a>
+<li><a href="_loops.html#_break_and_continue_statements">6.6. <code>break</code> and <code>continue</code> Statements</a>
 </li>
 <li><a href="_loops.html#_a_word_about_nested_loops">6.7. A Word About Nested Loops</a>
 </li>
@@ -144,15 +144,16 @@ Now that we understand how to use Boolean expressions to control the flow of our
 Many of the tasks we think of as "computer tasks" are repetitive in nature.
 Processing data often involves performing the same operation on each piece of information, one after the other, until everything is processed.
 A computer game has to draw the screen, check for collisions, check what the user is doing with the gamepad, and update the positions of all the objects on the screen, over and over again, until the game ends.
-When we use a search engine on the web, that search engine has scanned the web one page at a time, indexing what it finds and then moving on to the next page, until it&#8217;s scanned all of the pages in its database.</p>
+When we use a search engine on the web, that search engine has scanned the web one page at a time, indexing what it finds and then moving on to the next page, until it&#8217;s scanned all of the pages in its database.
+These kinds of repetitive tasks everywhere in computer use&mdash;and in computer programming.</p>
 </div>
 <div class="paragraph">
-<p>Computers are great for these kinds of tasks: they don&#8217;t get bored, they don&#8217;t get tired, and they don&#8217;t make mistakes — other than the mistakes we make when programming them!</p>
+<p>Computers are great for these kinds of tasks: they don&#8217;t get bored, they don&#8217;t get tired, and they don&#8217;t make mistakes—other than the mistakes we make when programming them!</p>
 </div>
 <div class="paragraph">
 <p>To create the kind of repetition that leverages this processing power, programmers use <em>loops</em>.
 A loop is a structure that repeats a block of code as long as a certain condition is true.
-Each time the loop repeats, it&#8217;s called an <em>iteration</em>.</p>
+Each time the loop repeats is called an <em>iteration</em>.</p>
 </div>
 <div class="exampleblock callout ttw">
 <div class="content">
@@ -173,8 +174,8 @@ Each time the loop repeats, it&#8217;s called an <em>iteration</em>.</p>
 <div class="sect2">
 <h3 id="_while_loops">6.1. <code>while</code> Loops</h3>
 <div class="paragraph">
-<p>The first structure Java offers for creating loops is the <code>while</code> loop.
-The <code>while</code> loop repeats a block of code as long as a specified condition is true.
+<p>The first structure we&#8217;ll look at for creating loops in Java is the <code>while</code> loop.
+A <code>while</code> loop repeats a block of code as long as a specified condition is true.
 The condition is checked before the block of code is executed, so the block of code might not execute at all if the condition is false the first time it&#8217;s checked.</p>
 </div>
 <div class="paragraph">
@@ -205,15 +206,15 @@ This process repeats until the expression <code>count &lt; 10</code> is false.</
 </div>
 <div class="paragraph">
 <p>The result of this loop is that the program prints out the value of <code>count</code> 10 times, starting with 0 and ending with 9.
-It is a definite loop because, before the loop starts, it&#8217;s already known that the loop will repeat 10 times.</p>
+It is a definite loop because, before the loop starts, it&#8217;s already been determined that the loop will repeat 10 times.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_infinite_loops">6.2. Infinite Loops</h3>
 <div class="paragraph">
 <p>One thing to be careful of when using a <code>while</code> loop is the possibility of creating an <em>infinite loop</em>.
-An infinite loop is a loop that repeats forever, because the condition that determines whether the loop should repeat is never false.
-Infinite loops are a common mistake for new programmers, and they cause our program to hang or crash.</p>
+An infinite loop is a loop that repeats forever, because the condition that determines whether the loop should repeat is never <code>false</code>.
+Infinite loops are a common mistake for new programmers, and they cause our program to crash or appear to freeze.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 6.2 - An infinite loop using a <code>while</code> statement</div>
@@ -240,7 +241,7 @@ The program will print out "Count is: 0" over and over again, forever.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. Often, this is a square button — essentially the symbol for "stop". In VS Code, you can also kill the terminal window that&#8217;s running the program by clicking the trash can icon in the terminal window. Finally, every IDE should allow you to press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> to stop the program.
+Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. Often, this is a square button—essentially the symbol for "stop". In VS Code, you can also kill the terminal window that&#8217;s running the program by clicking the trash can icon in the terminal window. Finally, every IDE should allow you to press <span class="keyseq"><kbd>Ctrl</kbd>+<kbd>C</kbd></span> to stop the program.
 </td>
 </tr>
 </table>
@@ -257,7 +258,7 @@ Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. 
 </div>
 <div class="paragraph">
 <p>This loop will repeat forever, because the condition <code>true</code> is always true.
-Some programmers use this to start a loop and then use an if statement to break out of the loop when a certain condition is met, but that&#8217;s not really an infinite loop — it just puts the boolean expression that controls the loop in an <code>if</code> statement  within the loop&#8217;s body instead of in the <code>while</code> statement.
+Some programmers use this to start a loop and then use an if statement to break out of the loop when a certain condition is met, but that&#8217;s not really an infinite loop—it just puts the boolean expression that controls the loop in an <code>if</code> statement  within the loop&#8217;s body instead of in the <code>while</code> statement.
 I personally consider that less readable than using a clear condition in the <code>while</code> statement, so I don&#8217;t write loops like that.</p>
 </div>
 <div class="exampleblock callout ttw">
@@ -279,13 +280,22 @@ I personally consider that less readable than using a clear condition in the <co
 <div class="ulist">
 <ul>
 <li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/06%20Loops/WhileLoopDemo1.java" target="_blank" rel="noopener"><code>WhileLoopDemo1.java</code></a></p>
+<p>Starter code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/06%20Loops/WhileLoopDemo1.java" target="_blank" rel="noopener"><code>WhileLoopDemo1.java</code></a></p>
 </li>
 <li>
 <p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/06%20Loops/WhileLoopDemo2.java" target="_blank" rel="noopener"><code>WhileLoopDemo2.java</code></a></p>
 </li>
 <li>
 <p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/06%20Loops/WhileLoopDemo3.java" target="_blank" rel="noopener"><code>WhileLoopDemo3.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/06%20Loops/WhileLoopDemo1.java" target="_blank" rel="noopener"><code>WhileLoopDemo1Finished.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/06%20Loops/WhileLoopDemo2.java" target="_blank" rel="noopener"><code>WhileLoopDemo2Finished.java</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/06%20Loops/WhileLoopDemo3.java" target="_blank" rel="noopener"><code>WhileLoopDemo3Finished.java</code></a></p>
 </li>
 </ul>
 </div>
@@ -511,15 +521,15 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 </div>
 </div>
 <div class="sect2">
-<h3 id="_optional_break_and_continue_statements">6.6. OPTIONAL: <code>break</code> and <code>continue</code> Statements</h3>
+<h3 id="_break_and_continue_statements">6.6. <code>break</code> and <code>continue</code> Statements</h3>
 <div class="paragraph">
 <p>I believe that <code>while</code>, <code>do-while</code>, and <code>for</code> loops, when written with clear Boolean expressions, are the most readable loops, and any loop a coder will need in their career can be written with those structures.
 A well-written loop will execute the block of code as many times as necessary, and then stop when the condition is false, without any additional help from the programmer.
 However, Java provides two statements that can be used to alter the flow of a loop: the <code>break</code> statement and the <code>continue</code> statement.</p>
 </div>
 <div class="paragraph">
-<p>Since they aren&#8217;t necessary for writing loops, I consider them optional: <strong>none of my assignments or quiz questions will require you to know them</strong>.
-While I think people should know them, I think beginners can live without them for now.</p>
+<p>Since they aren&#8217;t necessary for writing loops, I consider them somewhat optional: <strong>none of my assignments questions will require you to use them</strong>.
+However, it is important for beginners to know how they work.</p>
 </div>
 <div class="paragraph">
 <p>The <code>break</code> statement is used to exit a loop early.
@@ -574,7 +584,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>Content labelled as <strong>Just for Fun</strong> is not required for the course, but is included for students who are interested in learning more about the topic. If you&#8217;re struggling to learn the material in this course, please skip this — maybe you can return when you have more time.</p>
+<p>Content labelled as <strong>Just for Fun</strong> is not required for the course, but is included for students who are interested in learning more about the topic. If you&#8217;re struggling to learn the material in this course, please skip this—maybe you can return when you have more time.</p>
 </div>
 </div>
 </div>
@@ -658,8 +668,8 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-15<br />
-        18:12:23 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-05-17<br />
+        02:42:19 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
