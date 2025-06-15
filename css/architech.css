@@ -168,6 +168,8 @@ table thead th {
 #toc ul {
   flex: 1 1 auto;
   /* TOC list takes up available vertical space */
+  /* padding-bottom: 2em; */
+  /* space between TOC and button */
 }
 
 /* Responsiveness fixes */
@@ -231,7 +233,7 @@ video {
   display: flex;
   align-items: flex-start;
   vertical-align: middle;
-  gap: 0.75em;  
+  gap: 0.75em;
 
   .callout-title {
     font-family: var(--heading-font);
@@ -301,9 +303,10 @@ video {
   margin-left: 0.5em;
 }
 
-.video-title p {
+.video-title {
   font-size: 1.5em !important;
 }
+
 
 /* code listing callout numbers */
 .conum {
