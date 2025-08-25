@@ -214,7 +214,7 @@ In Java, parentheses <strong>always</strong> indicate a method, whether or not t
 <p>The <code>void</code> keyword indicates that this method will not return anything. This is called the method&#8217;s <em>return type</em>, and we&#8217;ll learn about this shortly.</p>
 </li>
 <li>
-<p><code>displayBandName</code> is the identifier for the method, in the same way variables have identifiers. Like variable identifiers, use <em>camelCase</em> to make the name readable&#8212;&#8203;and be sure to make the name descriptive. The convention is that the name of a method should describe what it does; usually, that means the identifier is (or includes) a verb.</p>
+<p><code>displayBandName</code> is the identifier for the method, in the same way variables have identifiers. Like variable identifiers, use <em>camelCase</em> to make the name readable—and be sure to make the name descriptive. The convention is that the name of a method should describe what it does; usually, that means the identifier is (or includes) a verb.</p>
 </li>
 <li>
 <p>The parentheses indicate to the compiler that this is a method, as opposed to a variable or some other fancy thing. You&#8217;ll see what we can put in the parentheses shortly.</p>
@@ -254,7 +254,7 @@ In Java, parentheses <strong>always</strong> indicate a method, whether or not t
 <h3 id="variable_scope">3.2. Variable Scope</h3>
 <div class="paragraph">
 <p>As we begin organizing our code into different methods and (when we learn object-oriented programming basics) classes, we&#8217;ll need to understand how data is compartmentalized within a program.
-Whenever we create a class or method&#8212;&#8203;and other structures we&#8217;ll about learn as we go&#8212;&#8203;we use curly braces to define the boundaries, and we use indenting to help make those boundaries clear.
+Whenever we create a class or method—and other structures we&#8217;ll about learn as we go—we use curly braces to define the boundaries, and we use indenting to help make those boundaries clear.
 These braces form <em>code blocks</em>.</p>
 </div>
 <div class="paragraph">
@@ -342,7 +342,7 @@ Shadowing is a <strong>very</strong> bad practice, because it often leads to con
 When <code>outputNumber()</code> is called, another variable named <code>numberOfSongs</code> is created and assigned the value <code>18</code>.
 After that is output, an assignment statement changes that value to <code>10</code>.
 Then, program execution returns to <code>main()</code>, where a <code>println()</code> statement outputs <code>numberOfSongs</code> again.
-However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10&#8212;&#8203;the other one was.</p>
+However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10—the other one was.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.3 - Variable shadowing, which we should avoid.</div>
@@ -404,7 +404,7 @@ However, <em>this</em> <code>numberOfSongs</code> wasn&#8217;t changed to 10&#82
 <h4 id="_global_variables">3.2.2. Global Variables</h4>
 <div class="paragraph">
 <p>As you can see, variable scope has a big impact on how our code runs.
-Beginning programmers sometimes try to avoid scope issues by declaring their variables within the class code block, which makes them accessible to any block nested within the class&#8212;&#8203;inclusing all of the methods the class encloses.
+Beginning programmers sometimes try to avoid scope issues by declaring their variables within the class code block, which makes them accessible to any block nested within the class—inclusing all of the methods the class encloses.
 This kind of class-level variable is sometimes called a <em>global variable</em>, and the use of global variables is generally discouraged.</p>
 </div>
 <div class="listingblock">
@@ -466,7 +466,7 @@ This kind of class-level variable is sometimes called a <em>global variable</em>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-The use of global or class-level variables in code that you turn in for an assignment in my class is very heavily penalized. As much as possible, I try to reinforce best practices&#8212;&#8203;and that means we don&#8217;t use global variables.
+The use of global or class-level variables in code that you turn in for an assignment in my class is very heavily penalized. As much as possible, I try to reinforce best practices—and that means we don&#8217;t use global variables.
 </td>
 </tr>
 </table>
@@ -510,7 +510,7 @@ So, the <code>String</code> we want to output is passed to the <code>print()</co
 <p>We specify what information a method needs as part of the method definition.
 Within the method we&#8217;re defining, those pieces of information are called <strong>parameters</strong>.
 A parameter is a variable that exists in the method and receives the argument, and it&#8217;s declared inside the parentheses in our method definition.
-The methods we&#8217;ve defined so far didn&#8217;t need any outside information, so we haven&#8217;t been putting anything in the parentheses&#8212;&#8203;but now let&#8217;s see an example with a parameter.</p>
+The methods we&#8217;ve defined so far didn&#8217;t need any outside information, so we haven&#8217;t been putting anything in the parentheses—but now let&#8217;s see an example with a parameter.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 3.5 - ParameterExample.java - Defining a parameter and passing in an argument</div>
@@ -606,8 +606,8 @@ The actual value passed in when we call a method is referred to as an <em>argume
 <div class="sect2">
 <h3 id="_returning_values">3.4. Returning Values</h3>
 <div class="paragraph">
-<p>The methods we&#8217;ve seen to this point are basically commands&#8212;&#8203;they simply perform a task, and then when they&#8217;re done, program execution just goes back to the method that called it and resumes there.
-But we can also create methods that are like questions&#8212;&#8203;they execute a chunk of code, but when they are finished they give back an answer.</p>
+<p>The methods we&#8217;ve seen to this point are basically commands—they simply perform a task, and then when they&#8217;re done, program execution just goes back to the method that called it and resumes there.
+But we can also create methods that are like questions—they execute a chunk of code, but when they are finished they give back an answer.</p>
 </div>
 <div class="paragraph">
 <p>Consider these methods:</p>
@@ -660,7 +660,7 @@ The <code>return</code> statement sends the <code>favNum</code> value back to th
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-If a method has a return type of anything other than <code>void</code>, it will only compile if it has a <code>return</code> statement followed by a value&#8212;&#8203;either literal or variable&#8212;&#8203;of the specified type.
+If a method has a return type of anything other than <code>void</code>, it will only compile if it has a <code>return</code> statement followed by a value—either literal or variable—of the specified type.
 </td>
 </tr>
 </table>
@@ -722,7 +722,7 @@ There are a few reasons for this, but consider an obvious one.
 If we use a <code>print()</code> method, our code is limited to only working in a console application.
 That&#8217;s fine for now, because it&#8217;s the only kind of application we know how to make!
 But what if we want to use that same code in a web application, or a mobile app?
-That <code>print()</code> statement won&#8217;t work&#8212;&#8203;rather, the user will never see the result, because they won&#8217;t have a console window.</p>
+That <code>print()</code> statement won&#8217;t work—rather, the user will never see the result, because they won&#8217;t have a console window.</p>
 </div>
 <div class="paragraph">
 <p>Consider this code:</p>
@@ -783,7 +783,7 @@ The solution is to return the String and perform the output in <code>main()</cod
 </div>
 <div class="paragraph">
 <p>This is another example of something that seems annoying, like pointless extra work.
-When we&#8217;re learning new things, we sometimes have to accept the wisdom of people who are experienced&#8212;&#8203;and recognize that eventually we&#8217;ll see the point.
+When we&#8217;re learning new things, we sometimes have to accept the wisdom of people who are experienced—and recognize that eventually we&#8217;ll see the point.
 We&#8217;re all about learning good habits and best practices around here, so we&#8217;ll almost always return values rather than printing them.</p>
 </div>
 <div class="paragraph">
@@ -874,7 +874,7 @@ We still want a method that calculates the average age, but one that takes three
 </div>
 <div class="paragraph">
 <p>To create another version of a method that operates a little differently, we can use <em>method overloading</em>.
-Overloading a method means creating a new version of the method that has the same name&#8212;&#8203;and the same basic purpose&#8212;&#8203;but a different set of parameters.
+Overloading a method means creating a new version of the method that has the same name—and the same basic purpose—but a different set of parameters.
 To overload a method, we write a new method with the same identifier, but with a different set of parameters.
 An overload for our <code>averageAge()</code> method could look like this:</p>
 </div>
@@ -1086,7 +1086,7 @@ We simply provide the arguments that match the method signature we want to use.<
 <li>
 <p>What is a method, and why would you use one in your code?</p>
 <div class="paragraph">
-<p>(In your own words — bonus points if you mention LEGO. Or the Beatles.)</p>
+<p>(In your own words—bonus points if you mention LEGO. Or the Beatles.)</p>
 </div>
 </li>
 <li>
@@ -1163,8 +1163,8 @@ We simply provide the arguments that match the method signature we want to use.<
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-06-15<br />
-        02:44:59 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-08-25<br />
+        18:17:13 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
