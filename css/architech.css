@@ -275,10 +275,36 @@ video {
   }
 }
 
+.callout.stop {
+
+  border-color: var(--spincolor);
+
+  .stop-icon {
+    fill: var(--spincolor);
+    width: 3em;
+    height: 3em;
+    vertical-align: text-center;
+    margin-right: 1em;
+  }
+
+  .callout-title {
+    color: var(--spincolor) !important;
+  }
+
+}
+
 .callout.spin {
   border-color: var(--spincolor);
 
   .spin-icon {
+    fill: var(--spincolor);
+    width: 3em;
+    height: 3em;
+    vertical-align: text-center;
+    margin-right: 1em;
+  }
+
+  .stop-icon {
     fill: var(--spincolor);
     width: 3em;
     height: 3em;
@@ -301,9 +327,10 @@ video {
   margin-left: 0.5em;
 }
 
-.video-title p {
+.video-title {
   font-size: 1.5em !important;
 }
+
 
 /* code listing callout numbers */
 .conum {
