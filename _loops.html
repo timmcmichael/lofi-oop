@@ -64,15 +64,17 @@
 </li>
 <li><a href="_loops.html#_input_validation_with_loops">6.4. Input Validation with Loops</a>
 </li>
-<li><a href="_loops.html#_for_loops">6.5. <code>for</code> Loops</a>
+<li><a href="_loops.html#_counters_and_accumulators">6.5. Counters and Accumulators</a>
 </li>
-<li><a href="_loops.html#_break_and_continue_statements">6.6. <code>break</code> and <code>continue</code> Statements</a>
+<li><a href="_loops.html#_for_loops">6.6. <code>for</code> Loops</a>
 </li>
-<li><a href="_loops.html#_a_word_about_nested_loops">6.7. A Word About Nested Loops</a>
+<li><a href="_loops.html#_break_and_continue_statements">6.7. <code>break</code> and <code>continue</code> Statements</a>
 </li>
-<li><a href="_loops.html#_just_for_fun_recursion">6.8. JUST FOR FUN: Recursion</a>
+<li><a href="_loops.html#_a_word_about_nested_loops">6.8. A Word About Nested Loops</a>
 </li>
-<li><a href="_loops.html#_solution_walkthroughs">6.9. Solution Walkthroughs</a>
+<li><a href="_loops.html#_just_for_fun_recursion">6.9. JUST FOR FUN: Recursion</a>
+</li>
+<li><a href="_loops.html#_solution_walkthroughs">6.10. Solution Walkthroughs</a>
 </li>
 <li><a href="_loops.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_7">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
@@ -432,7 +434,194 @@ For example, if a program displays a menu with three options, a loop could keep 
 <div class="paragraph">
 <p>This code will keep displaying the menu and asking for the user&#8217;s choice until the user enters a number between 1 and 4.</p>
 </div>
-<div class="exampleblock callout spin">
+</div>
+<div class="sect2">
+<h3 id="_counters_and_accumulators">6.5. Counters and Accumulators</h3>
+<div class="paragraph">
+<p>When we use loops, we often need to keep track of how many times the loop has executed, or keep a running total of something.
+This is done with <em>counters</em> and <em>accumulators</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A <em>counter</em> is a variable that keeps track of how many times something has happened, such as how many times a loop has executed.</p>
+</li>
+<li>
+<p>An <em>accumulator</em> is a variable that keeps a running total of something, such as the sum of a series of numbers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Typically, the result of a counter or accumulator is used after the loop has finished executing.
+For that reason, these variables need to be declared (and initialized) before the loop starts; if you create a variable inside the loop, it will be re-created each time the loop iterates and will not keep a running total.
+And it would be scoped to the loop, so you wouldn&#8217;t be able to access it after the loop anyway.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 6.5 - A counter in a while loop</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> java.util.Scanner;</span>
+
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">NegativeCounter</span><span style="color: #f8f8f2"> {</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        Scanner input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Scanner(System.</span><span style="color: #a6e22e">in</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> currentInput </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+
+
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The object of the game is to see how many times you can enter a negative number.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot; If you enter a positive number, the game is over.\n&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;We didn&#39;t say it was a fun game.\n&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (currentInput </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Enter a negative number: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            currentInput </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextInt</span><span style="color: #f8f8f2">();</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (currentInput </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">                count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">            }</span>
+<span style="color: #f8f8f2">        }</span>
+
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;\nGame over!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;You entered &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; negative numbers.&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The counter variable <code>count</code> is declared and initialized to <code>0</code> before the loop starts.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The counter variable <code>count</code> is incremented by <code>1</code> each time the user enters a negative number.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>After the loop ends, the value of <code>count</code> is printed out, showing how many negative numbers the user entered.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If we want to do arithmetic within the loop, such as calculating a sum, we can use an accumulator variable in the same way.
+It will need to be declared and initialized before the loop starts, and then updated within the loop.
+Once the loop is finished, we can use (or output) the value of the accumulator variable.</p>
+</div>
+<div class="paragraph">
+<p>The following code adds an accumulator to the previous example to calculate the sum of all the negative numbers the user enters.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 6.6 - An accumulator in a while loop</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> java.util.Scanner;</span>
+
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">NegativeAccumulator</span><span style="color: #f8f8f2"> {</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        Scanner input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Scanner(System.</span><span style="color: #a6e22e">in</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> currentInput </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
+
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The object of the game is to see how much you can accumulate by entering negative numbers.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot; If you enter a positive number, the game is over.\n&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;We didn&#39;t say it was a fun game.\n&quot;</span><span style="color: #f8f8f2">);</span>
+
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (currentInput </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Enter a negative number: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            currentInput </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextInt</span><span style="color: #f8f8f2">();</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (currentInput </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">                count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">                sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> currentInput; </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">            }</span>
+<span style="color: #f8f8f2">        }</span>
+
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;\nGame over!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;You entered &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; negative numbers.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The total of all the negative numbers you entered is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;.&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The accumulator variable <code>sum</code> is declared and initialized to <code>0</code> before the loop starts.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The accumulator variable <code>sum</code> is increased by the value of <code>currentInput</code> each time the user enters a negative number.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>After the loop ends, the value of <code>sum</code> is printed out, showing the total of all the negative numbers the user entered.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Counters and accumulators are very common and useful, and they can be used with any kind of loop.</p>
+</div>
+<div class="exampleblock callout ttw callout spin">
 <div class="content">
 <div class="paragraph">
 <p><svg xmlns="http://www.w3.org/2000/svg" class="spin-icon" width="88.88" height="62.42" viewBox="0 0 88.88 62.42" fill="currentColor"><path d="M60.84,29.26c-1.16.32-1.79,1.37-1.47,2.42.32,1.05,1.37,1.68,2.42,1.47,1.05-.32,1.68-1.37,1.47-2.42-.32-1.16-1.37-1.79-2.42-1.47Z"/><path d="M40.63,15.26c-.32-.21-.74-.32-1.16-.21l-17.26,4.32c-.53.11-.95.63-.95,1.26v18.63c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-13.79l14.74-3.79v9.26c-.84-.42-1.79-.63-2.74-.63-2.95,0-5.37,2.11-5.37,4.63s2.42,4.63,5.37,4.63,5.37-2.11,5.37-4.63v-22.63c-.21-.42-.31-.84-.63-1.05h0ZM18.42,45.26c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.27,2-2.74,2ZM35.68,40.95c-1.47,0-2.74-.95-2.74-2,0-1.16,1.26-2,2.74-2s2.74.95,2.74,2c.11,1.05-1.16,2-2.74,2ZM38.53,22.95l-14.74,3.79v-5.16l14.74-3.68v5.05Z"/><path d="M88,24.21c-3.16-12-13.79-20.1-25.58-20.53V1.47c0-.84-.63-1.47-1.47-1.47H1.47C.63,0,0,.64,0,1.48v59.47c0,.84.63,1.47,1.47,1.47h59.47c.84,0,1.47-.63,1.47-1.47v-2.21c2-.11,4-.32,5.89-.84,14.64-3.89,23.48-18.94,19.69-33.68h0ZM61.27,39.05c-4.32,0-7.79-3.47-7.79-7.79s3.47-7.79,7.79-7.79,7.79,3.47,7.79,7.79-3.48,7.79-7.79,7.79ZM2.95,2.84h56.53v3.26H2.95s0-3.26,0-3.26ZM59.47,59.48H2.95v-2.74h56.53v2.74ZM59.47,53.69H2.95V9.05h56.53v11.05c-5.47.74-9.58,5.37-9.58,10.95s4.21,10.32,9.58,10.95v11.68ZM76.74,28c-.63.21-1.26-.21-1.47-.84-1.05-3.47-3.26-6.42-6.32-8.32-.32-.21-.42-.42-.53-.74-.11-.32,0-.63.11-.95.32-.53,1.05-.74,1.68-.42,3.58,2.21,6.21,5.68,7.37,9.68.21.74-.21,1.38-.84,1.59h0ZM81.37,26.74c-.63.21-1.26-.21-1.47-.84-1.37-4.74-4.32-8.74-8.53-11.26-.32-.21-.42-.42-.53-.74s0-.63.11-.95c.32-.53,1.05-.74,1.68-.42,4.74,2.84,8.11,7.37,9.58,12.63.21.74-.21,1.48-.84,1.58h0Z"/></svg><strong class="callout-title">Take It for a Spin</strong></p>
@@ -444,13 +633,13 @@ For example, if a program displays a menu with three options, a loop could keep 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_for_loops">6.5. <code>for</code> Loops</h3>
+<h3 id="_for_loops">6.6. <code>for</code> Loops</h3>
 <div class="paragraph">
 <p>Definite loops are really common, especially when we learn about things like <em>arrays</em> later on, so Java provides a shorthand format to create that kind of loop: the <code>for</code> keyword.
 The syntax of a <code>for</code> loop can be a little intimidating for new coders, but it really just takes  all three of the pieces we need for a loop and combines them into one line of code: initializing a counter, checking the counter, and changing the counter.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 6.5 - A simple <code>for</code> loop</div>
+<div class="title">Example 6.7 - A simple <code>for</code> loop</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -521,7 +710,7 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 </div>
 </div>
 <div class="sect2">
-<h3 id="_break_and_continue_statements">6.6. <code>break</code> and <code>continue</code> Statements</h3>
+<h3 id="_break_and_continue_statements">6.7. <code>break</code> and <code>continue</code> Statements</h3>
 <div class="paragraph">
 <p>I believe that <code>while</code>, <code>do-while</code>, and <code>for</code> loops, when written with clear Boolean expressions, are the most readable loops, and any loop a coder will need in their career can be written with those structures.
 A well-written loop will execute the block of code as many times as necessary, and then stop when the condition is false, without any additional help from the programmer.
@@ -571,7 +760,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 </div>
 <div class="sect2">
-<h3 id="_a_word_about_nested_loops">6.7. A Word About Nested Loops</h3>
+<h3 id="_a_word_about_nested_loops">6.8. A Word About Nested Loops</h3>
 <div class="paragraph">
 <p>We can put a loop inside another loop, and that&#8217;s called a <em>nested loop</em>. They are useful in some situations, and studying them can improve your ability to think through loop-based algorithms.</p>
 </div>
@@ -580,7 +769,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 </div>
 <div class="sect2">
-<h3 id="_just_for_fun_recursion">6.8. JUST FOR FUN: Recursion</h3>
+<h3 id="_just_for_fun_recursion">6.9. JUST FOR FUN: Recursion</h3>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -593,7 +782,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 </div>
 <div class="sect2">
-<h3 id="_solution_walkthroughs">6.9. Solution Walkthroughs</h3>
+<h3 id="_solution_walkthroughs">6.10. Solution Walkthroughs</h3>
 <div class="paragraph">
 <p>In "solution walkthrough" videos, I give a problem/prompt that is similar to the kinds of work I assign, and then I record myself writing a solution. It&#8217;s not absolutely mandatory to watch this video, but students report that these videos are particularly helpful.</p>
 </div>
@@ -668,8 +857,8 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-09-08<br />
-        02:57:42 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-09-09<br />
+        02:28:33 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
