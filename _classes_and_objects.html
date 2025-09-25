@@ -225,7 +225,7 @@ With an order, we might send it to the kitchen, print the bill, or close the bil
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Your Canvas course includes access to <strong>Lucid (Whiteboard)</strong>, which is a free online tool you can use to create UML diagrams. If you create your account through the link in the left-hand navbar in Canvas, you&#8217;ll have access to the premium features for free.
+Your Canvas course includes access to <strong>Lucid (Whiteboard)</strong>, which is an online tool you can use to create UML diagrams. If you create your account through the link in the left-hand navbar in Canvas, you&#8217;ll have access to the premium features for free.
 </td>
 </tr>
 </table>
@@ -244,7 +244,7 @@ If we have an <code>Order</code> class in a program used by a restaurant, we don
 Encapsulation of a class means that attributes are hidden from the outside world, and only the behaviors of the class can access and change them.
 Continuing with food service analogies, consider the counter at a fast food restaurant.
 We can&#8217;t just reach over and grab a handful of fries; we have to ask the employee behind the counter to get them for us.
-In this analogy, the food is encapsulated and we can only access it by using a behavior, like "order food".</p>
+In this analogy, the food is encapsulated and we can only access it by using a behavior, like "order food" (which would work with the employee).</p>
 </div>
 <div class="paragraph">
 <p>Another way to think of encapsulation is the way we interact with other people in social situations.
@@ -252,7 +252,7 @@ When we encounter a stranger, they don&#8217;t automatically know our name and p
 We&#8217;ve encapsulated our personal information, and we only share it when and how we choose to.</p>
 </div>
 <div class="paragraph">
-<p>In Java, encapsulation is not a strict requirement, and our code will still work if we don&#8217;t use it.
+<p>In Java, encapsulation is not a strict technical requirement, and our code will still work if we don&#8217;t use it.
 But it&#8217;s a best practice—and an important one—so we will encapsulate all of our classes in this course.
 In fact, I would argue that if we don&#8217;t encapsulate our classes, we&#8217;re not really doing object-oriented programming.
 And that&#8217;s what we&#8217;re here to learn.</p>
@@ -360,12 +360,12 @@ Since a class will compile and run even if we leave off the <code>private</code>
 </div>
 </div>
 <div class="paragraph">
-<p>You might remember from <a href="_methods.html#variable_scope">the section on variable scope in Chapter 0011</a> that using global variables is terrible, and every time we create a global variable, a puppy loses its favorite toy.
+<p>You might remember from <a href="_methods.html#variable_scope">the section on variable scope in Chapter 3</a> that using global variables is terrible, and every time we create a global variable, a puppy loses its favorite toy.
 And these fields look an awful lot like global variables.
-But fields in a class are <strong>not</strong> global variables; they&#8217;re <strong>instance</strong> variables, and that&#8217;s a good thing.
-The fields are <strong>encapsulated</strong>, so they can only be accessed and changed by the methods of the class—which is also good thing.
+But fields in a class are <strong>not</strong> global variables; they&#8217;re <strong>instance</strong> variables—and that&#8217;s a good thing.
+The fields are <strong>encapsulated</strong> with that <code>private</code> keyword, so they can only be accessed and changed by the methods of the class—which is also good thing.
 And the fields are unique to each object, so we can have multiple objects with different values for the fields—which is yet another a good thing.
-And so no puppies' toys will be harmed as long as we use <strong><code>private</code></strong> fields correctly.</p>
+And so no puppies' toys will be harmed as long as we use that <strong><code>private</code></strong> keyword.</p>
 </div>
 <div class="exampleblock callout ttw">
 <div class="content">
@@ -387,12 +387,12 @@ And so no puppies' toys will be harmed as long as we use <strong><code>private</
 <h4 id="_methods_2">4.3.2. Methods</h4>
 <div class="paragraph">
 <p>Ensuring that our fields are <code>private</code> is the first step in encapsulating our class, but it&#8217;s not the only step.
-We also need to create methods that can access and change the fields—otherwise, the fields are useless.
+We also need to create methods that can access and change the fields appropriately—otherwise, the fields are not very useful.
 So far, our methods have included the keyword <code>static</code>; we&#8217;ll learn more about that shortly, but when we make methods for an OOP class, we&#8217;ll leave off that <code>static</code> keyword.
 These <em>nonstatic</em> methods are called <strong>instance methods</strong>, and they are otherwise very similar to the <code>static</code> methods we&#8217;ve been using.</p>
 </div>
 <div class="paragraph">
-<p>For now our instance methods will be <code>public</code>, so they can be accessed from other classes.
+<p>For now, our instance methods will be <code>public</code> so they can be accessed from other classes.
 Remember, the foundation of encapsulation is having <code>private</code> fields and <code>public</code> methods to permit interactions with that data.</p>
 </div>
 <div class="paragraph">
@@ -512,7 +512,7 @@ But we really should only write setters for fields that we want to be able to ch
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-A rule of thumb for beginners: create <strong>getters</strong> for all of your fields when you first write your class, and then add <strong>setters</strong> only as you need them. Because this is sometimes tricky for beginners to determine, I don&#8217;t deduct points for writing unnecessary setters—but sometimes my directions will explicitly tell you <strong>not</strong> to write a setter for a field, and I do deduct for that.
+A rule of thumb for beginners: create <strong>getters</strong> for all of your fields when you first write your class, and then add <strong>setters</strong> only as you need them. Because this is sometimes tricky for beginners to determine, I generally don&#8217;t deduct points for writing unnecessary setters—but sometimes my directions will explicitly tell you not to write a setter for a field, and I do deduct in that case.
 </td>
 </tr>
 </table>
@@ -722,7 +722,7 @@ We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#82
 </div>
 </div>
 <div class="paragraph">
-<p>We&#8217;re soon going to spend some time learning about constructors, but here are the takeaways for now: the identifier is exactly the same as the class name (case-sensitive!), and it&#8217;s followed by parentheses.</p>
+<p>We&#8217;re soon going to spend some time learning about constructors, but here is the takeaway for now: the identifier is exactly the same as the class name (case-sensitive!), and it&#8217;s followed by parentheses.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -804,7 +804,7 @@ The dot notation lets us specify the object we want to use; and even if we only 
 <p>Ok, time for another convention that seems only intended to be nitpicky and pointless, but is important and is expected on assignments in this course.
 OOP nerds value keeping the different parts of our programs compartmentalized, and that includes separating the class definition from the code that uses the class.
 A class definition goes in its own file, which must have a filename exactly match the name of the class (with <code>.java</code> as the extension)—and that one&#8217;s not a convention, that&#8217;s a syntax rule for the compiler.
-A class we define for use as an object can be called an <strong>object class</strong> or a <strong>user-defined class</strong>.</p>
+A class we define for use as object can be called an <strong>object class</strong> or a <strong>user-defined class</strong> (where the "user" in this case is the programmer).</p>
 </div>
 <div class="paragraph">
 <p>The code that uses the <em>object class</em> should be in its own file, and is often called a <strong>driver class</strong>.
@@ -825,7 +825,7 @@ I don&#8217;t much care what term you use, as long as it&#8217;s a separate clas
 <p>Your pitchforks are already sharpened, but here&#8217;s the part where you light your torches.
 <strong>All of your input and output should be in the driver class.</strong>
 That is, you generally shouldn&#8217;t have any <code>print()</code> or <code>println()</code> statements, any dialog popups (if you know how to use <code>JOptionPane</code> or similar), or any <code>Scanner</code> input calls in your object classes.
-My examples always demonstrate this <em>separation of concerns</em>, so you&#8217;ll have plenty of examples of what I mean.</p>
+My examples always enforce this <em>separation of concerns</em>, so you&#8217;ll have plenty of examples of what I mean.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -837,14 +837,23 @@ I decided it was too creepy to display in the text, but this crime against natur
 </div>
 </div>
 <div class="paragraph">
-<p>So, why can&#8217;t we put input/output in our object classes?
-* To "decouple" the UI from the <em>business logic</em> or guts of our program. This makes our code reusable in a variety of projects, such as web pages, mobile apps, and GUI applications—none of which are friendly to console input and output. Look up the terms <strong>MVC</strong> and <strong>MVVM</strong> for all kinds of information about that if you think your professor is just a crank and you want to know what happens in the <em>real world</em>. Spoiler alert, the real world generally wants them kept separate, too.</p>
+<p>So, why can&#8217;t we put input/output in our object classes?</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>To "decouple" the UI from the <em>business logic</em> or guts of our program. This makes our code reusable in a variety of projects, such as web pages, mobile apps, and GUI applications—none of which are friendly to console input and output. Look up the terms <strong>MVC</strong> and <strong>MVVM</strong> for all kinds of information about that if you think your professor is just a crank and you want to know what happens in the <em>real world</em>. Spoiler alert, the real world generally wants them kept separate, too.</p>
 <div class="paragraph">
-<p>+
-Incidentally, we might use the term <em>portability</em> to describe this quality, since we can move our well-designed code to other projects and copntexts easily.
-* To keep our code more readable by keeping the different parts clearly identifiable and easy to find.
-* Because I just don&#8217;t care much about input and output. I care about the classes you create, so I want to look at (and grade) that work separately. If your input and output don&#8217;t work but your object class looks good, you&#8217;re still going to get a good grade—if I&#8217;m able to separate out those mistakes.</p>
+<p>Incidentally, we might use the term <em>portability</em> to describe this quality, since we can move our well-designed code to other projects and copntexts easily.</p>
+</div>
+</li>
+<li>
+<p>To keep our code more readable by keeping the different parts clearly identifiable and easy to find.</p>
+</li>
+<li>
+<p>Because I just don&#8217;t care much about input and output. I care about the classes you create, so I want to look at (and grade) that work separately. If your input and output don&#8217;t work but your object class looks good, you&#8217;re still going to get a good grade—if I&#8217;m able to separate out those mistakes.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Unfortunately, this is one of those things that boils down to, "because I said so" and "you&#8217;ll thank me later."
@@ -1259,8 +1268,8 @@ As an example, the <code>Math</code> class has a <code>PI</code> constant that i
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-09-23<br />
-        18:13:05 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-09-25<br />
+        22:12:12 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
