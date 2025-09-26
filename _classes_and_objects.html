@@ -1021,7 +1021,7 @@ As a beginner, our rule of thumb is to just make a simple assignment statement f
 We can initialize those fields to any value we want, but we should choose values that make sense for the object; whatever we put there will be the default values that each object gets when it is instantiated.</p>
 </div>
 <div class="paragraph">
-<p>Constructors should be written at the top of the class, before the fields and methods.</p>
+<p>Constructors should be placed after the fields but before the getter and setter methods.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1030,7 +1030,7 @@ We can initialize those fields to any value we want, but we should choose values
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This constructor is called a <strong>parameterless</strong> constructor because it doesn&#8217;t have any parameters in the parentheses. It&#8217;s technically <strong>not</strong> a default constructor, because we wrote it ourselves rather than letting the compiler do it, but so many people call it a default constructor that the term is used more often than <em>parameterless constructor</em>.
+This kind of constructor is called a <strong>parameterless</strong> constructor because, well, it doesn&#8217;t have any parameters in the parentheses. It&#8217;s technically <strong>not</strong> a default constructor, because we wrote it ourselves rather than letting the compiler do it, but most programmers aren&#8217;t as nerdy about word choice as I am, so the term "default constructor" is used more often than <em>parameterless constructor</em>.
 </td>
 </tr>
 </table>
@@ -1038,7 +1038,7 @@ This constructor is called a <strong>parameterless</strong> constructor because 
 <div class="paragraph">
 <p>Constructors can also have parameters, which allows us to pass values to the constructor when we instantiate an object.
 This is useful when we want to set the initial values of the fields to something specific, rather than the default values.
-We add parameters to our constructor just like we do with any other method, by listing the data type and identifier in the parentheses.</p>
+We add parameters to our constructor just like we do with any other method, by listing the data types and identifiers in the parentheses.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 4.15 - A <code>WeatherRecord</code> constructor with parameters.</div>
@@ -1085,7 +1085,7 @@ That can include having a parameterless constructor and one or more constructors
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-To see a complete example of the <code>WeatherRecord</code> class with constructors, fields, and methods, as well as a driver class to demonstrate it, the Source code examples from this chapter and associated videos are available in the <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/04%20Classes%20and%20Objects" target="_blank" rel="noopener">GitHub repository for this chapter</a>.
+To see complete examples of the <code>WeatherRecord</code> class with constructors, fields, and methods, as well as a driver class to demonstrate the different features, visit the <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/04%20Classes%20and%20Objects" target="_blank" rel="noopener">GitHub repository for this chapter</a>.
 </td>
 </tr>
 </table>
@@ -1184,7 +1184,7 @@ Technically, <code>System.out</code> is an object of the <code>PrintStream</code
 </div>
 <div class="paragraph">
 <p>As our skills develop, we&#8217;ll learn more about using <code>static</code> in our programs and classes, but an important one to know about for now is the <code>static</code> constant.
-When we put a <code>static</code> constant in an object class (which would also use the keyword <code>final</code>), we&#8217;re creating a value that is shared by all objects created from the class.
+When we put a <code>static</code> constant in an object class (which would also use the keyword <code>final</code>), we&#8217;re defining a value that is shared by all objects created from the class.
 If we have a savings account class, a common example when learning OOP, we might have a <code>static final double INTEREST_RATE</code> constant.
 This would mean that every savings account would earn the same interest rate, which is often how banks work.</p>
 </div>
@@ -1268,8 +1268,8 @@ As an example, the <code>Math</code> class has a <code>PI</code> constant that i
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-09-25<br />
-        22:14:01 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-09-26<br />
+        03:08:10 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
