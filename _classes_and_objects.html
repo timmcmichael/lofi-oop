@@ -54,13 +54,23 @@
 </li>
 <li><a href="_classes_and_objects.html#_oop_basics">4.1. OOP Basics</a>
 </li>
-<li><a href="_classes_and_objects.html#_encapsulation">4.2. Encapsulation</a>
+<li><a href="_classes_and_objects.html#_defining_a_class">4.2. Defining a Class</a>
 </li>
-<li><a href="_classes_and_objects.html#_defining_and_using_a_class">4.3. Defining and Using a Class</a>
+<li><a href="_classes_and_objects.html#_fields">4.3. Fields</a>
 </li>
-<li><a href="_classes_and_objects.html#_constructors">4.4. Constructors</a>
+<li><a href="_classes_and_objects.html#_methods_2">4.4. Methods</a>
 </li>
-<li><a href="_classes_and_objects.html#_static_constants_and_methods">4.5. <code>static</code> Constants and Methods</a>
+<li><a href="_classes_and_objects.html#_the_this_keyword">4.5. The <code>this</code> Keyword</a>
+</li>
+<li><a href="_classes_and_objects.html#_validating_data_in_a_setter">4.6. Validating Data in a Setter</a>
+</li>
+<li><a href="_classes_and_objects.html#_fully_defined_weatherrecord_class">4.7. Fully Defined <code>WeatherRecord</code> Class</a>
+</li>
+<li><a href="_classes_and_objects.html#_using_a_class">4.8. Using a Class</a>
+</li>
+<li><a href="_classes_and_objects.html#_constructors">4.9. Constructors</a>
+</li>
+<li><a href="_classes_and_objects.html#_static_constants_and_methods">4.10. <code>static</code> Constants and Methods</a>
 </li>
 <li><a href="_classes_and_objects.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_5">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
@@ -231,9 +241,8 @@ Your Canvas course includes access to <strong>Lucid (Whiteboard)</strong>, which
 </table>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_encapsulation">4.2. Encapsulation</h3>
+<div class="sect3">
+<h4 id="_encapsulation">4.1.2. Encapsulation</h4>
 <div class="paragraph">
 <p>Object-oriented programming is all about creating objects that can interact with each other.
 Since the objects will be interacting, we need to think about how to keep them from interfering with each other in ways we don&#8217;t want.
@@ -258,8 +267,9 @@ In fact, I would argue that if we don&#8217;t encapsulate our classes, we&#8217;
 And that&#8217;s what we&#8217;re here to learn.</p>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_defining_and_using_a_class">4.3. Defining and Using a Class</h3>
+<h3 id="_defining_a_class">4.2. Defining a Class</h3>
 <div class="paragraph">
 <p>We&#8217;ll look at a hypothetical program to keep rudimentary data about a song&#8217;s sales and chart performance; for a single song&#8217;s data, we&#8217;ll have a class called <code>SongData</code>.</p>
 </div>
@@ -308,8 +318,9 @@ The class header is followed by a code block, enclosed in curly braces.</p>
 <p>The class code block is where we define the different components that make up the class, which we call the <strong>instance members</strong>.
 To begin with, we&#8217;ll focus on two types of instance members: <strong>fields</strong> and <strong>methods</strong>.</p>
 </div>
-<div class="sect3">
-<h4 id="_fields">4.3.1. Fields</h4>
+</div>
+<div class="sect2">
+<h3 id="_fields">4.3. Fields</h3>
 <div class="paragraph">
 <p><strong>Fields</strong> are the implementation of the <em>attributes</em> of the class.
 They are also known as <strong>instance variables</strong> because they are similar to the variables we&#8217;ve been using in our programs, but their scope is the object created from the class, not the method where they&#8217;re defined.
@@ -383,8 +394,8 @@ And so no puppies' toys will be harmed as long as we use that <strong><code>priv
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_methods_2">4.3.2. Methods</h4>
+<div class="sect2">
+<h3 id="_methods_2">4.4. Methods</h3>
 <div class="paragraph">
 <p>Ensuring that our fields are <code>private</code> is the first step in encapsulating our class, but it&#8217;s not the only step.
 We also need to create methods that can access and change the fields appropriately—otherwise, the fields are not very useful.
@@ -398,8 +409,8 @@ Remember, the foundation of encapsulation is having <code>private</code> fields 
 <div class="paragraph">
 <p>In broad terms, we can categorize instance methods into two types: <strong>accessor</strong> methods and <strong>mutator</strong> methods.</p>
 </div>
-<div class="sect4">
-<h5 id="_accessor_methods">Accessor Methods</h5>
+<div class="sect3">
+<h4 id="_accessor_methods">4.4.1. Accessor Methods</h4>
 <div class="paragraph">
 <p>Accessor methods give access to the fields of the class, but they don&#8217;t change the fields.
 Think of them as "read only" methods, and often all they do is return the value of a field.
@@ -478,8 +489,8 @@ But read-only access usually does no harm, so often we&#8217;ll have getters for
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_mutator_methods">Mutator Methods</h5>
+<div class="sect3">
+<h4 id="_mutator_methods">4.4.2. Mutator Methods</h4>
 <div class="paragraph">
 <p>Mutator methods <em>change</em> the fields of the class.
 Though they sometimes return a value, their primary purpose is to change the value of a field, so they usually have a <code>void</code> return type.
@@ -530,8 +541,8 @@ These methods are still mutators, and we might even still refer to them as <em>s
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_the_this_keyword">4.3.3. The <code>this</code> Keyword</h4>
+<div class="sect2">
+<h3 id="_the_this_keyword">4.5. The <code>this</code> Keyword</h3>
 <div class="paragraph">
 <p>Notice that we&#8217;ve been prefixing the field names with <code>this.</code> in our methods.
 <code>this</code> is a Java keyword that refers to the current instance.
@@ -564,7 +575,7 @@ But it&#8217;s common for programmers to use the same name for a parameter as th
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Ambiguous idenfifier references.</td>
+<td>Ambiguous identifier references.</td>
 </tr>
 </table>
 </div>
@@ -574,12 +585,12 @@ In this case, the parameter is a <em>local variable</em> to the <code>setHighTem
 </div>
 <div class="paragraph">
 <p>Unless we tell it otherwise, the compiler will use the local variable any time it sees <code>highTemperature</code>; that means the assignment statement looks up the value of the <code>highTemperature</code> <strong>parameter</strong>, and then assigns that value to&#8230;&#8203;the <code>highTemperature</code> parameter.
-In other words, it&#8217;s a line of code that does nothing but waste clocks cycles.</p>
+In other words, it&#8217;s a line of code that does nothing but waste the computer&#8217;s time.</p>
 </div>
 <div class="paragraph">
 <p>To avoid this, we can just give our parameters different identifiers, and I tend to recommend that on the first few classes you create.
 But it is common to see parameters with the same name as the field they refer to, so we need another solution.
-The solution is the <code>this</code> keyword, which tells the compiler that one of those is referring to the field.</p>
+The solution is the <code>this</code> keyword, which tells the compiler when we are referring to the field.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example 4.6 - Use of <code>this</code> to clarify an ambiguous identifier.</div>
@@ -610,13 +621,44 @@ In fact, there&#8217;s a nerdy debate about whether programmers should use <code
 I recommend that new programmers just get in the habit of using it from the start.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_fully_defined_weatherrecord_class">4.3.4. Fully Defined <code>WeatherRecord</code> Class</h4>
+<div class="sect2">
+<h3 id="_validating_data_in_a_setter">4.6. Validating Data in a Setter</h3>
+<div class="paragraph">
+<p>The setters we&#8217;ve seen to this point don&#8217;t actually do anything other than set the value of a field to whatever is passed to them.
+In other words, they are no different than making the fields <code>public</code>—which, as we&#8217;ve learned, is a bad practice.</p>
+</div>
+<div class="paragraph">
+<p>We can improve our setters by adding some code to <em>validate</em> the data before changing the field.
+Data validation is the process of ensuring that the data being used is correct and appropriate.
+In the context of a setter, we can make sure that the new value being passed to the setter meets certain criteria before we assign it to the field.</p>
+</div>
+<div class="paragraph">
+<p>In our <code>WeatherRecord</code> class, we have a field for the average wind speed for the day.
+It&#8217;s not possible to have a negative wind speed, so we should make sure that the value being passed to the setter is zero or greater before assigning it to the field.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 4.7 - A setter with data validation.</div>
+<div class="content">
+<pre>public void setAverageWindSpeed(double averageWindSpeed) {
+    if (averageWindSpeed &gt;= 0) {
+        this.averageWindSpeed = averageWindSpeed;
+    }
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, the setter checks if the new <code>averageWindSpeed</code> value is zero or greater before assigning it to the field.
+If the value is below zero, the setter just does nothing—which is a simple way to handle invalid data.
+We&#8217;ll eventually learn more sophisticated ways to handle invalid data, but for now this is sufficient.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fully_defined_weatherrecord_class">4.7. Fully Defined <code>WeatherRecord</code> Class</h3>
 <div class="paragraph">
 <p>Here&#8217;s how the <code>WeatherRecord</code> class looks with the setters added, and using <code>this.</code> to indicate when we&#8217;re referring to a field.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.7 - <code>WeatherRecord.java</code>. Setters added to the <code>WeatherRecord</code> class, <code>this.</code> added to field names, and comments identifying the parts.</div>
+<div class="title">Example 4.8 - <code>WeatherRecord.java</code>. Setters added to the <code>WeatherRecord</code> class, <code>this.</code> added to field names, and comments identifying the parts.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -649,7 +691,9 @@ I recommend that new programmers just get in the habit of using it from the star
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">31</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">WeatherRecord</span><span style="color: #f8f8f2"> {</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">32</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">33</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">34</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">WeatherRecord</span><span style="color: #f8f8f2"> {</span>
 <span style="color: #f8f8f2">    </span><span style="color: #959077">// Fields</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> String date;</span>
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">private</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> highTemperature;</span>
@@ -678,15 +722,17 @@ I recommend that new programmers just get in the habit of using it from the star
 <span style="color: #f8f8f2">    }</span>
 
 <span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">setAverageWindSpeed</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> averageWindSpeed) {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">averageWindSpeed</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> averageWindSpeed;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (averageWindSpeed </span><span style="color: #ff4689">&gt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">averageWindSpeed</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> averageWindSpeed;</span>
+<span style="color: #f8f8f2">        }</span>
 <span style="color: #f8f8f2">    }</span>
 <span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_using_the_class">4.3.5. Using the Class</h4>
+<div class="sect2">
+<h3 id="_using_a_class">4.8. Using a Class</h3>
 <div class="paragraph">
 <p>As we&#8217;ve learned, defining a class establishes a blueprint; to make use of a class in a program, we need to use that blueprint to create an object.
 We can as many objects from a class as we need, and each object is known as an <strong>instance</strong> of the class.
@@ -697,7 +743,7 @@ And creating an instance is called <strong>instantiating</strong> a class.</p>
 The declaration is still a <em>data type</em> and an _identifier, but in this case the data type is the name of the class:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.8 - A declaration statement for an object variable.</div>
+<div class="title">Example 4.9 - A declaration statement for an object variable.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">WeatherRecord day1;</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -713,7 +759,7 @@ In this case, the <code>day1</code> object is going to maintain the record for t
 We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#8217;ll call a <strong>constructor</strong>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.9 - A declaration followed by an assignment statement for the newly declared object.</div>
+<div class="title">Example 4.10 - A declaration followed by an assignment statement for the newly declared object.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">WeatherRecord day1;</span>
@@ -731,7 +777,7 @@ We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#82
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-We&#8217;ve already learned that parentheses in Java <strong>always</strong> means we&#8217;re referring to a method. A constructor is a special method called when instantiating an object.
+We&#8217;ve already learned that parentheses in Java usually means we&#8217;re referring to a method. A constructor is a special method called when instantiating an object.
 </td>
 </tr>
 </table>
@@ -748,7 +794,7 @@ We&#8217;ve already learned that parentheses in Java <strong>always</strong> mea
 <p>Now that we have an object, we can call its instance methods using <em>dot notation</em>, which means we put the object name (<strong>not</strong> the class name!), followed by a dot, followed by the method call:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.10 - Instance method calls using dot notation.</div>
+<div class="title">Example 4.11 - Instance method calls using dot notation.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -767,7 +813,7 @@ This is a good test of the <em>set</em> and <em>get</em> methods for the <code>h
 To see why it&#8217;s necessary, consider the following example.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.11 - An invalid instance method call.</div>
+<div class="title">Example 4.12 - An invalid instance method call.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -784,7 +830,7 @@ To see why it&#8217;s necessary, consider the following example.</p>
 The dot notation lets us specify the object we want to use; and even if we only have one object, that object still needs to be specified with dot notation so the compiler knows where to find the method.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.12 - Valid instance method calls on multiple objects.</div>
+<div class="title">Example 4.13 - Valid instance method calls on multiple objects.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -798,8 +844,8 @@ The dot notation lets us specify the object we want to use; and even if we only 
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_object_classes_vs_driver_classes">Object Classes vs. Driver Classes</h5>
+<div class="sect3">
+<h4 id="_object_classes_vs_driver_classes">4.8.1. Object Classes vs. Driver Classes</h4>
 <div class="paragraph">
 <p>Ok, time for another convention that seems only intended to be nitpicky and pointless, but is important and is expected on assignments in this course.
 OOP nerds value keeping the different parts of our programs compartmentalized, and that includes separating the class definition from the code that uses the class.
@@ -807,14 +853,14 @@ A class definition goes in its own file, which must have a filename exactly matc
 A class we define for use as object can be called an <strong>object class</strong> or a <strong>user-defined class</strong> (where the "user" in this case is the programmer).</p>
 </div>
 <div class="paragraph">
-<p>The code that uses the <em>object class</em> should be in its own file, and is often called a <strong>driver class</strong>.
+<p>The code that <strong>uses</strong> the <em>object class</em> should be in its own file, and is often called a <strong>driver class</strong>.
 The driver class contains the <code>main()</code> method, which is the entry point for the program.</p>
 </div>
 <div class="paragraph">
 <p>A driver class actually goes by several different names.
 Some people call it a <em>main class</em> because, well, it&#8217;s the class with the <code>main()</code> method; I don&#8217;t hear that term a lot, but it is out there.
 I often use the terms <em>demo class</em> or <em>test class</em> because, as learners, we&#8217;re often making a class just to try a specific concept or skill, and the only thing our program really does is show that the object class is working.
-And in those cases, we often see "test" or "demo"; so a driver class for our <code>WeatherRecord</code> object class might be called <code>WeatherRecordDemo</code> or <code>TestWeatherRecord</code>, or something similar.</p>
+And in those cases, we often use "test" or "demo" in the name; so a driver class for our <code>WeatherRecord</code> object class might be called <code>WeatherRecordDemo</code> or <code>TestWeatherRecord</code>, or something similar.</p>
 </div>
 <div class="paragraph">
 <p>The point here is that, if we&#8217;ve created an object class called <code>WeatherRecord</code>, we&#8217;re not going to put our <code>main()</code> method in that same class/file.
@@ -825,7 +871,7 @@ I don&#8217;t much care what term you use, as long as it&#8217;s a separate clas
 <p>Your pitchforks are already sharpened, but here&#8217;s the part where you light your torches.
 <strong>All of your input and output should be in the driver class.</strong>
 That is, you generally shouldn&#8217;t have any <code>print()</code> or <code>println()</code> statements, any dialog popups (if you know how to use <code>JOptionPane</code> or similar), or any <code>Scanner</code> input calls in your object classes.
-My examples always enforce this <em>separation of concerns</em>, so you&#8217;ll have plenty of examples of what I mean.</p>
+My examples always enforce this <em>separation of concerns</em>, so you&#8217;ll see plenty of examples of what I mean.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -844,7 +890,7 @@ I decided it was too creepy to display in the text, but this crime against natur
 <li>
 <p>To "decouple" the UI from the <em>business logic</em> or guts of our program. This makes our code reusable in a variety of projects, such as web pages, mobile apps, and GUI applications—none of which are friendly to console input and output. Look up the terms <strong>MVC</strong> and <strong>MVVM</strong> for all kinds of information about that if you think your professor is just a crank and you want to know what happens in the <em>real world</em>. Spoiler alert, the real world generally wants them kept separate, too.</p>
 <div class="paragraph">
-<p>Incidentally, we might use the term <em>portability</em> to describe this quality, since we can move our well-designed code to other projects and copntexts easily.</p>
+<p>Incidentally, we can use the term <em>portability</em> to describe this quality, since we can move our well-designed code to other projects and contexts easily.</p>
 </div>
 </li>
 <li>
@@ -860,7 +906,7 @@ I decided it was too creepy to display in the text, but this crime against natur
 Sorry, I can&#8217;t do much better than that for now.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.13 - <code>WeatherRecordDemo.java</code>. A driver class to demonstrate the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 4.14 - <code>WeatherRecordDemo.java</code>. A driver class to demonstrate the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -963,9 +1009,8 @@ In general, I ask students to create at least two instances of each class they a
 </div>
 </div>
 </div>
-</div>
 <div class="sect2">
-<h3 id="_constructors">4.4. Constructors</h3>
+<h3 id="_constructors">4.9. Constructors</h3>
 <div class="paragraph">
 <p>When we instantiate a new object, the syntax includes an assignment statement with the <code>new</code> keyword and a call to a method:</p>
 </div>
@@ -987,7 +1032,7 @@ A constructor is always public, it has no return type (not even <code>void</code
 A definition for a constructor for the <code>WeatherRecord</code> class would look like this:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.14 - A constructor definition for the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 4.15 - A constructor definition for the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -1041,7 +1086,7 @@ This is useful when we want to set the initial values of the fields to something
 We add parameters to our constructor just like we do with any other method, by listing the data types and identifiers in the parentheses.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.15 - A <code>WeatherRecord</code> constructor with parameters.</div>
+<div class="title">Example 4.16 - A <code>WeatherRecord</code> constructor with parameters.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -1119,7 +1164,7 @@ To see complete examples of the <code>WeatherRecord</code> class with constructo
 </div>
 </div>
 <div class="sect3">
-<h4 id="_constructors_and_encapsulation">4.4.1. Constructors and Encapsulation</h4>
+<h4 id="_constructors_and_encapsulation">4.9.1. Constructors and Encapsulation</h4>
 <div class="paragraph">
 <p>Constructors allow us to be stricter with our encapsulation since now we don&#8217;t have to have setters to put data into our objects.
 We can provide a constructor to accept all the data the object needs, decide if we give access to change a field after the object has been instantiated.</p>
@@ -1131,7 +1176,7 @@ In that case, our constructor would accept the account number, but we wouldn&#82
 </div>
 </div>
 <div class="sect2">
-<h3 id="_static_constants_and_methods">4.5. <code>static</code> Constants and Methods</h3>
+<h3 id="_static_constants_and_methods">4.10. <code>static</code> Constants and Methods</h3>
 <div class="paragraph">
 <p>Since our first "Hello World" program, we&#8217;ve been using the <code>static</code> keyword to create methods—beginning with the <code>main()</code> method that is the starting point for every Java program.
 However, we haven&#8217;t had enough context to understand what that keyword means.</p>
@@ -1186,7 +1231,7 @@ If we have a savings account class, a common example when learning OOP, we might
 This would mean that every savings account would earn the same interest rate, which is often how banks work.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.16 - A class with a <code>static</code> constant.</div>
+<div class="title">Example 4.17 - A class with a <code>static</code> constant.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1216,7 +1261,7 @@ A constant can also be declared as <code>public</code>, which would allow other 
 As an example, the <code>Math</code> class has a <code>PI</code> constant that is defined as follows:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.17 - The definition of the <code>PI</code> constant in the <code>Math</code> class.</div>
+<div class="title">Example 4.18 - The definition of the <code>PI</code> constant in the <code>Math</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">final</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> PI </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3.141592653589793</span><span style="color: #f8f8f2">;</span></code></pre>
 </div>
@@ -1265,8 +1310,8 @@ As an example, the <code>Math</code> class has a <code>PI</code> constant that i
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-09-30<br />
-        15:05:39 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-10-21<br />
+        18:54:14 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
