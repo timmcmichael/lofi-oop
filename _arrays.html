@@ -118,6 +118,9 @@
 <li>
 <p>Write loops to iterate through arrays</p>
 </li>
+<li>
+<p>Store objects in arrays</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -125,7 +128,7 @@
 </div>
 <hr>
 <div class="paragraph">
-<p>Arrays will be our first real exploration of the idea of data structures.
+<p>Arrays will be our first real exploration of the idea of <em>data structures</em>.
 Data structures are ways of organizing and storing data so that we can use them more efficiently.
 Data structures are a fundamental part of computer science, and they are used in almost every program we write.
 Arrays aren&#8217;t necessarily the best data structure for every situation, but they are a good place to start.</p>
@@ -185,7 +188,7 @@ Any time you see square brackets in Java, you&#8217;re dealing with an array.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #f8f8f2">String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> groceryItems </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> String</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">5</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><span></span><span style="color: #F8F8F2">String</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> groceryItems </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> String</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">5</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -196,15 +199,15 @@ Any time you see square brackets in Java, you&#8217;re dealing with an array.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">0</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;milk&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">1</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;eggs&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">2</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;bread&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">3</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;butter&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">4</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;cheese&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">0</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;milk&quot;</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">1</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;eggs&quot;</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">2</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;bread&quot;</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">3</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;butter&quot;</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">4</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;cheese&quot;</span><span style="color: #F8F8F2">;</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -216,14 +219,15 @@ Any time you see square brackets in Java, you&#8217;re dealing with an array.
 The element is just like any other variable, so we can use it in expressions, pass it to methods, and so on.</p>
 </div>
 <div class="listingblock">
+<div class="title">Example 8.1 - Accessing and modifying array elements by index.</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The first item on the list is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">0</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The last item on the list is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">4</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">2</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;bananas&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Bread has been replaced with &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">2</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The first item on the list is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">0</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The last item on the list is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">4</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">2</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;bananas&quot;</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Bread has been replaced with &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">2</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -281,19 +285,19 @@ We can also use a traversal to search for something within an array, or to put t
 <p>Most of the time, we&#8217;ll use a simple <code>for</code> loop to traverse an array.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 8.1 - An array traversal using a <code>for</code> loop</div>
+<div class="title">Example 8.2 - Using a <code>for</code> loop to traverse an array</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
-<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> scores.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">) {</span>
-<span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[</span><span style="color: #f8f8f2">i</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The sum of the scores is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> sum);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> scores</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> {</span><span style="color: #AE81FF">90</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">85</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">95</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">88</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">92</span><span style="color: #F8F8F2">};</span>
+<span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
+<span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> i </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; i </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> scores.</span><span style="color: #A6E22E">length</span><span style="color: #F8F8F2">; i</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">) {</span>
+<span style="color: #F8F8F2">    sum </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> scores</span><span style="color: #FF4689">[</span><span style="color: #F8F8F2">i</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">}</span>
+<span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The sum of the scores is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> sum);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -323,19 +327,19 @@ That way, this same loop will work for any array of any size.
 If we hard-coded the size of the array into the loop, we would have to change our code every time we changed the size of the array.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 8.2 - A <code>for</code> loop unwisely using a "hard coded" literal for the array length</div>
+<div class="title">Example 8.3 - A <code>for</code> loop unwisely using a "hard coded" literal for the array length</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
-<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">) { </span><span style="color: #959077">// Uh oh! What if we decide to hold more scores?</span>
-<span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[</span><span style="color: #f8f8f2">i</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The sum of the scores is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> sum);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> scores</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> {</span><span style="color: #AE81FF">90</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">85</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">95</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">88</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">92</span><span style="color: #F8F8F2">};</span>
+<span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
+<span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> i </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; i </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">; i</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">) { </span><span style="color: #959077">// Uh oh! What if we decide to hold more scores?</span>
+<span style="color: #F8F8F2">    sum </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> scores</span><span style="color: #FF4689">[</span><span style="color: #F8F8F2">i</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">}</span>
+<span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The sum of the scores is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> sum);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -388,18 +392,19 @@ We&#8217;ve been using arrays of Strings, which are objects, but students someti
 <p>If we were to define a GroceryItem class with fields for the name and the aisle where it&#8217;s located, we could create an array of GroceryItem objects.</p>
 </div>
 <div class="listingblock">
+<div class="title">Example 8.4 - Creating and populating an array of objects</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">GroceryItem</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> groceryItems </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">5</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">0</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;milk&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">1</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;eggs&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">9</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">2</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;bread&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">3</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;butter&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">groceryItems</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">4</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> GroceryItem(</span><span style="color: #e6db74">&quot;cheese&quot;</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">GroceryItem</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> groceryItems </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">5</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">;</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">0</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;milk&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">1</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;eggs&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">9</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">2</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;bread&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">7</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">3</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;butter&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
+<span style="color: #F8F8F2">groceryItems</span><span style="color: #FF4689">[</span><span style="color: #AE81FF">4</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> GroceryItem(</span><span style="color: #E6DB74">&quot;cheese&quot;</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -439,7 +444,7 @@ Our array can hold multiple objects, and each object can have multiple fields—
 <div class="sect2">
 <h3 id="_for_each_loops">8.5. "For-Each" Loops</h3>
 <div class="paragraph">
-<p>Because array traversal is such a common task, Java provides a special kind of loop that makes it easier to traverse an array.
+<p>Because array traversal is such a common task, Java provides a special kind of loop that makes it easier to write a traversal loop.
 It is officially known as an <em>enhanced for loop</em>, but it is often called a "for-each loop" because it goes through each element in the array.
 A for-each loop is easy to write, and because it handles index management for us, it is less error-prone than a traditional for loop.
 However, it is less flexible than a traditional for loop: we can&#8217;t use it when we need to know the index of the element we&#8217;re working with, or when we need to move through the array in a different order.</p>
@@ -455,6 +460,23 @@ The for-each loop is optional. You can always use a traditional for loop to trav
 </td>
 </tr>
 </table>
+</div>
+<div class="listingblock">
+<div class="title">Example 8.5 - Using a "for each" loop to traverse an array</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> scores</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> {</span><span style="color: #AE81FF">90</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">85</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">95</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">88</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">92</span><span style="color: #F8F8F2">};</span>
+<span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
+<span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> score : scores) {</span>
+<span style="color: #F8F8F2">    sum </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> score;</span>
+<span style="color: #F8F8F2">}</span>
+<span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The sum of the scores is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> sum);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
 </div>
 <div class="exampleblock callout ttw">
 <div class="content">
@@ -520,8 +542,8 @@ The for-each loop is optional. You can always use a traditional for loop to trav
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-03<br />
-        21:04:46 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-04<br />
+        17:42:16 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
