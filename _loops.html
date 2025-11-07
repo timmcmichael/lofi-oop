@@ -188,15 +188,15 @@ If the condition is still true, the block of code is executed again.</p>
 <div class="listingblock">
 <div class="title">Example 6.1 - A simple <code>while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">    System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">    count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -221,13 +221,13 @@ Infinite loops are a common mistake for new programmers, and they cause our prog
 <div class="listingblock">
 <div class="title">Example 6.2 - An infinite loop using a <code>while</code> statement</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">    System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -253,9 +253,9 @@ Your IDE has a way to stop the program if it&#8217;s stuck in an infinite loop. 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><span></span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #959077">// hey, there&#39;s nothing to stop this loop!</span>
-<span style="color: #F8F8F2">}</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// hey, there&#39;s nothing to stop this loop!</span>
+<span style="color: #f8f8f2">}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -315,15 +315,15 @@ Other than that, a <code>do-while</code> loop is exactly the same as a <code>whi
 <div class="listingblock">
 <div class="title">Example 6.3 - A simple <code>do-while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">do</span><span style="color: #F8F8F2"> {</span>
-<span style="color: #F8F8F2">    System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">    count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">} </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">do</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">    count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">} </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -389,7 +389,7 @@ For example, if a program displays a menu with three options, a loop could keep 
 <div class="listingblock">
 <div class="title">Example 6.4 - Input validation using a <code>do-while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -408,26 +408,26 @@ For example, if a program displays a menu with three options, a loop could keep 
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> java.util.Scanner;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> java.util.Scanner;</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">InputValidation</span><span style="color: #F8F8F2"> {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">main</span><span style="color: #F8F8F2">(String</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> args) {</span>
-<span style="color: #F8F8F2">        Scanner input </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> Scanner(System.</span><span style="color: #A6E22E">in</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> choice;</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">InputValidation</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        Scanner input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Scanner(System.</span><span style="color: #a6e22e">in</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> choice;</span>
 
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">do</span><span style="color: #F8F8F2"> {</span>
-<span style="color: #F8F8F2">            System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Choose an option:&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">            System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;1. Check balance&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">            System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;2. Deposit&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">            System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;3. Withdraw&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">            System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;4. Exit&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">            System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">print</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Your choice: &quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">            choice </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> input.</span><span style="color: #A6E22E">nextInt</span><span style="color: #F8F8F2">();</span>
-<span style="color: #F8F8F2">        } </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (choice </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">||</span><span style="color: #F8F8F2"> choice </span><span style="color: #FF4689">&gt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">do</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Choose an option:&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;1. Check balance&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;2. Deposit&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;3. Withdraw&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;4. Exit&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Your choice: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            choice </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextInt</span><span style="color: #f8f8f2">();</span>
+<span style="color: #f8f8f2">        } </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (choice </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">||</span><span style="color: #f8f8f2"> choice </span><span style="color: #ff4689">&gt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #F8F8F2">        </span><span style="color: #959077">// Rest of the code...</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">        </span><span style="color: #959077">// Rest of the code...</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -459,7 +459,7 @@ And it would be scoped to the loop, so you wouldn&#8217;t be able to access it a
 <div class="listingblock">
 <div class="title">Example 6.5 - A counter in a while loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -485,33 +485,33 @@ And it would be scoped to the loop, so you wouldn&#8217;t be able to access it a
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> java.util.Scanner;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> java.util.Scanner;</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">NegativeCounter</span><span style="color: #F8F8F2"> {</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">NegativeCounter</span><span style="color: #f8f8f2"> {</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">main</span><span style="color: #F8F8F2">(String</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> args) {</span>
-<span style="color: #F8F8F2">        Scanner input </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> Scanner(System.</span><span style="color: #A6E22E">in</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> currentInput </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">-</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        Scanner input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Scanner(System.</span><span style="color: #a6e22e">in</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> currentInput </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
 
 
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">print</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The object of the game is to see how many times you can enter a negative number.&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot; If you enter a positive number, the game is over.\n&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;We didn&#39;t say it was a fun game.\n&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The object of the game is to see how many times you can enter a negative number.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot; If you enter a positive number, the game is over.\n&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;We didn&#39;t say it was a fun game.\n&quot;</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (currentInput </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">            System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">print</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Enter a negative number: &quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">            currentInput </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> input.</span><span style="color: #A6E22E">nextInt</span><span style="color: #F8F8F2">();</span>
-<span style="color: #F8F8F2">            </span><span style="color: #66D9EF">if</span><span style="color: #F8F8F2"> (currentInput </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">                count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span><i class="conum" data-value="2"></i><b>(2)</b>
-<span style="color: #F8F8F2">            }</span>
-<span style="color: #F8F8F2">        }</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (currentInput </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Enter a negative number: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            currentInput </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextInt</span><span style="color: #f8f8f2">();</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (currentInput </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">                count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">            }</span>
+<span style="color: #f8f8f2">        }</span>
 
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;\nGame over!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;You entered &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot; negative numbers.&quot;</span><span style="color: #F8F8F2">); </span><i class="conum" data-value="3"></i><b>(3)</b>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;\nGame over!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;You entered &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; negative numbers.&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -542,7 +542,7 @@ Once the loop is finished, we can use (or output) the value of the accumulator v
 <div class="listingblock">
 <div class="title">Example 6.6 - An accumulator in a while loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -570,35 +570,35 @@ Once the loop is finished, we can use (or output) the value of the accumulator v
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> java.util.Scanner;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> java.util.Scanner;</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">NegativeAccumulator</span><span style="color: #F8F8F2"> {</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">NegativeAccumulator</span><span style="color: #f8f8f2"> {</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">main</span><span style="color: #F8F8F2">(String</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> args) {</span>
-<span style="color: #F8F8F2">        Scanner input </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> Scanner(System.</span><span style="color: #A6E22E">in</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> currentInput </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">-</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        Scanner input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Scanner(System.</span><span style="color: #a6e22e">in</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> currentInput </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">;</span>
 
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">print</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The object of the game is to see how much you can accumulate by entering negative numbers.&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot; If you enter a positive number, the game is over.\n&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;We didn&#39;t say it was a fun game.\n&quot;</span><span style="color: #F8F8F2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The object of the game is to see how much you can accumulate by entering negative numbers.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot; If you enter a positive number, the game is over.\n&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;We didn&#39;t say it was a fun game.\n&quot;</span><span style="color: #f8f8f2">);</span>
 
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">while</span><span style="color: #F8F8F2"> (currentInput </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">            System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">print</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Enter a negative number: &quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">            currentInput </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> input.</span><span style="color: #A6E22E">nextInt</span><span style="color: #F8F8F2">();</span>
-<span style="color: #F8F8F2">            </span><span style="color: #66D9EF">if</span><span style="color: #F8F8F2"> (currentInput </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">                count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">                sum </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> currentInput; </span><i class="conum" data-value="2"></i><b>(2)</b>
-<span style="color: #F8F8F2">            }</span>
-<span style="color: #F8F8F2">        }</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">while</span><span style="color: #f8f8f2"> (currentInput </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">            System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Enter a negative number: &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">            currentInput </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextInt</span><span style="color: #f8f8f2">();</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">if</span><span style="color: #f8f8f2"> (currentInput </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">                count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">                sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> currentInput; </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">            }</span>
+<span style="color: #f8f8f2">        }</span>
 
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;\nGame over!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;You entered &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot; negative numbers.&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The total of all the negative numbers you entered is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;.&quot;</span><span style="color: #F8F8F2">); </span><i class="conum" data-value="3"></i><b>(3)</b>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;\nGame over!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;You entered &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; negative numbers.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The total of all the negative numbers you entered is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;.&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -641,11 +641,11 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 <div class="listingblock">
 <div class="title">Example 6.7 - A simple <code>for</code> loop</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> count </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; count </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">; count</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">    System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Count is: &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> count);</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> count </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; count </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">; count</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Count is: &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> count);</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -857,8 +857,8 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-04<br />
-        18:03:56 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-07<br />
+        20:26:06 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

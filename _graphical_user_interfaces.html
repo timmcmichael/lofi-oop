@@ -182,7 +182,7 @@ JavaFX is newer and more powerful than Swing, but it&#8217;s also more complex a
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><span></span><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> javax.swing.*;</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> javax.swing.*;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -194,7 +194,7 @@ Finally, we&#8217;ll set the frame to be visible, which will cause the window to
 <div class="listingblock">
 <div class="title">Example 10.1 - A simple "Hello World!" GUI using Swing</div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -207,20 +207,20 @@ Finally, we&#8217;ll set the frame to be visible, which will cause the window to
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> javax.swing.*;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> javax.swing.*;</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">BasicGUI</span><span style="color: #F8F8F2"> {</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">BasicGUI</span><span style="color: #f8f8f2"> {</span>
 
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">main</span><span style="color: #F8F8F2">(String</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> args) {</span>
-<span style="color: #F8F8F2">        JFrame frame </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> JFrame(</span><span style="color: #E6DB74">&quot;Hello, World!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        frame.</span><span style="color: #A6E22E">setSize</span><span style="color: #F8F8F2">(</span><span style="color: #AE81FF">300</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">200</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        frame.</span><span style="color: #A6E22E">setDefaultCloseOperation</span><span style="color: #F8F8F2">(JFrame.</span><span style="color: #A6E22E">EXIT_ON_CLOSE</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        JLabel lblHello </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> JLabel(</span><span style="color: #E6DB74">&quot;It&#39;s so gooey!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        frame.</span><span style="color: #A6E22E">add</span><span style="color: #F8F8F2">(lblHello);</span>
-<span style="color: #F8F8F2">        frame.</span><span style="color: #A6E22E">setVisible</span><span style="color: #F8F8F2">(</span><span style="color: #66D9EF">true</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        JFrame frame </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> JFrame(</span><span style="color: #e6db74">&quot;Hello, World!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        frame.</span><span style="color: #a6e22e">setSize</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">300</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">200</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        frame.</span><span style="color: #a6e22e">setDefaultCloseOperation</span><span style="color: #f8f8f2">(JFrame.</span><span style="color: #a6e22e">EXIT_ON_CLOSE</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        JLabel lblHello </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> JLabel(</span><span style="color: #e6db74">&quot;It&#39;s so gooey!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        frame.</span><span style="color: #a6e22e">add</span><span style="color: #f8f8f2">(lblHello);</span>
+<span style="color: #f8f8f2">        frame.</span><span style="color: #a6e22e">setVisible</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
 
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -484,7 +484,7 @@ Layout managers are part of AWT, so we&#8217;ll have to import them from the <co
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><span></span><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> java.awt.*;</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> java.awt.*;</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -601,8 +601,8 @@ There are tools that allow us to create GUIs visually, by dragging and dropping 
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-04<br />
-        18:03:56 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-07<br />
+        20:26:06 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
