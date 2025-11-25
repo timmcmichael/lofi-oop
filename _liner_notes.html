@@ -139,19 +139,31 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>The primary role of a programming language is to act as a bridge between human language and machine language. It allows humans to write instructions in a way that is easier for them to understand and use, which can then be accurately translated into machine language that a computer can execute.</p>
 </li>
 <li>
-<p><em><strong>What happens when you run a C# program? Describe that process in simple terms.</strong></em></p>
-<p>When you run a C# program, your code gets compiled (translated) into something the computer can understand, then the computer follows your instructions step by step and shows the results (like printing text or doing math).</p>
+<p><em><strong>What happens when you run a Java program? Describe that process in simple terms.</strong></em></p>
+<p>When you run a Java program, your code gets compiled (translated) into something the computer can understand, then the computer follows your instructions step by step and shows the results (like printing text or doing math).</p>
 </li>
-<li>
-<p><em><strong>What&#8217;s the difference between Console.Write() and System.out.println()? When would you use each?</strong></em></p>
-<p>Console.Write() prints text and keeps the cursor on the same line. System.out.println() prints text and moves the cursor to a new line. Use Write() when you want output to continue on the same line, and WriteLine() when you want it to start a new line afterward.</p>
-</li>
-<li>
-<p><em><strong>How would you explain what a “program” is to an 8-year-old?</strong></em></p>
+</ol>
+</div>
+<div class="paragraph">
+<p>There are likely many other good ways to explain this to an 8-year-old!
+<strong>What&#8217;s the difference between <code>System.out.println()</code> and <code>System.out.print()</code>? When would you use each?</strong>::
+<code>System.out.print()</code> prints text and keeps the cursor on the same line. <code>System.out.println()</code>, which we pronounce "print line", prints text and moves the cursor to a new line. Use <code>print()</code> when you want output to continue on the same line, and <code>println()</code> when you want it to start a new line afterward.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>How would you explain what a “program” is to an 8-year-old?</strong></dt>
+<dd>
 <p>A program is like a list of instructions you give to a computer—kind of like a recipe. The computer follows the steps exactly to do something, like showing a message or solving a puzzle.</p>
-</li>
-<li>
-<p><em><strong>Explain the difference between compiled and interpreted programming languages. Describe how C# is both compiled *and</strong> interpreted.*</em></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>There are likely many other good ways to explain this to an 8-year-old!</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Explain the difference between compiled and interpreted programming languages. Describe how Java is both compiled *and</strong> interpreted.*</dt>
+<dd>
 <div class="ulist">
 <ul>
 <li>
@@ -161,12 +173,12 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><strong>Interpreted languages</strong> are those where the source code is translated into machine language on the fly, as the program is running, by an interpreter. An example of an interpreted language is Python.</p>
 </li>
 <li>
-<p><strong>C#</strong> is a somewhat unique case, as it is both compiled and interpreted. The source code is first compiled into an intermediate language called CIL, which is then interpreted by the .NET runtime (CLR) when the program is executed. This allows C# to have some of the performance benefits of compiled languages while still being able to run on different platforms.</p>
+<p><strong>Java</strong> is a somewhat unique case, as it is both compiled and interpreted. The source code is first compiled into an intermediate language called CIL, which is then interpreted by the .NET runtime (CLR) when the program is executed. This allows C# to have some of the performance benefits of compiled languages while still being able to run on different platforms.</p>
 </li>
 </ul>
 </div>
-</li>
-</ol>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect2">
@@ -209,13 +221,13 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><em><strong>What will the following code print? Why?</strong></em></p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">string leadGuitarist </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;Brian Jones&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">leadGuitarist </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;Mick Taylor&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">leadGuitarist </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;Ronnie Wood&quot;</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(leadGuitarist);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">string leadGuitarist </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Brian Jones&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">leadGuitarist </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Mick Taylor&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">leadGuitarist </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Ronnie Wood&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(leadGuitarist);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -236,8 +248,8 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><strong>False.</strong> You can declare a variable and assign a value to it later:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> albums;</span>
-<span style="color: #F8F8F2">albums </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">12</span><span style="color: #F8F8F2">;</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums;</span>
+<span style="color: #f8f8f2">albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">;</span></code></pre>
 </div>
 </div>
 </li>
@@ -246,8 +258,8 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>Compound assignment operators combine an arithmetic operation with assignment. Examples:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><span></span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> numStones </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">numStones </span><span style="color: #FF4689">-=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">; </span><span style="color: #959077">// Rest in peace, Charlie Watts!</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numStones </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">numStones </span><span style="color: #ff4689">-=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Rest in peace, Charlie Watts!</span></code></pre>
 </div>
 </div>
 </li>
@@ -256,7 +268,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <div class="listingblock">
 <div class="title"><code>StonesGreeting.java</code></div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
@@ -269,20 +281,20 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> java.util.Scanner;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #ff4689">import</span><span style="color: #f8f8f2"> java.util.Scanner;</span>
 
-<span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">class</span> <span style="color: #A6E22E">StonesGreeting</span><span style="color: #F8F8F2"> {</span>
-<span style="color: #F8F8F2">    </span><span style="color: #66D9EF">public</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">main</span><span style="color: #F8F8F2">(String</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> args) {</span>
-<span style="color: #F8F8F2">        Scanner input </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">new</span><span style="color: #F8F8F2"> Scanner(System.</span><span style="color: #A6E22E">in</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">print</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;What is your name? &quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        String name </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> input.</span><span style="color: #A6E22E">nextLine</span><span style="color: #F8F8F2">();</span>
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">StonesGreeting</span><span style="color: #f8f8f2"> {</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(String</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> args) {</span>
+<span style="color: #f8f8f2">        Scanner input </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> Scanner(System.</span><span style="color: #a6e22e">in</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;What is your name? &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        String name </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextLine</span><span style="color: #f8f8f2">();</span>
 
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">print</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;How many Rolling Stones albums do you own? &quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">        </span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> albums </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> input.</span><span style="color: #A6E22E">nextInt</span><span style="color: #F8F8F2">();</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">print</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;How many Rolling Stones albums do you own? &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> input.</span><span style="color: #a6e22e">nextInt</span><span style="color: #f8f8f2">();</span>
 
-<span style="color: #F8F8F2">        System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Hello &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> name </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;, you have &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> albums </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot; Stones albums.&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">    }</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: #f8f8f2">        System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Hello &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;, you have &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> albums </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot; Stones albums.&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -314,19 +326,19 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><em><strong>Consider the code below. a. What does it do? b. How would you call it to greet someone named "Darryl Jones"?</strong></em></p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">greet</span><span style="color: #F8F8F2">(string name)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">($</span><span style="color: #E6DB74">&quot;Hello, {name}!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">greet</span><span style="color: #f8f8f2">(string name)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">($</span><span style="color: #e6db74">&quot;Hello, {name}!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><span></span><span style="color: #F8F8F2">greet(</span><span style="color: #E6DB74">&quot;Darryl Jones&quot;</span><span style="color: #F8F8F2">);</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #f8f8f2">greet(</span><span style="color: #e6db74">&quot;Darryl Jones&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
 </div>
 </div>
 </li>
@@ -338,13 +350,13 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><em><strong>Consider the code below. a. Overload the method by accepting the name of a band to introduce. b. Demonstrate how to call each version of the method.</strong></em></p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">announceBand</span><span style="color: #F8F8F2">()</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">    System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Ladies and gentlemen, The Beatles!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">announceBand</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Ladies and gentlemen, The Beatles!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -354,13 +366,13 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>Overloaded method:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">static</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">void</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">announceBand</span><span style="color: #F8F8F2">(string bandName)</span>
-<span style="color: #F8F8F2">{</span>
-<span style="color: #F8F8F2">	System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Ladies and gentlemen, &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> bandName </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&quot;!&quot;</span><span style="color: #F8F8F2">);</span>
-<span style="color: #F8F8F2">}</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">announceBand</span><span style="color: #f8f8f2">(string bandName)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">	System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Ladies and gentlemen, &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> bandName </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -369,9 +381,9 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>Calling each version:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #F8F8F2">announceBand(); </span><span style="color: #959077">// Calls the original method</span>
-<span style="color: #F8F8F2">announceBand(</span><span style="color: #E6DB74">&quot;The Rolling Stones&quot;</span><span style="color: #F8F8F2">); </span><span style="color: #959077">// Calls the overloaded method</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">announceBand(); </span><span style="color: #959077">// Calls the original method</span>
+<span style="color: #f8f8f2">announceBand(</span><span style="color: #e6db74">&quot;The Rolling Stones&quot;</span><span style="color: #f8f8f2">); </span><span style="color: #959077">// Calls the overloaded method</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -488,17 +500,17 @@ Another example is a loop that reads user input until a specific sentinel value 
 <p>Loops can be used to traverse an array by iterating through each element, performing operations such as reading, modifying, or accumulating values. Here is an example of a for loop that sums the elements of an integer array:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #F8F8F2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66D9EF">int</span><span style="color: #FF4689">[]</span><span style="color: #F8F8F2"> scores </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> {</span><span style="color: #AE81FF">90</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">85</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">95</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">88</span><span style="color: #F8F8F2">, </span><span style="color: #AE81FF">92</span><span style="color: #F8F8F2">};</span>
-<span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> sum </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">;</span>
-<span style="color: #66D9EF">for</span><span style="color: #F8F8F2"> (</span><span style="color: #66D9EF">int</span><span style="color: #F8F8F2"> i </span><span style="color: #FF4689">=</span><span style="color: #F8F8F2"> </span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">; i </span><span style="color: #FF4689">&lt;</span><span style="color: #F8F8F2"> scores.</span><span style="color: #A6E22E">length</span><span style="color: #F8F8F2">; i</span><span style="color: #FF4689">++</span><span style="color: #F8F8F2">) {</span>
-<span style="color: #F8F8F2">    sum </span><span style="color: #FF4689">+=</span><span style="color: #F8F8F2"> scores</span><span style="color: #FF4689">[</span><span style="color: #F8F8F2">i</span><span style="color: #FF4689">]</span><span style="color: #F8F8F2">;</span>
-<span style="color: #F8F8F2">}</span>
-<span style="color: #F8F8F2">System.</span><span style="color: #A6E22E">out</span><span style="color: #F8F8F2">.</span><span style="color: #A6E22E">println</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;The sum of the scores is &quot;</span><span style="color: #F8F8F2"> </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> sum);</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> scores </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> scores.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[</span><span style="color: #f8f8f2">i</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The sum of the scores is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> sum);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -563,8 +575,8 @@ Another example is a loop that reads user input until a specific sentinel value 
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-17<br />
-        16:25:03 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-25<br />
+        00:44:33 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
