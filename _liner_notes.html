@@ -418,6 +418,31 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <dd>
 <p>Encapsulation is the concept of hiding the internal state of an object and requiring all interaction to be performed through the object&#8217;s methods. This is important because it protects the object&#8217;s data from unintended or harmful modifications. For example, in a bank account class, the balance field is private and can only be accessed or modified through a public getter method, and modified through public deposit and withdraw methods.</p>
 </dd>
+<dt class="hdlist1"><strong>What are “fields” (instance variables) in a class, and how do they differ from local variables in methods?</strong></dt>
+<dd>
+<p><strong>Fields</strong> are variables defined inside a class but outside any method. Each object of the class gets its own copy of these variables. <strong>Local variables</strong>, on the other hand, exist only inside a method; they are created when the method runs and destroyed when it finishes.</p>
+</dd>
+<dt class="hdlist1"><strong>What is a constructor in Java, and what is its purpose when creating an object?</strong></dt>
+<dd>
+<p>A constructor is a special method that has the same name as the class and no return type. Its purpose is to initialize a new object, typically by giving initial values to the object&#8217;s fields.</p>
+</dd>
+<dt class="hdlist1"><strong>What is “instantiation” in Java? Give an example of how you would instantiate an object of a class called <code>RecordPlayer</code>.</strong></dt>
+<dd>
+<p>Instantiation is the process of creating an actual object from a class blueprint. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #f8f8f2">RecordPlayer myPlayer </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> RecordPlayer();</span></code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1"><strong>In a program using classes and objects, what is the role of a <em>driver class</em> (a.k.a., demo class or test class)?</strong></dt>
+<dd>
+<p>A driver class contains the main method and is used to create objects, call their methods, and test how the program works. It&#8217;s essentially the “entry point” for running and demonstrating your classes.</p>
+</dd>
+<dt class="hdlist1"><strong>What does the <code>this</code> keyword refer to inside a class method or constructor, and when is it useful?</strong></dt>
+<dd>
+<p><code>this</code> refers to the current object—the object whose method or constructor is running. It&#8217;s useful when you need to distinguish between fields and parameters with the same name (e.g., <code>this.volume = volume;</code>) or when passing the current object to another method.</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -431,15 +456,31 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </li>
 <li>
 <p><em><strong>Explain the difference between a relational operator and a logical operator.</strong></em></p>
-<p>Relational operators compare two values and determine their relationship, such as equality (==), inequality (!=), less than (&lt;), and greater than (&gt;). Logical operators, on the other hand, combine multiple Boolean expressions to form a single, more complex expression, such as AND (&amp;&amp;), OR (||), and NOT (!).</p>
+<p>Relational operators compare two values and determine their relationship, such as equality (==), inequality (!=), less than (&lt;), and greater than (&gt;). Logical operators, on the other hand, combine multiple Boolean expressions to form a single, more complex expression, such as AND (<code>&amp;&amp;</code>), OR (<code>||</code>), and NOT (<code>!</code>).</p>
 </li>
 <li>
 <p><em><strong>What is the difference between an <code>if</code> statement and an <code>if-else</code> statement?</strong></em></p>
-<p>An if statement allows you to execute a block of code only if a certain condition is true. An if-else statement extends this by providing an alternative block of code to execute if the condition is false, allowing you to choose between two possible actions.</p>
+<p>An if statement allows you to execute a block of code only if a certain condition is true. An <code>if-else</code> statement extends this by providing an alternative block of code to execute if the condition is false, allowing you to choose between two possible actions.</p>
 </li>
 <li>
 <p><em><strong>How can you write code that runs one code block from multiple options?</strong></em></p>
-<p>You can use a switch statement to run one code block from multiple options based on the value of an expression. Alternatively, you can use an if-else if structure to chain multiple if-else statements together, allowing you to handle more than two options.</p>
+<p>You can use a <code>switch</code> statement to run one code block from multiple options based on the value of an expression. Alternatively, you can use an <code>if-else if</code> structure to chain multiple <code>if-else</code> statements together, allowing you to handle more than two options.</p>
+</li>
+<li>
+<p><em><strong>What is the purpose of the <code>switch</code> statement, and when might you prefer it over multiple <code>if-else</code> statements?</strong></em></p>
+<p>A <code>switch</code> statement is used to select one of many code blocks to execute based on the value of a single variable or expression. You might prefer it over multiple <code>if-else</code> statements when you have a variable that can take on many discrete values, as it can make the code cleaner and easier to read.</p>
+</li>
+<li>
+<p><em><strong>What is a <em>nested if</em> statement? When might nesting be useful?</strong></em></p>
+<p>A nested <code>if</code> statement is an <code>if</code> statement that is placed inside another <code>if</code> or <code>else</code> block. Nesting can be useful when you need to make multiple levels of decisions based on different conditions, allowing for more complex (hierarchical) decision-making processes within your code.</p>
+</li>
+<li>
+<p><em><strong>How do you compare two <code>String</code> objects for equality in Java?</strong></em></p>
+<p>In Java, you compare two <code>String</code> objects for equality using the <code>.equals()</code> method (or <code>.equalsIgnoreCase()</code> for case-insensitive comparison) instead of the <code>==</code> operator, which does not behave as expected for <code>String</code> comparisons.</p>
+</li>
+<li>
+<p><em><strong>Explain the the difference between the AND (<code>&amp;&amp;</code>) and OR (<code>||</code>) logical operators.</strong></em></p>
+<p>The AND (<code>&amp;&amp;</code>) operator returns <code>true</code> only if both operands are <code>true</code>; if either operand is <code>false</code>, the result is <code>false</code>. The OR (<code>||</code>) operator returns <code>true</code> if at least one of the operands is <code>true</code>; it only returns <code>false</code> if both operands are <code>false</code>.</p>
 </li>
 </ol>
 </div>
@@ -575,8 +616,8 @@ Another example is a loop that reads user input until a specific sentinel value 
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-25<br />
-        00:44:33 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-12-09<br />
+        18:40:25 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

@@ -124,6 +124,12 @@
 <li>
 <p>Use <code>else if</code> and nested <code>if-else</code> statements</p>
 </li>
+<li>
+<p>Use logical operators to create complex Boolean expressions</p>
+</li>
+<li>
+<p>Use <code>switch</code> statements in place of <code>if-else if</code> structures</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -173,6 +179,7 @@ Think of Boolean expressions as questions that can be answered with a simple "ye
 These can be assigned to variables of type <code>boolean</code>:</p>
 </div>
 <div class="listingblock">
+<div class="title">Example 5.1 - <code>boolean</code> variables assigned Boolean values.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">boolean</span><span style="color: #f8f8f2"> isTimAmazing </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">true</span><span style="color: #f8f8f2">;</span>
@@ -237,6 +244,7 @@ In Java, where we have to stick with stuff on our keyboard, we use the following
 We can store that result in a <code>boolean</code> variable, as shown below, and we&#8217;ll also learn how to use these expressions in <code>if</code> statements later in this chapter.</p>
 </div>
 <div class="listingblock">
+<div class="title">Example 5.2 - <code>boolean</code> variables assign the results of relational operations.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">boolean</span><span style="color: #f8f8f2"> canBuyAlcohol </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> age </span><span style="color: #ff4689">&gt;=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">21</span><span style="color: #f8f8f2">;</span>
@@ -255,7 +263,7 @@ We can store that result in a <code>boolean</code> variable, as shown below, and
 The following code will not work as we might expect:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.1 - Incorrect <code>String</code> comparison.</div>
+<div class="title">Example 5.3 - Incorrect <code>String</code> comparison.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -276,7 +284,7 @@ Due to the nuances of how the Java runtime handles <code>String</code> objects, 
 This method will examine the contents of the strings and return <code>true</code> if they are the same, and <code>false</code> if they are different.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.2 - A correct (case sensitive) <code>String</code> comparison.</div>
+<div class="title">Example 5.4 - A correct (case sensitive) <code>String</code> comparison.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -295,7 +303,7 @@ This method will examine the contents of the strings and return <code>true</code
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The <code>equals()</code> method is case-sensitive, so <code>"Paul McCartney"</code> is not the same as <code>"paul mccartney"</code>. The String class also has a <code>equalsIgnoreCase()</code> method that will compare two strings without regard to case.
+The <code>equals()</code> method is case-sensitive, so <code>"Paul McCartney"</code> is not the same as <code>"paul mccartney"</code>. The String class also has an <code>equalsIgnoreCase()</code> method that will compare two strings without regard to case.
 </td>
 </tr>
 </table>
@@ -315,7 +323,7 @@ If the Boolean expression evaluates to <code>false</code>, the block of code wil
 In either case the program will continue executing the next line of code after the <code>if</code>-block.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.3 - Example of an <code>if</code> Statement.</div>
+<div class="title">Example 5.5 - An <code>if</code> Statement.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -350,7 +358,7 @@ If we want to choose between two blocks of code, we can add an <code>else</code>
 The syntax is simple: after the <code>if</code> block, add the keyword <code>else</code>, followed by a block of code in curly braces.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.4 - An <code>if-else</code> statement.</div>
+<div class="title">Example 5.6 - An <code>if-else</code> statement.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -430,7 +438,7 @@ This <code>if-else if</code> structure isn&#8217;t really a <em>thing</em> in Ja
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.5 - An if-else if structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/05%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete <code>WeatherRecord.java</code> file.</div>
+<div class="title">Example 5.7 - An if-else if structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/05%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete <code>WeatherRecord.java</code> file.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -580,7 +588,7 @@ Just like the <code>if-else if</code> structure, this is not a special structure
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.6 - Basic structure of a nested <code>if-else</code> statement.</div>
+<div class="title">Example 5.8 - Basic structure of a nested <code>if-else</code> statement.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -611,7 +619,7 @@ Just like the <code>if-else if</code> structure, this is not a special structure
 The if-else structures within those blocks check the average wind speed and return an appropriate description.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.7 - A nested <code>if-else</code> statement. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/05%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete <code>WeatherRecord.java</code> file.</div>
+<div class="title">Example 5.9 - A nested <code>if-else</code> statement. See <a href="https://github.com/timmcmichael/EMCCTimFiles/blob/main/OOP%20with%20Java%20(CIS150AB)/05%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete <code>WeatherRecord.java</code> file.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -750,7 +758,7 @@ A logical operator is a binary operation, so it takes two operands—but the ope
 For example, we could check if a student is eligible for a scholarship based on both their GPA (3.5 or better) and their age (younger than 25).</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.8 - A decision using a logical AND operation.</div>
+<div class="title">Example 5.10 - A decision using a logical AND operation.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -780,7 +788,7 @@ Some beginners might find it easier to implement AND logic using nested if-else 
 <p>The OR operation is similar, but only one of the expressions needs to be <code>true</code> for the entire expression to be <code>true</code>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.9 - A decision using a logical OR operation.</div>
+<div class="title">Example 5.11 - A decision using a logical OR operation.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -819,7 +827,7 @@ If the operand is <code>true</code>, the NOT operation will evaluate to <code>fa
 If the operand is <code>false</code>, the NOT operation will evaluate to <code>true</code>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.10 - A decision using a logical NOT operation.</div>
+<div class="title">Example 5.12 - A decision using a logical NOT operation.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -844,7 +852,7 @@ Range checking means we want to see if a value is within a specified range.</p>
 <p>A common example of range checking is to convert a percentage grade to a letter grade.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.11 - Range checking using logical operators.</div>
+<div class="title">Example 5.13 - Range checking using logical operators.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -893,7 +901,7 @@ I generally consider <code>switch</code> structures to be optional—you can com
 And since you see them often in code written by others, it&#8217;s good to know how they work.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.12 - The basic structure of a <code>switch</code> statement.</div>
+<div class="title">Example 5.14 - The basic structure of a <code>switch</code> statement.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -933,7 +941,7 @@ If we don&#8217;t include a <code>break</code> statement at the end of a <code>c
 This can be useful in some situations, but it&#8217;s generally not what you want, so you&#8217;ll usually see a <code>break</code> statement at the end of each <code>case</code> block.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 5.13 - A <code>switch</code> statement.</div>
+<div class="title">Example 5.15 - A <code>switch</code> statement.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1027,6 +1035,18 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 <li>
 <p>How can you write code that runs one code block from multiple options?</p>
 </li>
+<li>
+<p>What is the purpose of the <code>switch</code> statement, and when might you prefer it over multiple <code>if-else</code> statements?</p>
+</li>
+<li>
+<p>What is a <em>nested `if`</em> statement? When might nesting be useful?</p>
+</li>
+<li>
+<p>How do you compare two <code>String</code> objects for equality in Java?</p>
+</li>
+<li>
+<p>Explain the the difference between the AND (<code>&amp;&amp;</code>) and OR (<code>||</code>) logical operators.</p>
+</li>
 </ol>
 </div>
 </div>
@@ -1043,8 +1063,8 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-25<br />
-        00:44:33 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-12-09<br />
+        18:40:25 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">

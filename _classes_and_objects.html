@@ -284,7 +284,7 @@ And that&#8217;s what we&#8217;re here to learn.</p>
 The class header is followed by a code block, enclosed in curly braces.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.1 - <code>WeatherRecord.java</code>. A class header and code block.</div>
+<div class="title">Example 4.1 - A class header and code block for the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -343,7 +343,7 @@ Since a class will compile and run even if we leave off the <code>private</code>
 </table>
 </div>
 <div class="listingblock">
-<div class="title"><code>WeatherRecord.java</code>. Fields added to the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 4.2 - Fields added to the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -418,7 +418,7 @@ Java naming conventions specify that accessor methods should start with <code>ge
 Because of that convention, another name for accessor methods is <strong>getters</strong>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.2 - An accessor method (or "getter") for the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 4.3 - An accessor method (or "getter") for the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -448,7 +448,7 @@ By prefixing the field name with <code>this.</code>, we make it clear that we&#8
 But read-only access usually does no harm, so often we&#8217;ll have getters for all of our fields.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.3 - <code>WeatherRecord.java</code>. Getters in the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 4.4 - Getters in the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -498,7 +498,7 @@ As we&#8217;re getting the hang of this OOP thing, we&#8217;ll create a lot of m
 The naming convention for setters is to start with <code>set</code> and then the name of the field they change, formatted in camelCase; they usually have a void return type.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.4 - <code>WeatherRecord.java</code>. A setter in the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 4.5 - A setter in the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -557,7 +557,7 @@ In other words, if my parameter has a unique name, the compiler won&#8217;t get 
 But it&#8217;s common for programmers to use the same name for a parameter as the field it refers to:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.5 - Ambiguous identifiers in a setter method.</div>
+<div class="title">Example 4.6 - Ambiguous identifiers in a setter method.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -593,7 +593,7 @@ But it is common to see parameters with the same name as the field they refer to
 The solution is the <code>this</code> keyword, which tells the compiler when we are referring to the field.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.6 - Use of <code>this</code> to clarify an ambiguous identifier.</div>
+<div class="title">Example 4.7 - Use of <code>this</code> to clarify an ambiguous identifier.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -637,7 +637,7 @@ In the context of a setter, we can make sure that the new value being passed to 
 It&#8217;s not possible to have a negative wind speed, so we should make sure that the value being passed to the setter is zero or greater before assigning it to the field.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.7 - A setter with data validation.</div>
+<div class="title">Example 4.8 - A setter with data validation.</div>
 <div class="content">
 <pre>public void setAverageWindSpeed(double averageWindSpeed) {
     if (averageWindSpeed &gt;= 0) {
@@ -658,7 +658,7 @@ We&#8217;ll eventually learn more sophisticated ways to handle invalid data, but
 <p>Here&#8217;s how the <code>WeatherRecord</code> class looks with the setters added, and using <code>this.</code> to indicate when we&#8217;re referring to a field.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.8 - <code>WeatherRecord.java</code>. Setters added to the <code>WeatherRecord</code> class, <code>this.</code> added to field names, and comments identifying the parts.</div>
+<div class="title">Example 4.9 - Setters added to the <code>WeatherRecord</code> class, <code>this.</code> added to field names, and comments identifying the parts.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -743,7 +743,7 @@ And creating an instance is called <strong>instantiating</strong> a class.</p>
 The declaration is still a <em>data type</em> and an _identifier, but in this case the data type is the name of the class:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.9 - A declaration statement for an object variable.</div>
+<div class="title">Example 4.10 - A declaration statement for an object variable.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">WeatherRecord day1;</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -759,7 +759,7 @@ In this case, the <code>day1</code> object is going to maintain the record for t
 We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#8217;ll call a <strong>constructor</strong>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.10 - A declaration followed by an assignment statement for the newly declared object.</div>
+<div class="title">Example 4.11 - A declaration followed by an assignment statement for the newly declared object.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">WeatherRecord day1;</span>
@@ -794,7 +794,7 @@ We&#8217;ve already learned that parentheses in Java usually means we&#8217;re r
 <p>Now that we have an object, we can call its instance methods using <em>dot notation</em>, which means we put the object name (<strong>not</strong> the class name!), followed by a dot, followed by the method call:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.11 - Instance method calls using dot notation.</div>
+<div class="title">Example 4.12 - Instance method calls using dot notation.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -813,7 +813,7 @@ This is a good test of the <em>set</em> and <em>get</em> methods for the <code>h
 To see why it&#8217;s necessary, consider the following example.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.12 - An invalid instance method call.</div>
+<div class="title">Example 4.13 - An invalid instance method call.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -830,7 +830,7 @@ To see why it&#8217;s necessary, consider the following example.</p>
 The dot notation lets us specify the object we want to use; and even if we only have one object, that object still needs to be specified with dot notation so the compiler knows where to find the method.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.13 - Valid instance method calls on multiple objects.</div>
+<div class="title">Example 4.14 - Valid instance method calls on multiple objects.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -906,7 +906,7 @@ I decided it was too creepy to display in the text, but this crime against natur
 Sorry, I can&#8217;t do much better than that for now.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.14 - <code>WeatherRecordDemo.java</code>. A driver class to demonstrate the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 4.15 - A driver/demonstration class to demonstrate the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1032,7 +1032,7 @@ A constructor is always public, it has no return type (not even <code>void</code
 A definition for a constructor for the <code>WeatherRecord</code> class would look like this:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.15 - A constructor definition for the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 4.16 - A constructor definition for the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -1086,7 +1086,7 @@ This is useful when we want to set the initial values of the fields to something
 We add parameters to our constructor just like we do with any other method, by listing the data types and identifiers in the parentheses.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.16 - A <code>WeatherRecord</code> constructor with parameters.</div>
+<div class="title">Example 4.17 - A <code>WeatherRecord</code> constructor with parameters.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -1231,7 +1231,7 @@ If we have a savings account class, a common example when learning OOP, we might
 This would mean that every savings account would earn the same interest rate, which is often how banks work.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.17 - A class with a <code>static</code> constant.</div>
+<div class="title">Example 4.18 - A class with a <code>static</code> constant.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -1261,7 +1261,7 @@ A constant can also be declared as <code>public</code>, which would allow other 
 As an example, the <code>Math</code> class has a <code>PI</code> constant that is defined as follows:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 4.18 - The definition of the <code>PI</code> constant in the <code>Math</code> class.</div>
+<div class="title">Example 4.19 - The definition of the <code>PI</code> constant in the <code>Math</code> class.</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">final</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> PI </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3.141592653589793</span><span style="color: #f8f8f2">;</span></code></pre>
 </div>
@@ -1294,6 +1294,21 @@ As an example, the <code>Math</code> class has a <code>PI</code> constant that i
 <li>
 <p>What is encapsulation, and why is it important in OOP? Provide an example.</p>
 </li>
+<li>
+<p>What are “fields” (instance variables) in a class, and how do they differ from local variables in methods?</p>
+</li>
+<li>
+<p>What is a constructor in Java, and what is its purpose when creating an object?</p>
+</li>
+<li>
+<p>What is “instantiation” in Java? Give an example of how you would instantiate an object of a class called <code>RecordPlayer</code>.</p>
+</li>
+<li>
+<p>In a program using classes and objects, what is the role of a <em>driver class</em> (a.k.a., demo class or test class)?</p>
+</li>
+<li>
+<p>What does the <code>this</code> keyword refer to inside a class method or constructor, and when is it useful?</p>
+</li>
 </ol>
 </div>
 </div>
@@ -1310,8 +1325,8 @@ As an example, the <code>Math</code> class has a <code>PI</code> constant that i
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-11-25<br />
-        00:44:33 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-12-09<br />
+        18:40:25 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
