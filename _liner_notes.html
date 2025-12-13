@@ -82,7 +82,7 @@
 </li>
 <li><a href="_liner_notes.html#debugging-and-generative-ai">7. Debugging and Generative AI</a>
 </li>
-<li><a href="_liner_notes.html#arays-chapter">8. Arrays</a>
+<li><a href="_liner_notes.html#arrays-chapter">8. Arrays</a>
 </li>
 <li><a href="_liner_notes.html#inheritance-chapter">9. Inheritance</a>
 </li>
@@ -550,14 +550,30 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>Output statements, such as <code>print()</code> statements, allow you to monitor the values of variables and the flow of execution in your program. This visibility helps you pinpoint where things are going wrong, making it easier to identify and correct errors.</p>
 </li>
 <li>
-<p><em><strong>What are some strategies you can use when you&#8217;re frustrated by a bug in your code?</strong></em></p>
-<p>When you&#8217;re frustrated by a bug in your code, take a break to clear your mind and return with fresh eyes. Use output statements to track variables and execution flow, clean up your code for better readability, and break down the problem into smaller parts. If needed, seek help from others and stay patient, knowing that debugging is a valuable part of the learning process.</p>
+<p><em><strong>Explain two strategies you can use when you&#8217;re frustrated by a bug in your code.</strong></em></p>
+<p>One strategy is to take a short break and come back with fresh eyes, which often makes mistakes easier to spot. Another is to simplify the problem by testing smaller pieces of the code or explaining your logic out loud (even to an inanimate object).</p>
+</li>
+<li>
+<p><em><strong>What is a breakpoint in an IDE, and how does it help with debugging?</strong></em></p>
+<p>A breakpoint is a marker you place on a line of code that pauses the program while it runs. This allows you to inspect variables and step through the code one line at a time to see exactly what’s happening.</p>
+</li>
+<li>
+<p><em><strong>What is the purpose of a "watch window" in your IDE&#8217;s debugger?</strong></em></p>
+<p>A watch window displays the current values of selected variables while the program is paused. It helps you monitor how values change as you step through the code.</p>
+</li>
+<li>
+<p><em><strong>What does it mean to "step into" a method while debugging?</strong></em></p>
+<p>Stepping into a method means the debugger enters the method and shows each line of code inside it as it executes, instead of running the method all at once.</p>
+</li>
+<li>
+<p><em><strong>How might a generative AI tool assist you with debugging or writing code?</strong></em></p>
+<p>A generative AI tool can help explain error messages, suggest possible fixes, or provide example code. It can also help rephrase or simplify code, but the programmer is still responsible for understanding and testing the results.</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="arays-chapter">8. Arrays</h3>
+<h3 id="arrays-chapter">8. Arrays</h3>
 <div class="qlist qanda">
 <ol>
 <li>
@@ -565,31 +581,45 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>An array is a data structure that allows you to store multiple pieces of data in a single collection. Unlike a single variable, which can only store one piece of data at a time, an array can hold multiple values, each of which is referred to as an element. Each element in an array is accessed using its unique index, which starts at 0 for the first element and increments by 1 for each subsequent element.</p>
 </li>
 <li>
+<p><em><strong>How do you declare and create a new array of integers with space for 10 elements?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">int</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> numbers </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">new</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #ff4689">[</span><span style="color: #ae81ff">10</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>How do you find the number of elements of an array?</strong></em></p>
+<p>You use the array&#8217;s <code>length</code> property. For example, <code>albumTracks.length</code> returns the number of elements in the <code>albumTracks</code> array.</p>
+</li>
+<li>
 <p><em><strong>What is an ArrayIndexOutOfBoundsException and when does it occur?</strong></em></p>
 <p>An <code>ArrayIndexOutOfBoundsException</code> is a runtime error that occurs when you try to access an element at an index that is outside the bounds of the array. This means you are trying to access an index that is either less than 0 or greater than or equal to the length of the array. For example, if an array has 10 elements, valid indices are 0 through 9. Attempting to access the element at index 10 or higher will result in this exception.</p>
 </li>
 <li>
-<p><em><strong>How can loops be used to traverse an array? Provide an example of a for loop that sums the elements of an integer array.</strong></em></p>
-<p>Loops can be used to traverse an array by iterating through each element, performing operations such as reading, modifying, or accumulating values. Here is an example of a for loop that sums the elements of an integer array:</p>
+<p><em><strong>Explain what it means to <em>traverse</em> an array.</strong></em></p>
+<p>Traversing an array means visiting each element in the array, usually one at a time, often using a loop.</p>
+</li>
+<li>
+<p><em><strong>Give an example of a <code>for</code> loop to traverse an array called <code>albumTracks</code>.</strong></em></p>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #ff4689">[]</span><span style="color: #f8f8f2"> scores </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> {</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">85</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">95</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">88</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">92</span><span style="color: #f8f8f2">};</span>
-<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> scores.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">) {</span>
-<span style="color: #f8f8f2">    sum </span><span style="color: #ff4689">+=</span><span style="color: #f8f8f2"> scores</span><span style="color: #ff4689">[</span><span style="color: #f8f8f2">i</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">;</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">for</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> i </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">; i </span><span style="color: #ff4689">&lt;</span><span style="color: #f8f8f2"> albumTracks.</span><span style="color: #a6e22e">length</span><span style="color: #f8f8f2">; i</span><span style="color: #ff4689">++</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">    System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(albumTracks</span><span style="color: #ff4689">[</span><span style="color: #f8f8f2">i</span><span style="color: #ff4689">]</span><span style="color: #f8f8f2">);</span>
 <span style="color: #f8f8f2">}</span>
-<span style="color: #f8f8f2">System.</span><span style="color: #a6e22e">out</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">println</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;The sum of the scores is &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> sum);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>In this example, the for loop iterates through each element of the scores array, adding each element&#8217;s value to the sum variable. After the loop completes, the total sum of the array elements is printed.</p>
-</div>
+</li>
+<li>
+<p><em><strong>What is the difference between a traditional <code>for</code> loop and a "for-each" loop when working with arrays?</strong></em></p>
+<p>A traditional <code>for</code> loop uses an index and allows you to access element positions. A for-each loop iterates through each element directly without the use of an index.</p>
+</li>
+<li>
+<p><em><strong>Why might you use a loop when working with an array instead of accessing each element individually?</strong></em></p>
+<p>Using a loop is generally more efficient and flexible, especially when the array has many elements or its size might change. It avoids repetitive code and reduces errors.</p>
 </li>
 </ol>
 </div>
@@ -648,8 +678,8 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-12-10<br />
-        17:23:00 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2025-12-13<br />
+        01:54:47 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
