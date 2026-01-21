@@ -629,20 +629,50 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <div class="qlist qanda">
 <ol>
 <li>
-<p><em><strong>What is inheritance in object-oriented programming, and what are its benefits</strong></em></p>
-<p>Inheritance is a feature in object-oriented programming that allows a class (subclass) to inherit attributes and methods from another class (superclass), promoting code reuse and organization by enabling the creation of hierarchical relationships between classes.</p>
+<p><em><strong>In your own words, explain what inheritance is and why it&#8217;s useful in object-oriented programming.</strong></em></p>
+<p>Inheritance allows one class to reuse and build on the fields and methods of another class. It&#8217;s useful because it reduces duplicated code and lets related classes share common behavior while still having their own specialized features.</p>
 </li>
 <li>
-<p><em><strong>How do you override a method in a subclass, and why might you want to do this?</strong></em></p>
-<p>To override a method in a subclass, you define a method in the subclass with the same name, return type, and parameters as the method in the superclass. This allows the subclass to provide a specific implementation of the method, which can be used to customize or extend the behavior of the inherited method.</p>
+<p><em><strong>Describe the difference between a superclass and a subclass, and give a real-world example of each.</strong></em></p>
+<p>A superclass defines general behavior and properties that can be shared, while a subclass represents a more specific version of that concept. For example, Vehicle could be a superclass, and Car could be a subclass that adds or changes behavior.</p>
+</li>
+<li>
+<p><em><strong>Explain what method overriding is, and give an example of when you might want to override a method in a subclass.</strong></em></p>
+<p>Method overriding happens when a subclass provides its own version of a method defined in its superclass. You might override a method when the subclass needs to behave differently, such as calculating pay differently for hourly and salaried employees.</p>
+</li>
+<li>
+<p><em><strong>What does the <code>@Override</code> annotation do, and why is it good practice to use it?</strong></em></p>
+<p>The <code>@Override</code> annotation tells the compiler that a method is meant to override a superclass method. It&#8217;s good practice because it helps catch mistakes, like misspelling a method name or using the wrong parameters.</p>
 </li>
 <li>
 <p><em><strong>Explain how to use the <code>super</code> keyword in a constructor.</strong></em></p>
-<p>The super keyword is used in a subclass constructor to call the constructor of its superclass. This must be the first statement in the subclass constructor and is used to ensure that the superclass is properly initialized before the subclass adds its own initialization code. For example: super(parameter1, parameter2);.</p>
+<p>The <code>super</code> keyword is used in a subclass constructor to call a constructor from the superclass. This ensures that the superclass part of the object is properly initialized before the subclass adds its own setup.</p>
 </li>
 <li>
-<p><em><strong>Explain how different subclasses can be managed in a single array.</strong></em></p>
-<p>Different subclasses can be managed in a single array by declaring the array to be of the type of their common superclass. This allows the array to hold instances of any subclass, enabling polymorphism. For example, an array of type <code>BankAccount</code> can hold instances of both <code>CheckingAccount</code> and <code>SavingsAccount</code>, and common methods can be called on these instances through the superclass reference.</p>
+<p><em><strong>Explain how Java finds the correct method to call when a subclass overrides a superclass method.</strong></em></p>
+<p>Java uses the actual object type at runtime to decide which version of the method to call. If the object is a subclass instance, the overridden method in the subclass is used, even if the reference type is the superclass.</p>
+</li>
+<li>
+<p><em><strong>What is <em>polymorphism</em> in the context of inheritance? Give an example involving an array of superclass references.</strong></em></p>
+<p>Polymorphism allows objects of different subclasses to be treated as objects of a common superclass. For example, an array of <code>Athlete</code> references can store <code>Runner</code>, <code>Swimmer</code>, and <code>Cyclist</code> objects, each responding differently to the same method call.</p>
+</li>
+<li>
+<p><em><strong>Given an existing class named <code>Restaurant</code>, write a class definition statement for a subclass named <code>FastFoodRestaurant</code>.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">FastFoodRestaurant</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">extends</span><span style="color: #f8f8f2"> Restaurant {</span>
+
+<span style="color: #f8f8f2">}</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>In the chapter example, what are the advantages of storing different subclass objects in a single Athlete[] array? What are the limitations?</strong></em></p>
+<p>The advantage is that you can process different types of athletes using shared methods in a single loop. The limitation is that you can only directly access methods defined in the <code>Athlete</code> class unless you cast to a specific subclass.</p>
+</li>
+<li>
+<p><em><strong>Describe the role of the <code>Object</code> class in inheritance. Why might you override <code>toString()</code> in your own classes?</strong></em></p>
+<p>The <code>Object</code> class is the root of the inheritance hierarchy, so every class in Java inherits from it. You might override <code>toString()</code> to provide a more meaningful description of an object when it&#8217;s printed or logged.</p>
 </li>
 </ol>
 </div>
@@ -678,8 +708,8 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2026-01-17<br />
-        15:54:02 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2026-01-21<br />
+        21:43:30 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
