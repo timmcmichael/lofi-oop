@@ -25,7 +25,7 @@
     });
 </script>
 </head>
-<body id="_methods" class="article toc2 toc-left">
+<body id="methods" class="article toc2 toc-left">
 <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
 <!-- TODO: Keep link to font awesome? -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -41,58 +41,58 @@
 <div id="toc" class="toc2">
 <div id="toctitle">Track Listing</div>
 <p><span class="toc-root"><a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a></span></p><ul class="sectlevel1">
-<li><a href="_sound_check.html">Sound Check</a>
+<li><a href="sound-check.html">Sound Check</a>
 </li>
-<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+<li><a href="computers-and-coding.html">1. Computers and Coding</a>
 </li>
-<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+<li><a href="variables-and-data-types.html">2. Variables and Data Types</a>
 </li>
-<li><a href="_methods.html"><span class="toc-current">3. Methods</span></a>
+<li><a href="methods.html"><span class="toc-current">3. Methods</span></a>
 <ul class="sectlevel2">
-<li><a href="_methods.html#_whats_the_point_3">What&#8217;s the Point?</a>
+<li><a href="methods.html#_whats_the_point_3">What&#8217;s the Point?</a>
 </li>
-<li><a href="_methods.html#_defining_our_own_methods">3.1. Defining Our Own Methods</a>
+<li><a href="methods.html#_defining_our_own_methods">3.1. Defining Our Own Methods</a>
 </li>
-<li><a href="_methods.html#variable_scope">3.2. Variable Scope</a>
+<li><a href="methods.html#variable_scope">3.2. Variable Scope</a>
 </li>
-<li><a href="_methods.html#_passing_data_to_methods">3.3. Passing Data to Methods</a>
+<li><a href="methods.html#_passing_data_to_methods">3.3. Passing Data to Methods</a>
 </li>
-<li><a href="_methods.html#_returning_values">3.4. Returning Values</a>
+<li><a href="methods.html#_returning_values">3.4. Returning Values</a>
 </li>
-<li><a href="_methods.html#overloading">3.5. Overloading a Method</a>
+<li><a href="methods.html#overloading">3.5. Overloading a Method</a>
 </li>
-<li><a href="_methods.html#_solution_walkthrough">3.6. Solution Walkthrough</a>
+<li><a href="methods.html#_solution_walkthrough">3.6. Solution Walkthrough</a>
 </li>
-<li><a href="_methods.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_4">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+<li><a href="methods.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_4">Check Yourself Before You Wreck Yourself (on the assignments)</a>
 </li>
 </ul>
 </li>
-<li><a href="_classes_and_objects.html">4. Classes and Objects</a>
+<li><a href="classes-and-objects.html">4. Classes and Objects</a>
 </li>
-<li><a href="_decisions.html">5. Decisions</a>
+<li><a href="decisions.html">5. Decisions</a>
 </li>
-<li><a href="_loops.html">6. Loops</a>
+<li><a href="loops.html">6. Loops</a>
 </li>
-<li><a href="_debugging_and_generative_ai.html">7. Debugging and Generative AI</a>
+<li><a href="debugging-and-generative-ai.html">7. Debugging and Generative AI</a>
 </li>
-<li><a href="_arrays.html">8. Arrays</a>
+<li><a href="arrays.html">8. Arrays</a>
 </li>
-<li><a href="_inheritance.html">9. Inheritance</a>
+<li><a href="inheritance.html">9. Inheritance</a>
 </li>
-<li><a href="_graphical_user_interfaces.html">10. Graphical User Interfaces</a>
+<li><a href="graphical-user-interfaces.html">10. Graphical User Interfaces</a>
 </li>
-<li><a href="_b_side_lo_fi_testing.html">B-Side: Lo-Fi Testing</a>
+<li><a href="testing.html">B-Side: Lo-Fi Testing</a>
 </li>
-<li><a href="_liner_notes.html">Liner Notes</a>
+<li><a href="liner-notes.html">Liner Notes</a>
 </li>
-<li><a href="_acknowledgements.html">Acknowledgements</a>
+<li><a href="acknowledgements.html">Acknowledgements</a>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_methods">3. Methods</h2>
+<h2 id="methods">3. Methods</h2>
 <div class="sectionbody">
 <div class="paragraph subtitle">
 <p><span title='This is "Chapter Three" in binary (base 2)'>Chapter 0011 <sub>2</sub></span></p>
@@ -132,7 +132,7 @@
 <hr>
 <div class="paragraph">
 <p>As our programs begin to get larger and more complex, it will be important to keep our code organized.
-Each program we write is contained within a <em>class</em>, and classes are the basic building block of an OOP program; we&#8217;ll explore them in more detail in <a href="_classes_and_objects.html">Classes and Objects</a>.
+Each program we write is contained within a <em>class</em>, and classes are the basic building block of an OOP program; we&#8217;ll explore them in more detail in <a href="#_classes_and_objects">[_classes_and_objects]</a>.
 Within a class or program, we can organize code in <strong>methods</strong>.
 A method is a collection of statements that work together to complete a single task.
 Consider the assembly instructions for building a LEGO set.</p>
@@ -484,7 +484,7 @@ The best practice is to pass that variable value to the method as needed, and fo
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-In the <a href="_classes_and_objects.html">Classes and Objects</a> chapter, we will start using variables that look a lot like the global variables I just said we shouldn&#8217;t use. To be clear, those <em>instance variables</em> behave differently and serve a different purpose. They are not <em>global variables</em> as described here.
+In the <a href="#_classes_and_objects">[_classes_and_objects]</a> chapter, we will start using variables that look a lot like the global variables I just said we shouldn&#8217;t use. To be clear, those <em>instance variables</em> behave differently and serve a different purpose. They are not <em>global variables</em> as described here.
 </td>
 </tr>
 </table>
@@ -1156,19 +1156,19 @@ We simply provide the arguments that match the method signature we want to use.<
 </div>
 </div>
 <div class="paragraph">
-<p><em>Sample answers provided in the <a href="_liner_notes.html#methods">Liner Notes</a></em>.</p>
+<p><em>Sample answers provided in the <a href="liner-notes.html#methods-answers">Liner Notes</a></em>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph nav-footer">
-<p>← Previous: <a href="_variables_and_data_types.html">Variables and Data Types</a> | ↑ Up: <a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a> | Next: <a href="_classes_and_objects.html">Classes and Objects</a> →</p>
+<p>← Previous: <a href="variables-and-data-types.html">Variables and Data Types</a> | ↑ Up: <a href="index.html">Lo-Fi OOP: Intro to Object-Oriented Programming Using Java</a> | Next: <a href="classes-and-objects.html">Classes and Objects</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text" xmlns:cc="http://creativecommons.org/ns#">
-        Nanker Phelge Edition,&nbsp;revised&nbsp;2026-05-30<br />
-        02:31:18 UTC<br />
+        Nanker Phelge Edition,&nbsp;revised&nbsp;2026-06-03<br />
+        13:34:21 UTC<br />
         <span>This work is licensed under
             <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer">
